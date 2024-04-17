@@ -1,12 +1,17 @@
+<app-header></app-header>
 <div class="container flex gap-1">
   <div style="width: 45%">
     <div class="trip-details">
-      <p-card header="Trip to Paris">
-        <div class="flex gap-1">
-          <!-- <p>Paris is the capital of France.</p>
-                    <p>It is a major European city and a global center for art, fashion, gastronomy, and culture.</p> -->
-          <i class="pi pi-calendar-plus"></i>
-          <p class="m-0">4/12 - 4/16</p>
+      <p-card>
+        <div class="flex flex-column gap-20">
+          <div class="header">Trip to {{ tripDetails.destination }}</div>
+          <div class="flex gap-5">
+            <i class="pi pi-calendar-plus"></i>
+            <p class="m-0">
+              {{ tripDetails.startDate | date : "MMM - dd, YYYY" }} -
+              {{ tripDetails.endDate | date : "MMM - dd, YYYY" }}
+            </p>
+          </div>
         </div>
       </p-card>
     </div>

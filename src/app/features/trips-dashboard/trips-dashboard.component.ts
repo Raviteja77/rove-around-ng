@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { TripsDashboardService } from './services/trips-dashboard.service';
 import { Trip } from 'src/app/models/trip.model';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-trips-dashboard',
@@ -15,7 +16,10 @@ export class TripsDashboardComponent implements OnInit {
   trips: Trip[] = [];
   isOnGoingAndUpcomingTripsAvailable: boolean = false;
   isCompletedTripsAvailable: boolean = false;
-  constructor(private tripsDashboardService: TripsDashboardService) {}
+  constructor(
+    private router: Router,
+    private tripsDashboardService: TripsDashboardService
+  ) {}
 
   ngOnInit() {
     this.status = [
@@ -56,5 +60,9 @@ export class TripsDashboardComponent implements OnInit {
       },
       error: (error) => {},
     });
+  }
+
+  tripClicked(code: string) {
+    this.router.navigate(['trip-details', code]);
   }
 }

@@ -1,4 +1,5 @@
-<div class="flex flex-column gap-20">
+<app-header></app-header>
+<div class="container flex flex-column gap-30">
   <div class="flex justify-content-between">
     <p-dropdown
       [options]="status"
@@ -14,26 +15,30 @@
     </p-button>
   </div>
 
-  <div class="flex flex-wrap gap-10">
+  <div class="grid grid-nogutter gap-20">
     <ng-container *ngFor="let trip of trips">
       <ng-container *ngIf="trip.tripStatus === selectedStatus.value">
-        <div class="trip-card">
-          <div class="desination-image"></div>
-          <div class="trip-card-content">
-            <div class="desination-name">Trip to {{ trip.destination }}</div>
-            <div class="trip-dates">
-              {{ trip.startDate | date : "MMM - dd, YYYY" }} -
-              {{ trip.endDate | date : "MMM - dd, YYYY" }}
-            </div>
-            <div class="flex gap-5 additional-details">
-              <div>Budget - {{ trip.budget }}</div>
-              <div class="dot-separtor"></div>
-              <div>{{ trip.numberOfPlaces }} places</div>
-              <div class="dot-separtor"></div>
-              <div>{{ trip.numberOfUsers }} Users</div>
+        <p-card (click)="tripClicked(trip.tripCode)">
+          <div class="trip-card">
+            <div class="destination-image"></div>
+            <div class="trip-card-content">
+              <div class="destination-name">Trip to {{ trip.destination }}</div>
+              <div class="trip-dates">
+                {{ trip.startDate | date : "MMM - dd, YYYY" }} -
+                {{ trip.endDate | date : "MMM - dd, YYYY" }}
+              </div>
+              <div
+                class="flex flex-wrap align-items-center gap-10 additional-details"
+              >
+                <div>Budget - {{ trip.budget }}$</div>
+                <div class="dot-separator"></div>
+                <div>{{ trip.numberOfPlaces }} places</div>
+                <div class="dot-separator"></div>
+                <div>{{ trip.numberOfUsers }} Users</div>
+              </div>
             </div>
           </div>
-        </div>
+        </p-card>
       </ng-container>
     </ng-container>
   </div>

@@ -12,45 +12,12 @@ export class TripsDashboardService {
   constructor(private http: HttpClient) {}
 
   getTrips() {
-    const mockTrips: Trip[] = [
-      {
-        id: 1,
-        destination: 'Paris',
-        startDate: '2024-04-10',
-        endDate: '2024-04-15',
-        budget: 2000,
-        destinationImage: 'paris.jpg',
-        numberOfPlaces: 5,
-        numberOfUsers: 3,
-        tripStatus: '',
-        numberOfDays: 0,
-      },
-      {
-        id: 2,
-        destination: 'Tokyo',
-        startDate: '2024-05-15',
-        endDate: '2024-05-25',
-        budget: 3000,
-        destinationImage: 'tokyo.jpg',
-        numberOfPlaces: 8,
-        numberOfUsers: 4,
-        tripStatus: '',
-        numberOfDays: 0,
-      },
-      {
-        id: 3,
-        destination: 'New York',
-        startDate: '2024-06-20',
-        endDate: '2024-06-30',
-        budget: 2500,
-        destinationImage: 'newyork.jpg',
-        numberOfPlaces: 6,
-        numberOfUsers: 5,
-        tripStatus: '',
-        numberOfDays: 0,
-      },
-    ];
-    return of(mockTrips);
+    const trips = localStorage.getItem('trips');
+    if (trips) {
+      const mockTrips: Trip[] = JSON.parse(trips);
+      return of(mockTrips);
+    }
+    return of([]);
     // return this.http.get<Trip[]>(this.tripsAPI);
   }
 }
