@@ -3,3 +3,9 @@
 @import "primeng/resources/primeng.css";
 @import "primeicons/primeicons.css";
 @import 'primeflex/primeflex.scss';
+
+@for $i from 1 through 50 {
+  .gap-#{$i} {
+    gap: $i + px !important;
+  }
+}

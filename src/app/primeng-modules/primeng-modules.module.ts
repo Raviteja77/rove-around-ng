@@ -7,6 +7,7 @@ import { InputTextareaModule } from 'primeng/inputtextarea';
 import { ButtonModule } from 'primeng/button';
 import { AutoCompleteModule } from 'primeng/autocomplete';
 import { TooltipModule } from 'primeng/tooltip';
+import { DropdownModule } from 'primeng/dropdown';
 
 @NgModule({
   declarations: [],
@@ -18,7 +19,8 @@ import { TooltipModule } from 'primeng/tooltip';
     InputTextareaModule,
     ButtonModule,
     AutoCompleteModule,
-    TooltipModule
+    TooltipModule,
+    DropdownModule
   ],
   exports: [
     CardModule,
@@ -27,7 +29,8 @@ import { TooltipModule } from 'primeng/tooltip';
     InputTextareaModule,
     ButtonModule,
     AutoCompleteModule,
-    TooltipModule
+    TooltipModule,
+    DropdownModule
   ]
 })
 export class PrimengModulesModule { }

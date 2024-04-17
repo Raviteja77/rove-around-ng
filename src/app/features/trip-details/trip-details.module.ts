@@ -6,20 +6,19 @@ import { SharedComponentsModule } from 'src/app/shared-components/shared-compone
 import { PrimengModulesModule } from 'src/app/primeng-modules/primeng-modules.module';
 import { FormsModule } from '@angular/forms';
 import { GoogleMap } from '@angular/google-maps';
-
-
+import { TripDetailsService } from './services/trip-details.service';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
-  declarations: [
-    TripDetailsComponent
-  ],
+  declarations: [TripDetailsComponent],
   imports: [
     CommonModule,
     TripDetailsRoutingModule,
     SharedComponentsModule,
     PrimengModulesModule,
+    HttpClientModule,
     FormsModule,
   ],
-  providers: [GoogleMap]
+  providers: [GoogleMap, TripDetailsService],
 })
-export class TripDetailsModule { }
+export class TripDetailsModule {}
