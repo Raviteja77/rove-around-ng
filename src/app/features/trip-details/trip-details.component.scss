@@ -1,0 +1,29 @@
+
+.trip-details {
+    margin-bottom: 32px;
+}
+
+::ng-deep {
+    .trip-details-header {
+        border: none !important;
+        background: transparent !important;
+    }
+
+    .trip-details-content {
+        padding: 0 1.25rem !important;
+        border: none !important;
+    }
+
+    .p-inputtext {
+        background: #f2f2f2 !important;
+    }
+
+    .p-autocomplete {
+        width: 100%;
+
+        input {
+            width: 100%;
+        }
+    }
+}
+
