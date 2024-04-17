@@ -1,44 +1,58 @@
-<app-header></app-header>
 <div class="container flex gap-1">
-    <div style="width: 45%">
-        <div class="trip-details">
-            <p-card header="Trip to Paris">
-                <div class="flex gap-1">
-                    <!-- <p>Paris is the capital of France.</p>
+  <div style="width: 45%">
+    <div class="trip-details">
+      <p-card header="Trip to Paris">
+        <div class="flex gap-1">
+          <!-- <p>Paris is the capital of France.</p>
                     <p>It is a major European city and a global center for art, fashion, gastronomy, and culture.</p> -->
-                    <i class="pi pi-calendar-plus"></i>
-                    <p class="m-0">4/12 - 4/16</p>
-                </div>
-            </p-card>
+          <i class="pi pi-calendar-plus"></i>
+          <p class="m-0">4/12 - 4/16</p>
         </div>
-        <div class="trip-details">
-            <p-accordion [multiple]="true">
-                <p-accordionTab header="Notes" headerStyleClass="trip-details-header"
-                    contentStyleClass="trip-details-content">
-                    <textarea rows="1" cols="68" pInputTextarea [autoResize]="true" [(ngModel)]="notes" placeholder="Add notes"></textarea>
-                </p-accordionTab>
-                <p-divider></p-divider>
-                <p-accordionTab header="Place to Visit" headerStyleClass="trip-details-header"
-                    contentStyleClass="trip-details-content">
-                    <!-- <textarea rows="1" cols="60" pInputTextarea [autoResize]="true" [(ngModel)]="places"></textarea> -->
-                    <div style="width: 100%;">
-                        <p-autoComplete [(ngModel)]="places" [suggestions]="filteredPlaces" (completeMethod)="filterPlace($event)" field="name" placeholder="Search for any place">
-                            <ng-template let-place pTemplate="item">
-                                <div class="flex align-items-center gap-2">
-                                    
-                                </div>
-                            </ng-template>
-                        </p-autoComplete>
-                    </div>
-                </p-accordionTab>
-            </p-accordion>
-            <p-divider></p-divider>
-        </div>
-        <div>
-
-        </div>
+      </p-card>
     </div>
-    <div>
-        <app-googlemap></app-googlemap>
+    <div class="trip-details">
+      <p-accordion [multiple]="true">
+        <p-accordionTab
+          header="Notes"
+          headerStyleClass="trip-details-header"
+          contentStyleClass="trip-details-content"
+        >
+          <textarea
+            rows="1"
+            cols="68"
+            pInputTextarea
+            [autoResize]="true"
+            [(ngModel)]="notes"
+            placeholder="Add notes"
+          ></textarea>
+        </p-accordionTab>
+        <p-divider></p-divider>
+        <p-accordionTab
+          header="Place to Visit"
+          headerStyleClass="trip-details-header"
+          contentStyleClass="trip-details-content"
+        >
+          <!-- <textarea rows="1" cols="60" pInputTextarea [autoResize]="true" [(ngModel)]="places"></textarea> -->
+          <div style="width: 100%">
+            <p-autoComplete
+              [(ngModel)]="places"
+              [suggestions]="filteredPlaces"
+              (completeMethod)="filterPlace($event)"
+              field="name"
+              placeholder="Search for any place"
+            >
+              <ng-template let-place pTemplate="item">
+                <div class="flex align-items-center gap-2"></div>
+              </ng-template>
+            </p-autoComplete>
+          </div>
+        </p-accordionTab>
+      </p-accordion>
+      <p-divider></p-divider>
     </div>
+    <div></div>
+  </div>
+  <div>
+    <app-googlemap></app-googlemap>
+  </div>
 </div>

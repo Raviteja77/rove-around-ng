@@ -1,0 +1,59 @@
+<div class="flex flex-column gap-20">
+  <div class="flex justify-content-between">
+    <p-dropdown
+      [options]="status"
+      [(ngModel)]="selectedStatus"
+      optionLabel="name"
+    ></p-dropdown>
+
+    <p-button (click)="newPlan()">
+      <div class="flex gap-10">
+        <div class="pi pi-plus"></div>
+        <div>New Plan</div>
+      </div>
+    </p-button>
+  </div>
+
+  <div class="flex flex-wrap gap-10">
+    <ng-container *ngFor="let trip of trips">
+      <ng-container *ngIf="trip.tripStatus === selectedStatus.value">
+        <div class="trip-card">
+          <div class="desination-image"></div>
+          <div class="trip-card-content">
+            <div class="desination-name">Trip to {{ trip.destination }}</div>
+            <div class="trip-dates">
+              {{ trip.startDate | date : "MMM - dd, YYYY" }} -
+              {{ trip.endDate | date : "MMM - dd, YYYY" }}
+            </div>
+            <div class="flex gap-5 additional-details">
+              <div>Budget - {{ trip.budget }}</div>
+              <div class="dot-separtor"></div>
+              <div>{{ trip.numberOfPlaces }} places</div>
+              <div class="dot-separtor"></div>
+              <div>{{ trip.numberOfUsers }} Users</div>
+            </div>
+          </div>
+        </div>
+      </ng-container>
+    </ng-container>
+  </div>
+  <ng-container
+    *ngIf="
+      !isOnGoingAndUpcomingTripsAvailable &&
+      selectedStatus.value === 'Ongoing & Upcoming'
+    "
+  >
+    <div class="empty-card">
+      <div class="no-trip-icon"></div>
+      <div class="no-trip-message">No Ongoing or Upcoming trips available</div>
+    </div>
+  </ng-container>
+  <ng-container
+    *ngIf="!isCompletedTripsAvailable && selectedStatus.value === 'Completed'"
+  >
+    <div class="empty-card">
+      <div class="no-trip-icon"></div>
+      <div class="no-trip-message">No completed trips available</div>
+    </div>
+  </ng-container>
+</div>
