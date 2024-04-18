@@ -1,7 +1,15 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { AuthGuard } from './common/core/auth/auth.guard';
 
 const routes: Routes = [
+  {
+    path: 'user-authentication',
+    loadChildren: () =>
+      import('./features/user-authentication/user-authentication.module').then(
+        (m) => m.UserAuthenticationModule
+      ),
+  },
   {
     path: 'dashboard',
     loadChildren: () =>
@@ -15,7 +23,7 @@ const routes: Routes = [
       import('./features/trip-details/trip-details.module').then(
         (m) => m.TripDetailsModule
       ),
-  },
+  }
 ];
 
 @NgModule({
