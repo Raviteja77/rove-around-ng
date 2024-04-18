@@ -4,6 +4,10 @@
 @import "primeicons/primeicons.css";
 @import 'primeflex/primeflex.scss';
 
+body {
+  margin: 0;
+}
+
 @for $i from 1 through 50 {
   .gap-#{$i} {
     gap: $i + px !important;

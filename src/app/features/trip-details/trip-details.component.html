@@ -52,8 +52,82 @@
             </p-autoComplete>
           </div>
         </p-accordionTab>
+        <p-divider></p-divider>
       </p-accordion>
-      <p-divider></p-divider>
+
+      <div class="flex flex-column gap-10">
+        <div class="flex justify-content-between">
+          <div>Itinerary</div>
+          <div class="flex gap-5">
+            <i class="pi pi-calendar"></i>
+            <div>
+              {{
+                tripDetails.startDate
+                  | date : (isTripEndInSameYear ? "MM/dd" : "MM/dd/YYYY")
+              }}
+              -
+              {{
+                tripDetails.endDate
+                  | date : (isTripEndInSameYear ? "MM/dd" : "MM/dd/YYYY")
+              }}
+            </div>
+          </div>
+        </div>
+        <p-accordion [multiple]="true">
+          <ng-container
+            *ngFor="let itinerary of tripDetails.itinerary; let index = index"
+          >
+            <p-accordionTab
+              [header]="itinerary.date"
+              headerStyleClass="trip-details-header"
+              contentStyleClass="trip-details-content"
+            >
+              <div class="flex flex-column gap-10">
+                <p-tabMenu
+                  [model]="itineraryTabMenus[index]"
+                  [activeItem]="selectedItineraryTab[index]"
+                  (activeItemChange)="onActiveItineraryTabChange($event, index)"
+                >
+                  <ng-template pTemplate="item" let-item>
+                    <a
+                      class="p-menuitem-link flex justify-content-between align-items-center p-3"
+                    >
+                      <div>
+                        <span [class]="item.icon"></span>
+                        <span> {{ item.label }}</span>
+                      </div>
+                    </a>
+                  </ng-template>
+                </p-tabMenu>
+                <div class="tab-menu-content">
+                  <ng-container
+                    *ngIf="selectedItineraryTab[index].label === 'Places'"
+                  >
+                    <p-button>
+                      <div class="flex gap-10">
+                        <div class="pi pi-plus"></div>
+                        <div>Add Place</div>
+                      </div>
+                    </p-button>
+                  </ng-container>
+                  <ng-container
+                    *ngIf="selectedItineraryTab[index].label === 'Notes'"
+                  >
+                    <p-button>
+                      <div class="flex gap-10">
+                        <div class="pi pi-plus"></div>
+                        <div>Add Notes</div>
+                      </div>
+                    </p-button>
+                  </ng-container>
+                </div>
+              </div>
+            </p-accordionTab>
+
+            <p-divider></p-divider>
+          </ng-container>
+        </p-accordion>
+      </div>
     </div>
     <div></div>
   </div>

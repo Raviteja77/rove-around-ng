@@ -3,6 +3,7 @@ import { MapGeocoder } from '@angular/google-maps';
 import { ActivatedRoute, Router } from '@angular/router';
 import { TripDetailsService } from './services/trip-details.service';
 import { TripDetails } from 'src/app/models/trip-details.model';
+import { MenuItem } from 'primeng/api';
 
 @Component({
   selector: 'app-trip-details',
@@ -16,6 +17,10 @@ export class TripDetailsComponent implements OnInit {
   filteredPlaces: any = [];
   notesInput: any = [];
   tripDetails!: TripDetails;
+  isTripEndInSameYear: boolean = false;
+
+  itineraryTabMenus: MenuItem[][] = [];
+  selectedItineraryTab: MenuItem[] = [];
 
   constructor(
     private geocoder: MapGeocoder,
@@ -32,10 +37,22 @@ export class TripDetailsComponent implements OnInit {
   }
 
   getTripDetails() {
+    this.itineraryTabMenus = [];
+    this.selectedItineraryTab = [];
     this.tripDetailsService.getTripDetails(this.tripCode).subscribe({
       next: (data) => {
         if (data) {
           this.tripDetails = data;
+          this.isTripEndInSameYear =
+            new Date(this.tripDetails.startDate).getFullYear() ===
+            new Date(this.tripDetails.endDate).getFullYear();
+          this.tripDetails.itinerary.forEach((itinerary, index) => {
+            this.itineraryTabMenus.push([
+              { label: 'Places', icon: 'pi pi-map-marker' },
+              { label: 'Notes', icon: 'pi pi-clipboard' },
+            ]);
+            this.selectedItineraryTab.push(this.itineraryTabMenus[index][0]);
+          });
           console.log(data);
         } else {
           this.router.navigate(['dashboard']);
@@ -45,13 +62,9 @@ export class TripDetailsComponent implements OnInit {
     });
   }
 
-  addNoteForTrip() {}
+  addNote() {}
 
-  editNoteForTrip() {}
-
-  addNoteToPlace() {}
-
-  editNoteToPlace() {}
+  editNote() {}
 
   filterPlace(event: any): void {
     console.log(event);
@@ -60,5 +73,10 @@ export class TripDetailsComponent implements OnInit {
     // }).subscribe(({results}) => {
     //   console.log(results);
     // });
+  }
+
+  onActiveItineraryTabChange(event: any, index: number) {
+    console.log(event);
+    this.selectedItineraryTab[index] = event;
   }
 }
