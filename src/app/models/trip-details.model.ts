@@ -24,6 +24,7 @@ export interface Itinerary {
 }
 
 export interface Budget {
+  id: number;
   budgetAllocated: number;
   expenses: any[];
 }

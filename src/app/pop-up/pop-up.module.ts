@@ -8,6 +8,7 @@ import { FormsModule } from '@angular/forms';
 import { PrimengModulesModule } from '../primeng-modules/primeng-modules.module';
 import { PopUpService } from './services/pop-up.service';
 import { SharedComponentsModule } from '../shared-components/shared-components.module';
+import { AddEditBudgetPopUpComponent } from './components/add-edit-budget-pop-up/add-edit-budget-pop-up.component';
 
 @NgModule({
   declarations: [
@@ -15,6 +16,7 @@ import { SharedComponentsModule } from '../shared-components/shared-components.m
     AddPlacePopUpComponent,
     AddEditNotesPopUpComponent,
     ExpensesBreakDownPopUpComponent,
+    AddEditBudgetPopUpComponent,
   ],
   imports: [CommonModule, FormsModule, PrimengModulesModule, SharedComponentsModule],
   providers: [PopUpService],

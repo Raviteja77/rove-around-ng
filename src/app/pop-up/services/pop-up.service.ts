@@ -7,6 +7,9 @@ import { ExpensesBreakDownPopUpComponent } from '../components/expenses-break-do
 import { HttpClient } from '@angular/common/http';
 import { catchError } from 'rxjs';
 import { Environment } from 'src/app/environment/api_keys';
+import { BudgetResponse } from 'src/app/models/budget-response.model';
+import { Operations } from 'src/app/enums/operations.enum';
+import { AddEditBudgetPopUpComponent } from '../components/add-edit-budget-pop-up/add-edit-budget-pop-up.component';
 
 @Injectable({
   providedIn: 'root',
@@ -34,7 +37,16 @@ export class PopUpService {
       header: `Add Place in ${popUpData.type}`,
       data: {
         ...popUpData,
-      }
+      },
+    });
+  }
+
+  showAddEditBudgetPopUp(popUpData: any) {
+    this.ref = this.dialogService.open(AddEditBudgetPopUpComponent, {
+      header: `${popUpData.operationType} Budget`,
+      data: {
+        ...popUpData,
+      },
     });
   }
 
@@ -73,7 +85,20 @@ export class PopUpService {
   }
 
   getPlaceDetails(place: string) {
-    return this.http.get(`${this.basicSerpAPI}&q=${place}&key=${Environment.SERP_API_KEY}`)
-    .pipe(res => res, catchError(_ => []));
+    return this.http
+      .get(`${this.basicSerpAPI}&q=${place}&key=${Environment.SERP_API_KEY}`)
+      .pipe(
+        (res) => res,
+        catchError((_) => [])
+      );
+  }
+
+  saveBudget(data: BudgetResponse) {
+    this.http.post('', data).subscribe({
+      next: (_) => {
+        this.onClose();
+      },
+      error: (error) => {},
+    });
   }
 }
