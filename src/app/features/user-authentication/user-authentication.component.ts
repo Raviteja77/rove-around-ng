@@ -1,7 +1,6 @@
-import { Component } from '@angular/core';
+import { Component, ViewChild } from '@angular/core';
 import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 import { UserAuthenticationService } from './services/user-authentication.service';
-import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-user-authentication',
@@ -14,11 +13,10 @@ export class UserAuthenticationComponent {
 
   constructor(
     private fb: FormBuilder,
-    private userAuthenticationService: UserAuthenticationService,
-    private router: Router
+    private userAuthenticationService: UserAuthenticationService
   ) {
     this.signUpForm = this.fb.group({
-      name: ['', Validators.required],
+      userName: ['', Validators.required],
       email: ['', [Validators.required, Validators.email]],
       password: ['', [Validators.required, Validators.minLength(4)]],
     });
@@ -48,18 +46,23 @@ export class UserAuthenticationComponent {
       return;
     } else {
       this.userAuthenticationService
-        .postLoginDetais(this.signInForm.value)
-        .subscribe((user) => {
-          if (user) {
-            this.router.navigate(['/dashboard']);
-            console.log('User logged in successfully');
-          } else {
-            console.log('User not found');
+        .login(this.signInForm.value).subscribe({
+          next: (response: any) => {
+            this.userAuthenticationService.userStateManagement.token = response.token;
+            this.userAuthenticationService.userStateManagement.isAuthorized = true;
+            this.userAuthenticationService.userStateManagement.errorMessage = '';
+            this.userAuthenticationService.setUserStateManagement();
+            this.userAuthenticationService.isUserChanged$$.next(true);
+            console.log(response.token);
+          },
+          error: (e) => {
+            this.userAuthenticationService.userStateManagement.token = '';
+            this.userAuthenticationService.userStateManagement.isAuthorized = false;
+            this.userAuthenticationService.userStateManagement.errorMessage = 'Error in logging the user';
+            this.userAuthenticationService.setUserStateManagement();
+            this.userAuthenticationService.isUserChanged$$.next(true);
           }
-        }),
-        (err: any) => {
-          console.log('Error while logging in user', err);
-        };
+        });
     }
   }
 
@@ -77,13 +80,19 @@ export class UserAuthenticationComponent {
       return;
     } else {
       this.userAuthenticationService
-        .postRegisterDetails(this.signUpForm.value)
-        .subscribe((user) => {
-          console.log('User registered successfully');
-        }),
-        (err: any) => {
-          console.log('Error while registering user', err);
-        };
+        .register(this.signUpForm.value).subscribe({
+          next: (response: any) => {
+            console.log(response)
+            if(response === 208) {
+              alert("The entered email is already registered")
+            } else if(response == 201) {
+              this.toggleToOtherForm('login', document.getElementById(
+                'user-authentication-container'
+              ) as HTMLElement);
+            }
+          },
+          error: (e) => console.error(e)
+        });
     }
   }
 }

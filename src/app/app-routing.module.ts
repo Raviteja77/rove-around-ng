@@ -3,6 +3,11 @@ import { RouterModule, Routes } from '@angular/router';
 
 const routes: Routes = [
   {
+    path: '',
+    redirectTo: 'user-authentication',
+    pathMatch: 'full',
+  },
+  {
     path: 'user-authentication',
     loadChildren: () =>
       import('./features/user-authentication/user-authentication.module').then(

@@ -1,11 +1,11 @@
-<div class="container" id="container" #UserAuthenticationContainer>
+<div class="container" id="user-authentication-container" #UserAuthenticationContainer>
     <div class="form-container sign-up">
         <form [formGroup]="signUpForm" (ngSubmit)="onRegisterSubmit()">
             <h1>Create Account</h1>
             <span>or use your email for registration</span>
-            <input pInput class="form-control" type="text" placeholder="Name" formControlName="name">
-            <div *ngIf="signUpForm.get('name')?.invalid && (signUpForm.get('name')?.dirty || signUpForm.get('name')?.touched)">
-                <span class="error-message" *ngIf="signUpForm.get('name')?.errors?.['required']">Name is required</span>
+            <input pInput class="form-control" type="text" placeholder="Name" formControlName="userName">
+            <div *ngIf="signUpForm.get('userName')?.invalid && (signUpForm.get('userName')?.dirty || signUpForm.get('userName')?.touched)">
+                <span class="error-message" *ngIf="signUpForm.get('userName')?.errors?.['required']"> Username is required</span>
             </div>
             <input pInput class="form-control" type="email" placeholder="Email" formControlName="email">
             <div *ngIf="signUpForm.get('email')?.invalid && (signUpForm.get('email')?.dirty || signUpForm.get('email')?.touched)">

@@ -1,49 +1,61 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { Subject, of } from 'rxjs';
+import { Router } from '@angular/router';
+import { BehaviorSubject, Subject, of } from 'rxjs';
+import { environment } from 'src/app/environment/environment';
+import { UserAuthentication } from 'src/app/models/user-authentication.model';
 
 @Injectable({
   providedIn: 'root',
 })
 export class UserAuthenticationService {
+  userStateManagement: UserAuthentication = {
+    token: '',
+    isAuthorized: false,
+    errorMessage: ''
+  }
+
+  public isUserChanged$$ = new BehaviorSubject<boolean>(false);
+  public isUserChanged$ = this.isUserChanged$$.asObservable();
   public isLogged$$: Subject<boolean> = new Subject<boolean>();
-  constructor(private http: HttpClient) {}
+  constructor(private http: HttpClient, private router: Router) {}
 
-  postLoginDetais(details: ILoggeduser) {
-    const users = localStorage.getItem('users');
-    if (users) {
-      const mockUsers = JSON.parse(users);
-      const user = mockUsers.find(
-        (u: ILoggeduser) =>
-          u.email === details.email && u.password === details.password
-      );
-      localStorage.setItem('loggedInUser', JSON.stringify(user));
-      this.isLogged$$?.next(true);
-      return of(user);
-    }
-    return of(null);
+  setUserStateManagement() {
+    sessionStorage.setItem('userStateManagement', JSON.stringify(this.userStateManagement));
   }
 
-  postRegisterDetails(details: IRegisterUser) {
-    const users = localStorage.getItem('users');
-    if (users) {
-      const mockUsers = JSON.parse(users);
-      mockUsers.push(details);
-      localStorage.setItem('users', JSON.stringify(mockUsers));
-    } else {
-      localStorage.setItem('users', JSON.stringify([details]));
-    }
-    return of(details);
+  getStoredUserStateManagement() {
+    const storedList = sessionStorage.getItem('userStateManagement');
+    return storedList ? JSON.parse(storedList) : [];
   }
-}
 
-export interface ILoggeduser {
-  email: string;
-  password: string;
-}
+  register(postRegisterDetails: any) {
+    return this.http.post(environment.endpoints.register, {
+      email: postRegisterDetails.email,
+      userName: postRegisterDetails.userName,
+      password: postRegisterDetails.password,
+    });
+  }
 
-export interface IRegisterUser {
-  name: string;
-  email: string;
-  password: string;
+  login(postLoginDetails: any) {
+    return this.http.post(environment.endpoints.login, {
+      email: postLoginDetails.email,
+      password: postLoginDetails.password,
+    });
+  }
+
+  logout(authorizationToken: string) {
+    return this.http.post(environment.endpoints.logout, {
+      headers: { Authorization: authorizationToken },
+    }).subscribe({
+      next: (response: any) => {
+        this.userStateManagement.token = '';
+        this.userStateManagement.isAuthorized = false;
+        this.userStateManagement.errorMessage = '';
+        sessionStorage.clear();
+        this.isUserChanged$$.next(true);
+      },
+      error: (e) => console.log(e)
+    });
+  }
 }
