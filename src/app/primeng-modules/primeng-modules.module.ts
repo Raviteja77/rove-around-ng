@@ -10,6 +10,10 @@ import { DropdownModule } from 'primeng/dropdown';
 import { InputTextareaModule } from 'primeng/inputtextarea';
 import { TabMenuModule } from 'primeng/tabmenu';
 import { TooltipModule } from 'primeng/tooltip';
+import { DialogService, DynamicDialogModule } from 'primeng/dynamicdialog';
+import { ProgressBarModule } from 'primeng/progressbar';
+import { ToastModule } from 'primeng/toast';
+import { MessageService } from 'primeng/api';
 
 @NgModule({
   declarations: [],
@@ -25,6 +29,9 @@ import { TooltipModule } from 'primeng/tooltip';
     DropdownModule,
     TabMenuModule,
     CalendarModule,
+    DynamicDialogModule,
+    ProgressBarModule,
+    ToastModule,
   ],
   exports: [
     CardModule,
@@ -37,6 +44,10 @@ import { TooltipModule } from 'primeng/tooltip';
     DropdownModule,
     TabMenuModule,
     CalendarModule,
+    DynamicDialogModule,
+    ProgressBarModule,
+    ToastModule,
   ],
+  providers: [DialogService, MessageService],
 })
 export class PrimengModulesModule {}

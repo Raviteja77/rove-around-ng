@@ -2,9 +2,8 @@
 <div class="container flex gap-1">
   <div style="width: 45%">
     <div class="trip-details">
-      <p-card>
+      <p-card [header]="'Trip to ' + tripDetails.destination">
         <div class="flex flex-column gap-20">
-          <div class="header">Trip to {{ tripDetails.destination }}</div>
           <div class="flex gap-5">
             <i class="pi pi-calendar-plus"></i>
             <p class="m-0">
@@ -15,21 +14,42 @@
         </div>
       </p-card>
     </div>
-    <div class="trip-details">
+    <div class="trip-details flex flex-column gap-30">
       <p-accordion [multiple]="true">
         <p-accordionTab
           header="Notes"
           headerStyleClass="trip-details-header"
           contentStyleClass="trip-details-content"
         >
-          <textarea
-            rows="1"
-            cols="68"
-            pInputTextarea
-            [autoResize]="true"
-            [(ngModel)]="notes"
-            placeholder="Add notes"
-          ></textarea>
+          <div class="flex flex-column gap-10">
+            <div class="flex flex-column gap-5">
+              <ng-container *ngFor="let notes of tripDetails.notes">
+                <div
+                  class="flex justify-content-between align-items-center gap-10"
+                >
+                  <div class="note">
+                    {{ notes.notes }}
+                  </div>
+                  <div class="flex gap-10">
+                    <p-button
+                      icon="pi pi-pen-to-square"
+                      (onClick)="editNote(type.Trip, tripDetails.id, notes)"
+                    ></p-button>
+                    <p-button
+                      icon="pi pi-trash"
+                      (onClick)="deleteNote(notes.id)"
+                    ></p-button>
+                  </div>
+                </div>
+              </ng-container>
+            </div>
+            <p-button (onClick)="addNote(type.Trip, tripDetails.id)">
+              <div class="flex gap-10">
+                <div class="pi pi-plus"></div>
+                <div>Add Notes</div>
+              </div>
+            </p-button>
+          </div>
         </p-accordionTab>
         <p-divider></p-divider>
         <p-accordionTab
@@ -51,6 +71,12 @@
               </ng-template>
             </p-autoComplete>
           </div>
+          <p-button (onclick)="addPlace(type.Itinerary, tripDetails.id)">
+            <div class="flex gap-10">
+              <div class="pi pi-plus"></div>
+              <div>Add Place</div>
+            </div>
+          </p-button>
         </p-accordionTab>
         <p-divider></p-divider>
       </p-accordion>
@@ -103,7 +129,9 @@
                   <ng-container
                     *ngIf="selectedItineraryTab[index].label === 'Places'"
                   >
-                    <p-button>
+                    <p-button
+                      (onclick)="addPlace(type.Itinerary, itinerary.id)"
+                    >
                       <div class="flex gap-10">
                         <div class="pi pi-plus"></div>
                         <div>Add Place</div>
@@ -113,12 +141,39 @@
                   <ng-container
                     *ngIf="selectedItineraryTab[index].label === 'Notes'"
                   >
-                    <p-button>
-                      <div class="flex gap-10">
-                        <div class="pi pi-plus"></div>
-                        <div>Add Notes</div>
+                    <div class="flex flex-column gap-10">
+                      <div class="flex flex-column gap-5">
+                        <ng-container *ngFor="let notes of tripDetails.notes">
+                          <div
+                            class="flex justify-content-between align-items-center gap-10"
+                          >
+                            <div class="note">
+                              {{ notes.notes }}
+                            </div>
+                            <div class="flex gap-10">
+                              <p-button
+                                icon="pi pi-pen-to-square"
+                                (onClick)="
+                                  editNote(type.Itinerary, itinerary.id, notes)
+                                "
+                              ></p-button>
+                              <p-button
+                                icon="pi pi-trash"
+                                (onClick)="deleteNote(notes.id)"
+                              ></p-button>
+                            </div>
+                          </div>
+                        </ng-container>
                       </div>
-                    </p-button>
+                      <p-button
+                        (onClick)="addNote(type.Itinerary, itinerary.id)"
+                      >
+                        <div class="flex gap-10">
+                          <div class="pi pi-plus"></div>
+                          <div>Add Notes</div>
+                        </div>
+                      </p-button>
+                    </div>
                   </ng-container>
                 </div>
               </div>
@@ -127,6 +182,43 @@
             <p-divider></p-divider>
           </ng-container>
         </p-accordion>
+      </div>
+
+      <div class="flex flex-column gap-20">
+        <div class="flex justify-content-between">
+          <div class="">Budget</div>
+          <p-button (onClick)="addExpenses()">
+            <div class="flex gap-10">
+              <div class="pi pi-plus"></div>
+              <div>Add Expenses</div>
+            </div>
+          </p-button>
+        </div>
+        <div class="flex justify-content-between">
+          <div>$ {{ tripDetails.budget.budgetAllocated }}</div>
+          <div>$ {{ tripDetails.budget.budgetAllocated }}</div>
+        </div>
+        <p-progressBar [value]="50" [showValue]="false"></p-progressBar>
+        <div class="flex gap-10">
+          <p-button (onClick)="editBudget()">
+            <div class="flex gap-10">
+              <div class="pi pi-pencil"></div>
+              <div>
+                {{
+                  tripDetails.budget.budgetAllocated === 0
+                    ? "Set Budget"
+                    : "Edit Budget"
+                }}
+              </div>
+            </div>
+          </p-button>
+          <p-button (onClick)="viewBudgetBreakDown()">
+            <div class="flex gap-10">
+              <div class="pi pi-chart-bar"></div>
+              <div>View breakdown</div>
+            </div>
+          </p-button>
+        </div>
       </div>
     </div>
     <div></div>

@@ -4,6 +4,9 @@ import { ActivatedRoute, Router } from '@angular/router';
 import { TripDetailsService } from './services/trip-details.service';
 import { TripDetails } from 'src/app/models/trip-details.model';
 import { MenuItem } from 'primeng/api';
+import { PopUpService } from 'src/app/pop-up/services/pop-up.service';
+import { Operations } from 'src/app/enums/operations.enum';
+import { Type } from 'src/app/enums/type.enum';
 
 @Component({
   selector: 'app-trip-details',
@@ -22,11 +25,15 @@ export class TripDetailsComponent implements OnInit {
   itineraryTabMenus: MenuItem[][] = [];
   selectedItineraryTab: MenuItem[] = [];
 
+  operations = Operations;
+  type = Type;
+
   constructor(
     private geocoder: MapGeocoder,
     private route: ActivatedRoute,
     private router: Router,
-    private tripDetailsService: TripDetailsService
+    private tripDetailsService: TripDetailsService,
+    private popUpService: PopUpService
   ) {}
 
   ngOnInit(): void {
@@ -62,9 +69,37 @@ export class TripDetailsComponent implements OnInit {
     });
   }
 
-  addNote() {}
+  addNote(type: string, typeID: number) {
+    const popUpData = {
+      type,
+      typeID,
+      operationType: this.operations.Add,
+    };
+    this.popUpService.showAddEditNotesPopUp(popUpData);
+  }
 
-  editNote() {}
+  editNote(type: string, typeID: number, notes: any) {
+    const popUpData = {
+      type,
+      typeID,
+      operationType: this.operations.Edit,
+      notes: notes.notes,
+      id: notes.id,
+    };
+    this.popUpService.showAddEditNotesPopUp(popUpData);
+  }
+
+  addPlace(type: string, typeID: number) {
+    const popUpData = {
+      type,
+      typeID,
+    };
+    this.popUpService.showAddPlacePopUp(popUpData);
+  }
+
+  deleteNote(id: number) {
+    this.tripDetailsService.deleteNotes(id);
+  }
 
   filterPlace(event: any): void {
     console.log(event);
@@ -76,7 +111,14 @@ export class TripDetailsComponent implements OnInit {
   }
 
   onActiveItineraryTabChange(event: any, index: number) {
-    console.log(event);
     this.selectedItineraryTab[index] = event;
   }
+
+  addBudget() {}
+
+  editBudget() {}
+
+  addExpenses() {}
+
+  viewBudgetBreakDown() {}
 }

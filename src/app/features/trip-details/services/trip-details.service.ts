@@ -6,6 +6,10 @@ import { of } from 'rxjs';
   providedIn: 'root',
 })
 export class TripDetailsService {
+  private readonly getTripDetailsAPI = ``;
+  private readonly deleteNotesAPI = ``;
+  private readonly deletePlaceAPI = ``;
+
   constructor(private http: HttpClient) {}
 
   getTripDetails(code: string) {
@@ -21,9 +25,19 @@ export class TripDetailsService {
     return of(null);
   }
 
-  addNotes() {}
+  deleteNotes(id: number) {
+    this.http.post(this.deleteNotesAPI, { id }).subscribe({
+      next: () => {},
+      error: (error) => {},
+    });
+  }
 
-  editNotes() {}
+  deletePlace(id: number) {
+    this.http.post(this.deletePlaceAPI, { id }).subscribe({
+      next: () => {},
+      error: (error) => {},
+    });
+  }
 
   addPlace() {}
 }

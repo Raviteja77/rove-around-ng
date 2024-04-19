@@ -8,6 +8,7 @@ import { FormsModule } from '@angular/forms';
 import { GoogleMap } from '@angular/google-maps';
 import { TripDetailsService } from './services/trip-details.service';
 import { HttpClientModule } from '@angular/common/http';
+import { PopUpModule } from 'src/app/pop-up/pop-up.module';
 
 @NgModule({
   declarations: [TripDetailsComponent],
@@ -18,6 +19,7 @@ import { HttpClientModule } from '@angular/common/http';
     PrimengModulesModule,
     HttpClientModule,
     FormsModule,
+    PopUpModule,
   ],
   providers: [GoogleMap, TripDetailsService],
 })

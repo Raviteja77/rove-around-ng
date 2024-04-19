@@ -1,0 +1,20 @@
+<div class="flex flex-column gap-10">
+  <div>
+    <textarea
+      rows="1"
+      cols="68"
+      pInputTextarea
+      [autoResize]="true"
+      [(ngModel)]="notes"
+      [placeholder]="data.operationType + ' notes'"
+    ></textarea>
+  </div>
+  <div class="flex gap-10 justify-content-end">
+    <p-button [outlined]="true" label="Close" (onClick)="onClose()"></p-button>
+    <p-button
+      [disabled]="notes.length === 0"
+      [label]="data.operationType"
+      (onclick)="onSubmit()"
+    ></p-button>
+  </div>
+</div>

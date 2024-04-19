@@ -17,6 +17,7 @@ export interface Traveler {
 }
 
 export interface Itinerary {
+  id: number;
   date: string;
   places: any[];
   notes: any[];

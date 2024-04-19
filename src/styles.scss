@@ -2,7 +2,7 @@
 @import "primeng/resources/themes/lara-light-blue/theme.css";
 @import "primeng/resources/primeng.css";
 @import "primeicons/primeicons.css";
-@import 'primeflex/primeflex.scss';
+@import "primeflex/primeflex.scss";
 
 body {
   margin: 0;
@@ -11,5 +11,11 @@ body {
 @for $i from 1 through 50 {
   .gap-#{$i} {
     gap: $i + px !important;
+  }
+}
+
+@for $i from 1 through 50 {
+  .font-size-#{$i} {
+    font-size: $i + px !important;
   }
 }

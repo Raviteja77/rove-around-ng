@@ -84,14 +84,34 @@ export const tripsDetails = [
       },
     ],
     places: [],
-    notes: [],
-    itinerary: [
+    notes: [
       {
-        date: '2024-04-10',
-        places: [],
-        notes: [],
+        id: 1,
+        notes: 'first note',
       },
       {
+        id: 2,
+        notes: 'second note',
+      },
+    ],
+    itinerary: [
+      {
+        id: 1,
+        date: '2024-04-10',
+        places: [],
+        notes: [
+          {
+            id: 3,
+            notes: '3 note',
+          },
+          {
+            id: 4,
+            notes: '4 note',
+          },
+        ],
+      },
+      {
+        id: 2,
         date: '2024-04-11',
         places: [],
         notes: [],
@@ -122,16 +142,19 @@ export const tripsDetails = [
     notes: [],
     itinerary: [
       {
+        id: 3,
         date: '2024-05-15',
         places: [],
         notes: [],
       },
       {
+        id: 4,
         date: '2024-05-16',
         places: [],
         notes: [],
       },
       {
+        id: 5,
         date: '2024-05-17',
         places: [],
         notes: [],
