@@ -57,21 +57,7 @@
           headerStyleClass="trip-details-header"
           contentStyleClass="trip-details-content"
         >
-          <!-- <textarea rows="1" cols="60" pInputTextarea [autoResize]="true" [(ngModel)]="places"></textarea> -->
-          <div style="width: 100%">
-            <p-autoComplete
-              [(ngModel)]="places"
-              [suggestions]="filteredPlaces"
-              (completeMethod)="filterPlace($event)"
-              field="name"
-              placeholder="Search for any place"
-            >
-              <ng-template let-place pTemplate="item">
-                <div class="flex align-items-center gap-2"></div>
-              </ng-template>
-            </p-autoComplete>
-          </div>
-          <p-button (onclick)="addPlace(type.Itinerary, tripDetails.id)">
+          <p-button (onClick)="addPlace(type.Itinerary, tripDetails.id)">
             <div class="flex gap-10">
               <div class="pi pi-plus"></div>
               <div>Add Place</div>
@@ -130,7 +116,7 @@
                     *ngIf="selectedItineraryTab[index].label === 'Places'"
                   >
                     <p-button
-                      (onclick)="addPlace(type.Itinerary, itinerary.id)"
+                      (onClick)="addPlace(type.Itinerary, itinerary.id)"
                     >
                       <div class="flex gap-10">
                         <div class="pi pi-plus"></div>

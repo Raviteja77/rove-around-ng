@@ -19,7 +19,8 @@ import { AddPlaceComponent } from './add-place/add-place.component';
   ],
   exports: [
     HeaderComponent,
-    GooglemapComponent
+    GooglemapComponent,
+    AddPlaceComponent
   ]
 })
 export class SharedComponentsModule { }

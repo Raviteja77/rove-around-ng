@@ -1,5 +1,7 @@
 <div class="flex flex-column gap-10">
-  <div>// TODO ADD ADD-PLACE-COMPONENT</div>
+  <div style="width: 400px;">
+    <app-add-place (placeSelected)="handlePlaceSelection($event)"></app-add-place>
+  </div>
   <div class="flex gap-10 justify-content-end">
     <p-button [outlined]="true" label="Close" (onClick)="onClose()"></p-button>
     <p-button [label]="'Add'" (onClick)="onSubmit()"></p-button>

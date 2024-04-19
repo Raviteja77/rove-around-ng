@@ -7,6 +7,7 @@ import { ExpensesBreakDownPopUpComponent } from './components/expenses-break-dow
 import { FormsModule } from '@angular/forms';
 import { PrimengModulesModule } from '../primeng-modules/primeng-modules.module';
 import { PopUpService } from './services/pop-up.service';
+import { SharedComponentsModule } from '../shared-components/shared-components.module';
 
 @NgModule({
   declarations: [
@@ -15,7 +16,7 @@ import { PopUpService } from './services/pop-up.service';
     AddEditNotesPopUpComponent,
     ExpensesBreakDownPopUpComponent,
   ],
-  imports: [CommonModule, FormsModule, PrimengModulesModule],
+  imports: [CommonModule, FormsModule, PrimengModulesModule, SharedComponentsModule],
   providers: [PopUpService],
 })
 export class PopUpModule {}

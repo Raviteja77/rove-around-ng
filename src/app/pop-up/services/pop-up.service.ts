@@ -5,6 +5,8 @@ import { AddPlacePopUpComponent } from '../components/add-place-pop-up/add-place
 import { AddExpensesPopUpComponent } from '../components/add-expenses-pop-up/add-expenses-pop-up.component';
 import { ExpensesBreakDownPopUpComponent } from '../components/expenses-break-down-pop-up/expenses-break-down-pop-up.component';
 import { HttpClient } from '@angular/common/http';
+import { catchError } from 'rxjs';
+import { Environment } from 'src/app/environment/api_keys';
 
 @Injectable({
   providedIn: 'root',
@@ -12,6 +14,7 @@ import { HttpClient } from '@angular/common/http';
 export class PopUpService {
   private readonly saveNotesAPI = ``;
   private readonly savePlaceAPI = ``;
+  private readonly basicSerpAPI = `https://serpapi.com/search.json?engine=google_maps`;
 
   ref: DynamicDialogRef | undefined;
 
@@ -31,7 +34,7 @@ export class PopUpService {
       header: `Add Place in ${popUpData.type}`,
       data: {
         ...popUpData,
-      },
+      }
     });
   }
 
@@ -67,5 +70,10 @@ export class PopUpService {
       },
       error: (error) => {},
     });
+  }
+
+  getPlaceDetails(place: string) {
+    return this.http.get(`${this.basicSerpAPI}&q=${place}&key=${Environment.SERP_API_KEY}`)
+    .pipe(res => res, catchError(_ => []));
   }
 }

@@ -19,14 +19,21 @@ export class AddPlacePopUpComponent {
   }
 
   onSubmit() {
-    const response = {
-      ...this.data,
-      ...this.place,
-    };
-    this.popUpService.savePlace(response);
+    this.popUpService.getPlaceDetails(this.place.long_name).subscribe(response => {
+      console.log(response);
+      const formattedResponse = {
+        ...this.data,
+        place: JSON.stringify(response)
+      };
+      this.popUpService.savePlace(response);
+    });
   }
 
   onClose() {
     this.popUpService.onClose();
+  }
+
+  handlePlaceSelection(event: any): void {
+    this.place = event;
   }
 }

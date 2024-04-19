@@ -19,3 +19,7 @@ body {
     font-size: $i + px !important;
   }
 }
+
+.pac-container {
+  z-index: 10000 !important;
+}
