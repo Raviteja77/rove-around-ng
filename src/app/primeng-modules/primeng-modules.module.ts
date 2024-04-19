@@ -1,14 +1,15 @@
-import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { NgModule } from '@angular/core';
+import { AccordionModule } from 'primeng/accordion';
+import { AutoCompleteModule } from 'primeng/autocomplete';
+import { ButtonModule } from 'primeng/button';
+import { CalendarModule } from 'primeng/calendar';
 import { CardModule } from 'primeng/card';
 import { DividerModule } from 'primeng/divider';
-import { AccordionModule } from 'primeng/accordion';
-import { InputTextareaModule } from 'primeng/inputtextarea';
-import { ButtonModule } from 'primeng/button';
-import { AutoCompleteModule } from 'primeng/autocomplete';
-import { TooltipModule } from 'primeng/tooltip';
 import { DropdownModule } from 'primeng/dropdown';
+import { InputTextareaModule } from 'primeng/inputtextarea';
 import { TabMenuModule } from 'primeng/tabmenu';
+import { TooltipModule } from 'primeng/tooltip';
 
 @NgModule({
   declarations: [],
@@ -23,6 +24,7 @@ import { TabMenuModule } from 'primeng/tabmenu';
     TooltipModule,
     DropdownModule,
     TabMenuModule,
+    CalendarModule,
   ],
   exports: [
     CardModule,
@@ -34,6 +36,7 @@ import { TabMenuModule } from 'primeng/tabmenu';
     TooltipModule,
     DropdownModule,
     TabMenuModule,
+    CalendarModule,
   ],
 })
 export class PrimengModulesModule {}

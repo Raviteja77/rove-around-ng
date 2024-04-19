@@ -1,0 +1,21 @@
+<div>
+    <div>
+        Outline a travel itinerary
+    </div>
+    <div>
+        <p-autoComplete [(ngModel)]="selectedItem" [suggestions]="suggestions"
+            (completeMethod)="search($event)"></p-autoComplete>
+    </div>
+    <div>
+        <div>
+            <p-calendar [(ngModel)]="rangeDates" selectionMode="range" [readonlyInput]="true" [numberOfMonths]="2"
+                [minDate]="minDate" placeholder="Start Date - End Date"></p-calendar>
+        </div>
+        <div>
+            <p-button label="+ Invite Tripmates" [text]="true" severity="secondary" [raised]="true"></p-button>
+        </div>
+    </div>
+    <div>
+        <p-button label="Start Roving"></p-button>
+    </div>
+</div>

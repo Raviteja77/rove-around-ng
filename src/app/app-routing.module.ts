@@ -1,6 +1,5 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { AuthGuard } from './common/core/auth/auth.guard';
 
 const routes: Routes = [
   {
@@ -18,12 +17,19 @@ const routes: Routes = [
       ),
   },
   {
+    path: 'travel-outline',
+    loadChildren: () =>
+      import('./features/travel-outline/travel-outline.module').then(
+        (m) => m.TravelOutlineModule
+      ),
+  },
+  {
     path: 'trip-details/:code',
     loadChildren: () =>
       import('./features/trip-details/trip-details.module').then(
         (m) => m.TripDetailsModule
       ),
-  }
+  },
 ];
 
 @NgModule({
