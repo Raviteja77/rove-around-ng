@@ -1,0 +1,14 @@
+<div class="flex flex-column gap-10">
+  <div>
+    <input
+      type="number"
+      pInputText
+      [(ngModel)]="amount"
+      [placeholder]="data.operationType + ' budget'"
+    />
+  </div>
+  <div class="flex gap-10 justify-content-end">
+    <p-button [outlined]="true" label="Close" (onClick)="onClose()"></p-button>
+    <p-button [label]="data.operationType" (onclick)="onSubmit()"></p-button>
+  </div>
+</div>

@@ -116,7 +116,18 @@ export class TripDetailsComponent implements OnInit {
 
   addBudget() {}
 
-  editBudget() {}
+  editBudget() {
+    const popUpData = {
+      id: this.tripDetails.budget.id,
+      budget: this.tripDetails.budget.budgetAllocated,
+      tripID: this.tripDetails.id,
+      operationType:
+        this.tripDetails.budget.budgetAllocated === 0
+          ? this.operations.Add
+          : this.operations.Edit,
+    };
+    this.popUpService.showAddEditBudgetPopUp(popUpData);
+  }
 
   addExpenses() {}
 

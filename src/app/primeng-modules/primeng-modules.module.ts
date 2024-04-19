@@ -14,6 +14,7 @@ import { DialogService, DynamicDialogModule } from 'primeng/dynamicdialog';
 import { ProgressBarModule } from 'primeng/progressbar';
 import { ToastModule } from 'primeng/toast';
 import { MessageService } from 'primeng/api';
+import { InputTextModule } from 'primeng/inputtext';
 
 @NgModule({
   declarations: [],
@@ -32,6 +33,7 @@ import { MessageService } from 'primeng/api';
     DynamicDialogModule,
     ProgressBarModule,
     ToastModule,
+    InputTextModule,
   ],
   exports: [
     CardModule,
@@ -47,6 +49,7 @@ import { MessageService } from 'primeng/api';
     DynamicDialogModule,
     ProgressBarModule,
     ToastModule,
+    InputTextModule,
   ],
   providers: [DialogService, MessageService],
 })

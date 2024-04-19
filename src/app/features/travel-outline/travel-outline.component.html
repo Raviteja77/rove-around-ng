@@ -1,21 +1,38 @@
-<div>
-    <div>
-        Outline a travel itinerary
-    </div>
-    <div>
-        <p-autoComplete [(ngModel)]="selectedItem" [suggestions]="suggestions"
-            (completeMethod)="search($event)"></p-autoComplete>
-    </div>
-    <div>
-        <div>
-            <p-calendar [(ngModel)]="rangeDates" selectionMode="range" [readonlyInput]="true" [numberOfMonths]="2"
-                [minDate]="minDate" placeholder="Start Date - End Date"></p-calendar>
+<div class="container flex align-items-center justify-content-center">
+  <p-card>
+    <div
+      class="flex justify-content-center align-items-center"
+      style="width: 500px"
+    >
+      <div class="flex flex-column gap-30">
+        <div
+          class="font-size-30 flex justify-content-center align-items-center"
+        >
+          Outline a travel itinerary
         </div>
-        <div>
-            <p-button label="+ Invite Tripmates" [text]="true" severity="secondary" [raised]="true"></p-button>
+        <div class="flex flex-column gap-20">
+          <app-add-place
+            (placeSelected)="handlePlaceSelection($event)"
+          ></app-add-place>
+          <div>
+            <p-calendar
+              [(ngModel)]="rangeDates"
+              selectionMode="range"
+              [readonlyInput]="true"
+              [numberOfMonths]="2"
+              [minDate]="minDate"
+              placeholder="Start Date - End Date"
+            ></p-calendar>
+          </div>
         </div>
+        <div class="flex flex-column align-items-center">
+          <p-button
+            [disabled]="!(rangeDates && rangeDates.length === 2 && place)"
+            label="Start Roving"
+            (onClick)="hi()"
+          ></p-button>
+        </div>
+      </div>
     </div>
-    <div>
-        <p-button label="Start Roving"></p-button>
-    </div>
+  </p-card>
 </div>
