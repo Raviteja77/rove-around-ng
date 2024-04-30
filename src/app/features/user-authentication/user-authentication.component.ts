@@ -1,5 +1,6 @@
-import { Component, ViewChild } from '@angular/core';
-import { FormGroup, FormBuilder, Validators } from '@angular/forms';
+import { Component, OnInit } from '@angular/core';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { ActivatedRoute } from '@angular/router';
 import { UserAuthenticationService } from './services/user-authentication.service';
 
 @Component({
@@ -7,13 +8,14 @@ import { UserAuthenticationService } from './services/user-authentication.servic
   templateUrl: './user-authentication.component.html',
   styleUrls: ['./user-authentication.component.scss'],
 })
-export class UserAuthenticationComponent {
+export class UserAuthenticationComponent implements OnInit {
   signUpForm: FormGroup;
   signInForm: FormGroup;
 
   constructor(
     private fb: FormBuilder,
-    private userAuthenticationService: UserAuthenticationService
+    private userAuthenticationService: UserAuthenticationService,
+    private activedRoute: ActivatedRoute
   ) {
     this.signUpForm = this.fb.group({
       userName: ['', Validators.required],
@@ -24,6 +26,19 @@ export class UserAuthenticationComponent {
     this.signInForm = this.fb.group({
       email: ['', [Validators.required, Validators.email]],
       password: ['', [Validators.required, Validators.minLength(4)]],
+    });
+  }
+
+  ngOnInit(): void {
+    this.activedRoute.queryParams.subscribe((queryParams) => {
+      if (queryParams['operation'] && queryParams['operation'] === 'signUp') {
+        const UserAuthenticationContainer = document.getElementById(
+          'user-authentication-container'
+        );
+        if (UserAuthenticationContainer) {
+          this.toggleToOtherForm('register', UserAuthenticationContainer);
+        }
+      }
     });
   }
 
@@ -47,23 +62,24 @@ export class UserAuthenticationComponent {
     } else {
       this.userAuthenticationService.login(this.signInForm.value).subscribe({
         next: (response: any) => {
-          this.userAuthenticationService.userStateManagement.token =
-            response.token;
-          this.userAuthenticationService.userStateManagement.isAuthorized =
-            true;
-          this.userAuthenticationService.userStateManagement.errorMessage = '';
+          this.userAuthenticationService.userStateManagement = {
+            token: response.token,
+            isAuthorized: true,
+            errorMessage: '',
+            user: response.user,
+          };
           this.userAuthenticationService.setUserStateManagement();
-          this.userAuthenticationService.isUserChanged$$.next(true);
+          this.userAuthenticationService.isUserLoggedIn$$.next(true);
           console.log(response.token);
         },
         error: (e) => {
-          this.userAuthenticationService.userStateManagement.token = '';
-          this.userAuthenticationService.userStateManagement.isAuthorized =
-            false;
-          this.userAuthenticationService.userStateManagement.errorMessage =
-            'Error in logging the user';
+          this.userAuthenticationService.userStateManagement = {
+            token: '',
+            isAuthorized: false,
+            errorMessage: 'Error in logging the user',
+          };
           this.userAuthenticationService.setUserStateManagement();
-          this.userAuthenticationService.isUserChanged$$.next(true);
+          this.userAuthenticationService.isUserLoggedIn$$.next(true);
         },
       });
     }

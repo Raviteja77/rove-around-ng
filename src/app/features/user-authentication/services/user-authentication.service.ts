@@ -1,7 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Router } from '@angular/router';
-import { BehaviorSubject, Subject, of } from 'rxjs';
+import { BehaviorSubject } from 'rxjs';
 import { environment } from 'src/app/environment/environment';
 import { UserAuthentication } from 'src/app/models/user-authentication.model';
 
@@ -13,11 +13,19 @@ export class UserAuthenticationService {
     token: '',
     isAuthorized: false,
     errorMessage: '',
+    user: {
+      userId: 0,
+      userName: '',
+      email: '',
+      password: '',
+      role: '',
+      status: false,
+    },
   };
 
-  public isUserChanged$$ = new BehaviorSubject<boolean>(false);
-  public isUserChanged$ = this.isUserChanged$$.asObservable();
-  public isLogged$$: Subject<boolean> = new Subject<boolean>();
+  public isUserLoggedIn$$ = new BehaviorSubject<boolean>(false);
+  public isUserLoggedIn$ = this.isUserLoggedIn$$.asObservable();
+
   constructor(private http: HttpClient, private router: Router) {}
 
   setUserStateManagement() {
@@ -28,8 +36,8 @@ export class UserAuthenticationService {
   }
 
   getStoredUserStateManagement() {
-    const storedList = sessionStorage.getItem('userStateManagement');
-    return storedList ? JSON.parse(storedList) : [];
+    const storedUser = sessionStorage.getItem('userStateManagement');
+    return storedUser ? JSON.parse(storedUser) : {};
   }
 
   register(postRegisterDetails: any) {
@@ -58,7 +66,7 @@ export class UserAuthenticationService {
           this.userStateManagement.isAuthorized = false;
           this.userStateManagement.errorMessage = '';
           sessionStorage.clear();
-          this.isUserChanged$$.next(true);
+          this.isUserLoggedIn$$.next(true);
         },
         error: (e) => console.log(e),
       });

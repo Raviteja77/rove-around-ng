@@ -1,8 +1,8 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
+import { TripResponse } from 'src/app/models/trip-response.model';
 import { PopUpService } from 'src/app/pop-up/services/pop-up.service';
 import { TravelOutlineService } from './services/travel-outline.service';
-import { TripResponse } from 'src/app/models/trip-response.model';
-import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-travel-outline',
@@ -33,11 +33,12 @@ export class TravelOutlineComponent {
   }
 
   startRoving() {
-    this.popUpService
-      .getPlaceDetails(this.place.long_name)
-      .subscribe((response) => {
-        this.addTrip(JSON.stringify(response));
-      });
+    console.log(this.place);
+    // this.popUpService
+    //   .getPlaceDetails(this.place.long_name)
+    //   .subscribe((response) => {
+    //     this.addTrip(JSON.stringify(response));
+    //   });
   }
 
   addTrip(googleResponse: string) {

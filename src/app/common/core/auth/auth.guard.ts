@@ -9,12 +9,14 @@ import {
 import { Observable } from 'rxjs';
 import { UserAuthenticationService } from 'src/app/features/user-authentication/services/user-authentication.service';
 
-
 @Injectable({
   providedIn: 'root',
 })
 export class AuthGuard implements CanActivate {
-  constructor(private router: Router, private userAuthenticationService: UserAuthenticationService) { }
+  constructor(
+    private router: Router,
+    private userAuthenticationService: UserAuthenticationService
+  ) {}
 
   canActivate(
     route: ActivatedRouteSnapshot,
@@ -24,8 +26,9 @@ export class AuthGuard implements CanActivate {
     | Promise<boolean | UrlTree>
     | boolean
     | UrlTree {
-    this.userAuthenticationService.isUserChanged$.subscribe(_ => {
-      const userState = this.userAuthenticationService.getStoredUserStateManagement();
+    this.userAuthenticationService.isUserLoggedIn$.subscribe((_) => {
+      const userState =
+        this.userAuthenticationService.getStoredUserStateManagement();
       if (!userState.token) {
         this.router.navigate(['/user-authentication']);
         return false;
