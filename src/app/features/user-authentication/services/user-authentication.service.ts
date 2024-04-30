@@ -12,8 +12,8 @@ export class UserAuthenticationService {
   userStateManagement: UserAuthentication = {
     token: '',
     isAuthorized: false,
-    errorMessage: ''
-  }
+    errorMessage: '',
+  };
 
   public isUserChanged$$ = new BehaviorSubject<boolean>(false);
   public isUserChanged$ = this.isUserChanged$$.asObservable();
@@ -21,7 +21,10 @@ export class UserAuthenticationService {
   constructor(private http: HttpClient, private router: Router) {}
 
   setUserStateManagement() {
-    sessionStorage.setItem('userStateManagement', JSON.stringify(this.userStateManagement));
+    sessionStorage.setItem(
+      'userStateManagement',
+      JSON.stringify(this.userStateManagement)
+    );
   }
 
   getStoredUserStateManagement() {
@@ -45,17 +48,19 @@ export class UserAuthenticationService {
   }
 
   logout(authorizationToken: string) {
-    return this.http.post(environment.endpoints.logout, {
-      headers: { Authorization: authorizationToken },
-    }).subscribe({
-      next: (response: any) => {
-        this.userStateManagement.token = '';
-        this.userStateManagement.isAuthorized = false;
-        this.userStateManagement.errorMessage = '';
-        sessionStorage.clear();
-        this.isUserChanged$$.next(true);
-      },
-      error: (e) => console.log(e)
-    });
+    return this.http
+      .post(environment.endpoints.logout, {
+        headers: { Authorization: authorizationToken },
+      })
+      .subscribe({
+        next: (response: any) => {
+          this.userStateManagement.token = '';
+          this.userStateManagement.isAuthorized = false;
+          this.userStateManagement.errorMessage = '';
+          sessionStorage.clear();
+          this.isUserChanged$$.next(true);
+        },
+        error: (e) => console.log(e),
+      });
   }
 }

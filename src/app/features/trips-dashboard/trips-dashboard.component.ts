@@ -30,7 +30,9 @@ export class TripsDashboardComponent implements OnInit {
     this.getTrips();
   }
 
-  newPlan() {}
+  newPlan() {
+    this.router.navigate(['travel-outline']);
+  }
 
   getTrips() {
     this.isCompletedTripsAvailable = false;

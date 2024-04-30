@@ -45,24 +45,27 @@ export class UserAuthenticationComponent {
       }
       return;
     } else {
-      this.userAuthenticationService
-        .login(this.signInForm.value).subscribe({
-          next: (response: any) => {
-            this.userAuthenticationService.userStateManagement.token = response.token;
-            this.userAuthenticationService.userStateManagement.isAuthorized = true;
-            this.userAuthenticationService.userStateManagement.errorMessage = '';
-            this.userAuthenticationService.setUserStateManagement();
-            this.userAuthenticationService.isUserChanged$$.next(true);
-            console.log(response.token);
-          },
-          error: (e) => {
-            this.userAuthenticationService.userStateManagement.token = '';
-            this.userAuthenticationService.userStateManagement.isAuthorized = false;
-            this.userAuthenticationService.userStateManagement.errorMessage = 'Error in logging the user';
-            this.userAuthenticationService.setUserStateManagement();
-            this.userAuthenticationService.isUserChanged$$.next(true);
-          }
-        });
+      this.userAuthenticationService.login(this.signInForm.value).subscribe({
+        next: (response: any) => {
+          this.userAuthenticationService.userStateManagement.token =
+            response.token;
+          this.userAuthenticationService.userStateManagement.isAuthorized =
+            true;
+          this.userAuthenticationService.userStateManagement.errorMessage = '';
+          this.userAuthenticationService.setUserStateManagement();
+          this.userAuthenticationService.isUserChanged$$.next(true);
+          console.log(response.token);
+        },
+        error: (e) => {
+          this.userAuthenticationService.userStateManagement.token = '';
+          this.userAuthenticationService.userStateManagement.isAuthorized =
+            false;
+          this.userAuthenticationService.userStateManagement.errorMessage =
+            'Error in logging the user';
+          this.userAuthenticationService.setUserStateManagement();
+          this.userAuthenticationService.isUserChanged$$.next(true);
+        },
+      });
     }
   }
 
@@ -79,20 +82,22 @@ export class UserAuthenticationComponent {
       }
       return;
     } else {
-      this.userAuthenticationService
-        .register(this.signUpForm.value).subscribe({
-          next: (response: any) => {
-            console.log(response)
-            if(response === 208) {
-              alert("The entered email is already registered")
-            } else if(response == 201) {
-              this.toggleToOtherForm('login', document.getElementById(
+      this.userAuthenticationService.register(this.signUpForm.value).subscribe({
+        next: (response: any) => {
+          console.log(response);
+          if (response === 208) {
+            alert('The entered email is already registered');
+          } else if (response == 201) {
+            this.toggleToOtherForm(
+              'login',
+              document.getElementById(
                 'user-authentication-container'
-              ) as HTMLElement);
-            }
-          },
-          error: (e) => console.error(e)
-        });
+              ) as HTMLElement
+            );
+          }
+        },
+        error: (e) => console.error(e),
+      });
     }
   }
 }

@@ -1,1 +1,25 @@
-<p>add-expenses-pop-up works!</p>
+<div class="flex flex-column gap-10">
+  <div class="flex flex-column gap-10">
+    <input
+      type="number"
+      pInputText
+      [(ngModel)]="amount"
+      [placeholder]="data.operationType + ' budget'"
+    />
+    <p-dropdown
+      [options]="categories"
+      [(ngModel)]="selectedCategory"
+      optionLabel="name"
+      [showClear]="true"
+      placeholder="Select a category"
+    ></p-dropdown>
+  </div>
+  <div class="flex gap-10 justify-content-end">
+    <p-button [outlined]="true" label="Close" (onClick)="onClose()"></p-button>
+    <p-button
+      [disabled]="amount === 0"
+      [label]="data.operationType"
+      (onclick)="onSubmit()"
+    ></p-button>
+  </div>
+</div>

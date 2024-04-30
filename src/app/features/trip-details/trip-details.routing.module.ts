@@ -4,15 +4,15 @@ import { TripDetailsComponent } from './trip-details.component';
 import { AuthGuard } from 'src/app/common/core/auth/auth.guard';
 
 const routes: Routes = [
-{
+  {
     path: '',
     component: TripDetailsComponent,
-    canActivate : [AuthGuard]
-},
+    canActivate: [AuthGuard],
+  },
 ];
 
 @NgModule({
-    imports: [RouterModule.forChild(routes)], 
-    exports: [RouterModule],
+  imports: [RouterModule.forChild(routes)],
+  exports: [RouterModule],
 })
 export class TripDetailsRoutingModule {}

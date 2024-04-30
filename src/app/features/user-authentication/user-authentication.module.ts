@@ -8,22 +8,19 @@ import { NonAuthGuard } from 'src/app/common/core/non-auth/non-auth.guard';
 
 const routes: Routes = [
   {
-      path: '',
-      component: UserAuthenticationComponent,
-      canActivate : [NonAuthGuard]
+    path: '',
+    component: UserAuthenticationComponent,
+    canActivate: [NonAuthGuard],
   },
 ];
 
-
 @NgModule({
-  declarations: [
-    UserAuthenticationComponent
-  ],
+  declarations: [UserAuthenticationComponent],
   imports: [
     CommonModule,
     ReactiveFormsModule,
     PrimengModulesModule,
-    RouterModule.forChild(routes)
-  ]
+    RouterModule.forChild(routes),
+  ],
 })
-export class UserAuthenticationModule { }
+export class UserAuthenticationModule {}
