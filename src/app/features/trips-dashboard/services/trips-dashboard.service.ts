@@ -1,23 +1,22 @@
-import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
+import { Injectable } from '@angular/core';
+import { environment } from 'src/app/environment/environment';
 import { Trip } from 'src/app/models/trip.model';
-import { of } from 'rxjs';
+import { UserAuthenticationService } from '../../user-authentication/services/user-authentication.service';
 
 @Injectable({
   providedIn: 'root',
 })
 export class TripsDashboardService {
-  private readonly tripsAPI = '';
+  private readonly tripsAPI = `${environment.endpoints.trip}/all`;
 
-  constructor(private http: HttpClient) {}
+  constructor(
+    private http: HttpClient,
+    private authService: UserAuthenticationService
+  ) {}
 
   getTrips() {
-    const trips = localStorage.getItem('trips');
-    if (trips) {
-      const mockTrips: Trip[] = JSON.parse(trips);
-      return of(mockTrips);
-    }
-    return of([]);
-    // return this.http.get<Trip[]>(this.tripsAPI);
+    const user = this.authService.getStoredUserStateManagement()?.user;
+    return this.http.get<Trip[]>(`${this.tripsAPI}/${user.userId}`);
   }
 }
