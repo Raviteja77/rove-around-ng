@@ -1,18 +1,44 @@
 <div class="flex flex-column gap-10">
   <div class="flex flex-column gap-10">
-    <input
-      type="number"
-      pInputText
-      [(ngModel)]="amount"
-      [placeholder]="data.operationType + ' budget'"
-    />
-    <p-dropdown
-      [options]="categories"
-      [(ngModel)]="selectedCategory"
-      optionLabel="name"
-      [showClear]="true"
-      placeholder="Select a category"
-    ></p-dropdown>
+    <div class="flex flex-column gap-5">
+      <label for="">Amount</label>
+      <input
+        type="number"
+        pInputText
+        [(ngModel)]="amount"
+        [placeholder]="data.operationType + ' budget'"
+      />
+    </div>
+    <div class="flex flex-column gap-5">
+      <label for="">Category</label>
+      <p-dropdown
+        [options]="categories"
+        [(ngModel)]="selectedCategory"
+        optionLabel="name"
+        [showClear]="true"
+        placeholder="Select a category"
+      ></p-dropdown>
+    </div>
+    <div class="flex flex-column gap-5">
+      <label for="">Paid by</label>
+      <p-dropdown
+        [options]="paidBy"
+        [(ngModel)]="selectedPaidBy"
+        optionLabel="name"
+        [showClear]="true"
+        placeholder="Select a category"
+      ></p-dropdown>
+    </div>
+    <div class="flex flex-column gap-5">
+      <label for="">Split</label>
+      <p-dropdown
+        [options]="split"
+        [(ngModel)]="selectedSplit"
+        optionLabel="name"
+        [showClear]="true"
+        placeholder="Select a category"
+      ></p-dropdown>
+    </div>
   </div>
   <div class="flex gap-10 justify-content-end">
     <p-button [outlined]="true" label="Close" (onClick)="onClose()"></p-button>

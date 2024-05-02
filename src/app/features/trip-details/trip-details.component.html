@@ -2,13 +2,13 @@
   <div style="width: 45%">
     <app-header></app-header>
     <div class="trip-details">
-      <p-card [header]="'Trip to ' + tripDetails.destination">
+      <p-card [header]="'Trip to ' + tripDetails.trip.destination">
         <div class="flex flex-column gap-20">
           <div class="flex gap-5">
             <i class="pi pi-calendar-plus"></i>
             <p class="m-0">
-              {{ tripDetails.startDate | date : "MMM - dd, YYYY" }} -
-              {{ tripDetails.endDate | date : "MMM - dd, YYYY" }}
+              {{ tripDetails.trip.startDate | date : "MMM - dd, YYYY" }} -
+              {{ tripDetails.trip.endDate | date : "MMM - dd, YYYY" }}
             </p>
           </div>
         </div>
@@ -23,27 +23,21 @@
         >
           <div class="flex flex-column gap-10">
             <div class="flex flex-column gap-5">
-              <ng-container *ngFor="let notes of tripDetails.notes">
+              <ng-container *ngFor="let notes of tripDetails.tripNotes">
                 <div
                   class="flex justify-content-between align-items-center gap-10"
                 >
                   <div class="note">
-                    {{ notes.notes }}
+                    {{ notes.note }}
                   </div>
                   <div class="flex gap-10">
-                    <p-button
-                      icon="pi pi-pen-to-square"
-                      (onClick)="editNote(type.Trip, tripDetails.id, notes)"
-                    ></p-button>
-                    <p-button
-                      icon="pi pi-trash"
-                      (onClick)="deleteNote(notes.id)"
-                    ></p-button>
+                    <p-button icon="pi pi-pen-to-square"></p-button>
+                    <p-button icon="pi pi-trash"></p-button>
                   </div>
                 </div>
               </ng-container>
             </div>
-            <p-button (onClick)="addNote(type.Trip, tripDetails.id)">
+            <p-button>
               <div class="flex gap-10">
                 <div class="pi pi-plus"></div>
                 <div>Add Notes</div>
@@ -57,7 +51,7 @@
           headerStyleClass="trip-details-header"
           contentStyleClass="trip-details-content"
         >
-          <p-button (onClick)="addPlace(type.Itinerary, tripDetails.id)">
+          <p-button (onClick)="addPlace(type.Trip, tripDetails.trip.id)">
             <div class="flex gap-10">
               <div class="pi pi-plus"></div>
               <div>Add Place</div>
@@ -74,12 +68,12 @@
             <i class="pi pi-calendar"></i>
             <div>
               {{
-                tripDetails.startDate
+                getDate(tripDetails.trip.startDate)
                   | date : (isTripEndInSameYear ? "MM/dd" : "MM/dd/YYYY")
               }}
               -
               {{
-                tripDetails.endDate
+                getDate(tripDetails.trip.endDate)
                   | date : (isTripEndInSameYear ? "MM/dd" : "MM/dd/YYYY")
               }}
             </div>
@@ -87,10 +81,10 @@
         </div>
         <p-accordion [multiple]="true">
           <ng-container
-            *ngFor="let itinerary of tripDetails.itinerary; let index = index"
+            *ngFor="let itinerary of tripDetails.itineraries; let index = index"
           >
             <p-accordionTab
-              [header]="itinerary.date"
+              [header]="getDate(itinerary.date)"
               headerStyleClass="trip-details-header"
               contentStyleClass="trip-details-content"
             >
@@ -115,9 +109,7 @@
                   <ng-container
                     *ngIf="selectedItineraryTab[index].label === 'Places'"
                   >
-                    <p-button
-                      (onClick)="addPlace(type.Itinerary, itinerary.id)"
-                    >
+                    <p-button>
                       <div class="flex gap-10">
                         <div class="pi pi-plus"></div>
                         <div>Add Place</div>
@@ -129,7 +121,9 @@
                   >
                     <div class="flex flex-column gap-10">
                       <div class="flex flex-column gap-5">
-                        <ng-container *ngFor="let notes of tripDetails.notes">
+                        <ng-container
+                          *ngFor="let notes of itinerary.itineraryNotes"
+                        >
                           <div
                             class="flex justify-content-between align-items-center gap-10"
                           >
@@ -137,23 +131,13 @@
                               {{ notes.notes }}
                             </div>
                             <div class="flex gap-10">
-                              <p-button
-                                icon="pi pi-pen-to-square"
-                                (onClick)="
-                                  editNote(type.Itinerary, itinerary.id, notes)
-                                "
-                              ></p-button>
-                              <p-button
-                                icon="pi pi-trash"
-                                (onClick)="deleteNote(notes.id)"
-                              ></p-button>
+                              <p-button icon="pi pi-pen-to-square"></p-button>
+                              <p-button icon="pi pi-trash"></p-button>
                             </div>
                           </div>
                         </ng-container>
                       </div>
-                      <p-button
-                        (onClick)="addNote(type.Itinerary, itinerary.id)"
-                      >
+                      <p-button>
                         <div class="flex gap-10">
                           <div class="pi pi-plus"></div>
                           <div>Add Notes</div>
@@ -181,8 +165,8 @@
           </p-button>
         </div>
         <div class="flex justify-content-between">
-          <div>$ {{ tripDetails.budget.budgetAllocated }}</div>
-          <div>$ {{ tripDetails.budget.budgetAllocated }}</div>
+          <div>$ {{ tripDetails.budget.amount }}</div>
+          <div>$ {{ tripDetails.budget.amount }}</div>
         </div>
         <p-progressBar [value]="50" [showValue]="false"></p-progressBar>
         <div class="flex gap-10">
@@ -191,9 +175,7 @@
               <div class="pi pi-pencil"></div>
               <div>
                 {{
-                  tripDetails.budget.budgetAllocated === 0
-                    ? "Set Budget"
-                    : "Edit Budget"
+                  tripDetails.budget.amount === 0 ? "Set Budget" : "Edit Budget"
                 }}
               </div>
             </div>

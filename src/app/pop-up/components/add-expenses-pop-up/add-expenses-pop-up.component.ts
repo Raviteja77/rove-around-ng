@@ -62,7 +62,7 @@ export class AddExpensesPopUpComponent implements OnInit {
       ...this.data,
       notes: this.amount,
     };
-    this.popUpService.saveNotes(response);
+    // this.popUpService.addNotes(response);
   }
 
   onClose() {

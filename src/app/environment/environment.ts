@@ -6,6 +6,12 @@ export const environment = {
     register: `${baseUrl}/api/v1/auth/register`,
     login: `${baseUrl}/api/v1/auth/login`,
     logout: `${baseUrl}/api/v1/auth/logout`,
-    addTrip: `${baseUrl}/api/trip/add`,
+    trip: `${baseUrl}/api/trip`,
+    tripNotes: `${baseUrl}/api/trip-notes`,
+    tripPlaceNotes: `${baseUrl}/api/trip-location-notes`,
+    itineraryNotes: `${baseUrl}/api/itinerary-notes`,
+    itineraryPlaceNotes: `${baseUrl}/api/itinerary-location-notes`,
+    tripPlace: `${baseUrl}/api/trip-location`,
+    itineraryPlace: `${baseUrl}/api/itinerary-location`,
   },
 };

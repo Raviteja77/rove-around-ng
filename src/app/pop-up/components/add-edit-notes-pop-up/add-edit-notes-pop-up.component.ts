@@ -28,7 +28,7 @@ export class AddEditNotesPopUpComponent {
       ...this.data,
       notes: this.notes,
     };
-    this.popUpService.saveNotes(response);
+    // this.popUpService.addNotes(response);
   }
 
   onClose() {

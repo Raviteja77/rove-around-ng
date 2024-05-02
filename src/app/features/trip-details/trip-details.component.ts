@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { MapGeocoder } from '@angular/google-maps';
 import { ActivatedRoute, Router } from '@angular/router';
 import { TripDetailsService } from './services/trip-details.service';
-import { TripDetails } from 'src/app/models/trip-details.model';
+import { Itinerary, TripDetails } from 'src/app/models/trip-details.model';
 import { MenuItem } from 'primeng/api';
 import { PopUpService } from 'src/app/pop-up/services/pop-up.service';
 import { Operations } from 'src/app/enums/operations.enum';
@@ -51,15 +51,17 @@ export class TripDetailsComponent implements OnInit {
         if (data) {
           this.tripDetails = data;
           this.isTripEndInSameYear =
-            new Date(this.tripDetails.startDate).getFullYear() ===
-            new Date(this.tripDetails.endDate).getFullYear();
-          this.tripDetails.itinerary.forEach((itinerary, index) => {
-            this.itineraryTabMenus.push([
-              { label: 'Places', icon: 'pi pi-map-marker' },
-              { label: 'Notes', icon: 'pi pi-clipboard' },
-            ]);
-            this.selectedItineraryTab.push(this.itineraryTabMenus[index][0]);
-          });
+            new Date(this.tripDetails.trip.startDate).getFullYear() ===
+            new Date(this.tripDetails.trip.endDate).getFullYear();
+          this.tripDetails.itineraries.forEach(
+            (itinerary: Itinerary, index: number) => {
+              this.itineraryTabMenus.push([
+                { label: 'Places', icon: 'pi pi-map-marker' },
+                { label: 'Notes', icon: 'pi pi-clipboard' },
+              ]);
+              this.selectedItineraryTab.push(this.itineraryTabMenus[index][0]);
+            }
+          );
           console.log(data);
         } else {
           this.router.navigate(['dashboard']);
@@ -67,6 +69,10 @@ export class TripDetailsComponent implements OnInit {
       },
       error: (error) => {},
     });
+  }
+
+  getDate(date: any) {
+    return new Date(date).toString();
   }
 
   addNote(type: string, typeID: number) {
@@ -97,8 +103,8 @@ export class TripDetailsComponent implements OnInit {
     this.popUpService.showAddPlacePopUp(popUpData);
   }
 
-  deleteNote(id: number) {
-    this.tripDetailsService.deleteNotes(id);
+  deleteNote(type: string, id: number) {
+    // this.tripDetailsService.deleteNotes(id);
   }
 
   filterPlace(event: any): void {
@@ -117,19 +123,16 @@ export class TripDetailsComponent implements OnInit {
   addBudget() {}
 
   editBudget() {
-    const popUpData = {
-      id: this.tripDetails.budget.id,
-      budget: this.tripDetails.budget.budgetAllocated,
-      tripID: this.tripDetails.id,
-      operationType:
-        this.tripDetails.budget.budgetAllocated === 0
-          ? this.operations.Add
-          : this.operations.Edit,
-    };
+    const popUpData = {};
     this.popUpService.showAddEditBudgetPopUp(popUpData);
   }
 
-  addExpenses() {}
+  addExpenses() {
+    const popUpData = {
+      operationType: this.operations.Add,
+    };
+    this.popUpService.showAddExpensesPopUp(popUpData);
+  }
 
   viewBudgetBreakDown() {}
 }
