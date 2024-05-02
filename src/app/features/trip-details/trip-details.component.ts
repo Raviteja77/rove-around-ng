@@ -21,6 +21,7 @@ export class TripDetailsComponent implements OnInit {
   notesInput: any = [];
   tripDetails!: TripDetails;
   isTripEndInSameYear: boolean = false;
+  public coordinates: any[] = [];
 
   itineraryTabMenus: MenuItem[][] = [];
   selectedItineraryTab: MenuItem[] = [];
@@ -41,6 +42,13 @@ export class TripDetailsComponent implements OnInit {
       this.tripCode = params['code'];
       this.getTripDetails();
     });
+  }
+
+  getCoordinatesFromGoogleResponse(googleResponse: string) { 
+    const parsedGoogleResponse = JSON.parse(googleResponse);
+    this.coordinates = [parsedGoogleResponse.place_results.gps_coordinates.latitude, 
+      parsedGoogleResponse.place_results.gps_coordinates.longitude];
+    
   }
 
   getTripDetails() {
@@ -64,7 +72,7 @@ export class TripDetailsComponent implements OnInit {
           );
           console.log(data);
         } else {
-          this.router.navigate(['dashboard']);
+          // this.router.navigate(['dashboard']);
         }
       },
       error: (error) => {},

@@ -121,12 +121,13 @@ export class PopUpService {
   }
 
   getPlaceDetails(place: string) {
-    return this.http
-      .get(`${this.basicSerpAPI}&q=${place}&key=${Environment.SERP_API_KEY}`)
-      .pipe(
-        (res) => res,
-        catchError((_) => [])
-      );
+    // return this.http
+    //   .get(`${this.basicSerpAPI}&q=${place}&key=${Environment.SERP_API_KEY}`)
+    //   .pipe(
+    //     (res) => res,
+    //     catchError((_) => [])
+    //   );
+    return this.http.get('assets/mock-data/location-data.json');
   }
 
   saveBudget(data: BudgetResponse) {

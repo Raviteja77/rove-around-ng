@@ -3,4 +3,5 @@ export interface TripResponse {
   googleResponse: string;
   startDate: string;
   endDate: String;
+  userId: number;
 }

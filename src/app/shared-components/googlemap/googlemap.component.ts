@@ -1,4 +1,4 @@
-import { Component, ViewChild } from '@angular/core';
+import { Component, Input, ViewChild } from '@angular/core';
 import { MapGeocoder, MapInfoWindow, MapMarker } from '@angular/google-maps';
 
 @Component({
@@ -9,8 +9,10 @@ import { MapGeocoder, MapInfoWindow, MapMarker } from '@angular/google-maps';
 export class GooglemapComponent {
   @ViewChild(MapInfoWindow) infoWindow: MapInfoWindow | undefined;
   
-  center: google.maps.LatLngLiteral = { lat: 35.1031, lng: -80.5120 };
-  zoom = 6;
+  @Input() coordinates: any[] = [35.1031, -80.5120]
+
+  center: google.maps.LatLngLiteral = { lat: this.coordinates[0], lng: this.coordinates[1] };
+  zoom = 8;
   markerOptions: google.maps.MarkerOptions = {draggable: false};
   markerPositions: google.maps.LatLngLiteral[] = [];
 

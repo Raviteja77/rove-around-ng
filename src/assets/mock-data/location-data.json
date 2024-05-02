@@ -1,0 +1,117 @@
+{
+    "search_metadata": {
+        "id": "66340353116a554a5d14eca9",
+        "status": "Success",
+        "json_endpoint": "https://serpapi.com/searches/723851053800b610/66340353116a554a5d14eca9.json",
+        "created_at": "2024-05-02 21:19:15 UTC",
+        "processed_at": "2024-05-02 21:19:15 UTC",
+        "google_maps_url": "https://www.google.com/maps/search/New+York?hl=en",
+        "raw_html_file": "https://serpapi.com/searches/723851053800b610/66340353116a554a5d14eca9.html",
+        "total_time_taken": 2.79
+    },
+    "search_parameters": {
+        "engine": "google_maps",
+        "type": "search",
+        "q": "New York",
+        "google_domain": "google.com",
+        "hl": "en"
+    },
+    "search_information": {
+        "local_results_state": "Showing results for type: \"place\" instead of type: \"search\"",
+        "query_displayed": "New York"
+    },
+    "place_results": {
+        "title": "New York",
+        "place_id": "ChIJOwg_06VPwokRYv534QaPC8g",
+        "data_id": "0x89c24fa5d33f083b:0xc80b8f06e177fe62",
+        "data_cid": "14414772292044717666",
+        "reviews_link": "https://serpapi.com/search.json?data_id=0x89c24fa5d33f083b%3A0xc80b8f06e177fe62&engine=google_maps_reviews&hl=en",
+        "photos_link": "https://serpapi.com/search.json?data_id=0x89c24fa5d33f083b%3A0xc80b8f06e177fe62&engine=google_maps_photos&hl=en",
+        "gps_coordinates": {
+            "latitude": 40.7127753,
+            "longitude": -74.0059728
+        },
+        "place_id_search": "https://serpapi.com/search.json?engine=google_maps&google_domain=google.com&hl=en&place_id=ChIJOwg_06VPwokRYv534QaPC8g",
+        "provider_id": "/m/02_286",
+        "thumbnail": "https://lh5.googleusercontent.com/p/AF1QipP1ru_1oUuff2Hc4Ww8vTSxQgQT3Io1DiIOEzE7=w172-h86-k-no",
+        "description": {
+            "snippet": "New York City comprises 5 boroughs sitting where the Hudson River meets the Atlantic Ocean. At its core is Manhattan, a densely populated borough that’s among the world’s major commercial, financial and cultural centers. Its iconic sites include skyscrapers such as the Empire State Building and sprawling Central Park. Broadway theater is staged in neon-lit Times Square."
+        },
+        "address": "New York",
+        "weather": {
+            "celsius": "22°C",
+            "fahrenheit": "72°F",
+            "conditions": "Sunny"
+        },
+        "website": "http://www.nyc.gov/",
+        "at_this_location": [
+            {
+                "position": 1,
+                "title": "The Manhattan at Times Square Hotel",
+                "data_id": "0x89c258f88254f2c3:0xe0e14597c5400022",
+                "data_cid": "16204309452407439394",
+                "reviews_link": "https://serpapi.com/search.json?data_id=0x89c258f88254f2c3%3A0xe0e14597c5400022&engine=google_maps_reviews&hl=en",
+                "photos_link": "https://serpapi.com/search.json?data_id=0x89c258f88254f2c3%3A0xe0e14597c5400022&engine=google_maps_photos&hl=en",
+                "gps_coordinates": {
+                    "latitude": 40.7622856,
+                    "longitude": -73.9826404
+                },
+                "place_id_search": "https://serpapi.com/search.json?data=%214m5%213m4%211s0x89c258f88254f2c3%3A0xe0e14597c5400022%218m2%213d40.7622856%214d-73.9826404&engine=google_maps&google_domain=google.com&hl=en&type=place",
+                "rating": 3.1,
+                "type": "3 stars",
+                "price": "$172",
+                "thumbnail": "//lh5.googleusercontent.com/proxy/40V_-ASZD2Us0MiSxu6Tuj7N0W_KXZzv8lNWTSpupCio5qsmX18Iqt3j3s1PLxasoVmJ312TZHvCiFRT8wrMZzSl_5TCvSDisKYRzV3VdIR7FaxBQ_wcx-TG1oUticktEsqHg4BsNPLHwaovTTxkHwHE4839HW-9ST5tZauudVIsSXW-A2ze=w180-h120-k-no"
+            },
+            {
+                "position": 2,
+                "title": "31 Street Broadway Hotel",
+                "data_id": "0x89c25980c90c93d7:0xcb0f33c059c23944",
+                "data_cid": "14631970615582669124",
+                "reviews_link": "https://serpapi.com/search.json?data_id=0x89c25980c90c93d7%3A0xcb0f33c059c23944&engine=google_maps_reviews&hl=en",
+                "photos_link": "https://serpapi.com/search.json?data_id=0x89c25980c90c93d7%3A0xcb0f33c059c23944&engine=google_maps_photos&hl=en",
+                "gps_coordinates": {
+                    "latitude": 40.747211,
+                    "longitude": -73.9878074
+                },
+                "place_id_search": "https://serpapi.com/search.json?data=%214m5%213m4%211s0x89c25980c90c93d7%3A0xcb0f33c059c23944%218m2%213d40.747211%214d-73.9878074&engine=google_maps&google_domain=google.com&hl=en&type=place",
+                "rating": 2.8,
+                "price": "$34",
+                "thumbnail": "https://lh5.googleusercontent.com/p/AF1QipNlk-a29fviBnEtLTzYvuqdP8ZDEW1zVn-JMxfI=w160-h213-k-no"
+            },
+            {
+                "position": 3,
+                "title": "New York Marriott Marquis",
+                "data_id": "0x89c2585500e85589:0x18f39d1f8ee2a312",
+                "data_cid": "1797953435117724434",
+                "reviews_link": "https://serpapi.com/search.json?data_id=0x89c2585500e85589%3A0x18f39d1f8ee2a312&engine=google_maps_reviews&hl=en",
+                "photos_link": "https://serpapi.com/search.json?data_id=0x89c2585500e85589%3A0x18f39d1f8ee2a312&engine=google_maps_photos&hl=en",
+                "gps_coordinates": {
+                    "latitude": 40.758586199999996,
+                    "longitude": -73.98582019999999
+                },
+                "place_id_search": "https://serpapi.com/search.json?data=%214m5%213m4%211s0x89c2585500e85589%3A0x18f39d1f8ee2a312%218m2%213d40.758586199999996%214d-73.98582019999999&engine=google_maps&google_domain=google.com&hl=en&type=place",
+                "rating": 4.4,
+                "type": "4 stars",
+                "price": "$327",
+                "thumbnail": "//lh3.googleusercontent.com/proxy/59ldNl-bB1RSSMerwbhDcMPLZoWFsJDTB6O-ARXxa0A7jKpiS_S4vx7zmz-wQVQ8st8IKztl8nZdcR5-I2mlJtgQUa47li1WQpbO5pDXc1xl96PBMrzJF0_ezUbYISXYThthZQcg4y9K0vh65q6AuoJQ0yWYlQ=w168-h120-k-no"
+            },
+            {
+                "position": 4,
+                "title": "Hyatt Grand Central New York",
+                "data_id": "0x89c259022d712db1:0x500317cc3cc9f519",
+                "data_cid": "5765478113925002521",
+                "reviews_link": "https://serpapi.com/search.json?data_id=0x89c259022d712db1%3A0x500317cc3cc9f519&engine=google_maps_reviews&hl=en",
+                "photos_link": "https://serpapi.com/search.json?data_id=0x89c259022d712db1%3A0x500317cc3cc9f519&engine=google_maps_photos&hl=en",
+                "gps_coordinates": {
+                    "latitude": 40.7520617,
+                    "longitude": -73.9762995
+                },
+                "place_id_search": "https://serpapi.com/search.json?data=%214m5%213m4%211s0x89c259022d712db1%3A0x500317cc3cc9f519%218m2%213d40.7520617%214d-73.9762995&engine=google_maps&google_domain=google.com&hl=en&type=place",
+                "rating": 4.1,
+                "type": "4 stars",
+                "price": "$267",
+                "thumbnail": "https://lh5.googleusercontent.com/p/AF1QipO4WtIONfP4PyAIO0DvWDBs4Kofml1fsnIHNu4=w173-h120-k-no"
+            }
+        ]
+    }
+}

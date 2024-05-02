@@ -53,7 +53,7 @@ export class HeaderComponent implements OnInit {
 
   onIconOrTitleClick() {
     if (this.isUserLoggedIn) {
-      this.router.navigate(['dashboard']);
+      this.router.navigate(['/dashboard']);
     } else {
       this.signIn();
     }

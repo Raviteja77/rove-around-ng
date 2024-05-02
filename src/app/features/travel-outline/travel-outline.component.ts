@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { TripResponse } from 'src/app/models/trip-response.model';
 import { PopUpService } from 'src/app/pop-up/services/pop-up.service';
@@ -9,7 +9,7 @@ import { TravelOutlineService } from './services/travel-outline.service';
   templateUrl: './travel-outline.component.html',
   styleUrls: ['./travel-outline.component.scss'],
 })
-export class TravelOutlineComponent {
+export class TravelOutlineComponent implements OnInit{
   rangeDates: any[] = [];
   minDate: any;
   place: any;
@@ -19,6 +19,13 @@ export class TravelOutlineComponent {
     private travelOutlineService: TravelOutlineService,
     private router: Router
   ) {}
+
+  ngOnInit(): void {
+    // this.travelOutlineService.getTrip(352).subscribe(data => {
+    //   console.log(data);
+      
+    // })
+  }
 
   search(event: any) {
     console.log(event);
@@ -30,29 +37,40 @@ export class TravelOutlineComponent {
 
   hi() {
     console.log(this.rangeDates);
+    // this.addTrip("hello world");
+    this.popUpService
+      .getPlaceDetails(this.place.address_components[0].long_name)
+      .subscribe((response) => {
+        console.log(response);
+        
+        this.addTrip(JSON.stringify(response), this.place.address_components[0].long_name);
+      });
   }
 
   startRoving() {
     console.log(this.place);
-    // this.popUpService
-    //   .getPlaceDetails(this.place.long_name)
-    //   .subscribe((response) => {
-    //     this.addTrip(JSON.stringify(response));
-    //   });
+    // this.addTrip("hello world");
   }
 
-  addTrip(googleResponse: string) {
-    const tripResponse = {
-      startDate: this.rangeDates[0],
-      endDate: this.rangeDates[1],
-      destination: googleResponse,
-      googleResponse,
-    } as TripResponse;
-    this.travelOutlineService.addTrip(tripResponse).subscribe({
-      next: (res: any) => {
-        this.router.navigate(['trip-details', res?.code]);
-      },
-      error: (error) => {},
-    });
+  addTrip(googleResponse: string, destination: string) {
+    let user = sessionStorage.getItem('userStateManagement');
+    if(user) {
+      const parsedUser = JSON.parse(user);
+      const tripResponse = {
+        startDate: this.rangeDates[0],
+        endDate: this.rangeDates[1],
+        destination: destination,
+        userId: parsedUser.user.userId,
+        googleResponse,
+      } as TripResponse;
+      this.travelOutlineService.addTrip(tripResponse).subscribe({
+        next: (res: any) => {
+          this.router.navigate([`trip-details/${res?.tripCode}`]);
+        },
+        error: (error) => {},
+      });
+      console.log(user);
+    }
+    
   }
 }
