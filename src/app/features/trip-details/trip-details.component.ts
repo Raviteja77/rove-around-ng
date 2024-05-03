@@ -1,12 +1,13 @@
 import { Component, OnInit } from '@angular/core';
 import { MapGeocoder } from '@angular/google-maps';
 import { ActivatedRoute, Router } from '@angular/router';
-import { TripDetailsService } from './services/trip-details.service';
-import { Itinerary, TripDetails } from 'src/app/models/trip-details.model';
 import { MenuItem } from 'primeng/api';
-import { PopUpService } from 'src/app/pop-up/services/pop-up.service';
 import { Operations } from 'src/app/enums/operations.enum';
 import { Type } from 'src/app/enums/type.enum';
+import { PopUpData } from 'src/app/models/pop-up-data.model';
+import { Itinerary, TripDetails } from 'src/app/models/trip-details.model';
+import { PopUpService } from 'src/app/pop-up/services/pop-up.service';
+import { TripDetailsService } from './services/trip-details.service';
 
 @Component({
   selector: 'app-trip-details',
@@ -40,79 +41,98 @@ export class TripDetailsComponent implements OnInit {
   ngOnInit(): void {
     this.route.params.subscribe((params) => {
       this.tripCode = params['code'];
-      this.getTripDetails();
+      this.tripDetailsService.getTripDetails(this.tripCode);
     });
+    this.getTripDetails();
   }
 
-  getCoordinatesFromGoogleResponse(googleResponse: string) { 
+  getCoordinatesFromGoogleResponse(googleResponse: string) {
     const parsedGoogleResponse = JSON.parse(googleResponse);
-    this.coordinates = [parsedGoogleResponse.place_results.gps_coordinates.latitude, 
-      parsedGoogleResponse.place_results.gps_coordinates.longitude];
-    
+    this.coordinates = [
+      parsedGoogleResponse.place_results.gps_coordinates.latitude,
+      parsedGoogleResponse.place_results.gps_coordinates.longitude,
+    ];
   }
 
   getTripDetails() {
-    this.itineraryTabMenus = [];
-    this.selectedItineraryTab = [];
-    this.tripDetailsService.getTripDetails(this.tripCode).subscribe({
-      next: (data) => {
-        if (data) {
-          this.tripDetails = data;
-          this.isTripEndInSameYear =
-            new Date(this.tripDetails.trip.startDate).getFullYear() ===
-            new Date(this.tripDetails.trip.endDate).getFullYear();
-          this.tripDetails.itineraries.forEach(
-            (itinerary: Itinerary, index: number) => {
-              this.itineraryTabMenus.push([
-                { label: 'Places', icon: 'pi pi-map-marker' },
-                { label: 'Notes', icon: 'pi pi-clipboard' },
-              ]);
-              this.selectedItineraryTab.push(this.itineraryTabMenus[index][0]);
-            }
+    this.tripDetailsService.tripDetails$.subscribe((data) => {
+      if (data) {
+        data.tripLocations.forEach((tripLocation) => {
+          tripLocation.serpGoogleResponse = JSON.parse(
+            tripLocation.googleResponse
           );
-          console.log(data);
-        } else {
-          // this.router.navigate(['dashboard']);
-        }
-      },
-      error: (error) => {},
+        });
+        this.itineraryTabMenus = [];
+        this.selectedItineraryTab = [];
+        this.tripDetails = data;
+        this.isTripEndInSameYear =
+          new Date(this.tripDetails.trip.startDate).getFullYear() ===
+          new Date(this.tripDetails.trip.endDate).getFullYear();
+        this.tripDetails.itineraries.forEach(
+          (itinerary: Itinerary, index: number) => {
+            itinerary.itineraryLocations.forEach((itineraryLocation) => {
+              itineraryLocation.serpGoogleResponse = JSON.parse(
+                itineraryLocation.googleResponse
+              );
+            });
+            this.itineraryTabMenus.push([
+              { label: 'Places', icon: 'pi pi-map-marker' },
+              { label: 'Notes', icon: 'pi pi-clipboard' },
+            ]);
+            this.selectedItineraryTab.push(this.itineraryTabMenus[index][0]);
+          }
+        );
+        console.log(data);
+      } else {
+        this.router.navigate(['dashboard']);
+      }
     });
   }
 
   getDate(date: any) {
-    return new Date(date).toString();
+    return new Date(date).toDateString();
   }
 
-  addNote(type: string, typeID: number) {
+  addNotes(type: string, typeID: number) {
     const popUpData = {
-      type,
-      typeID,
-      operationType: this.operations.Add,
-    };
+      type: type,
+      typeId: typeID,
+      operationType: Operations.Add,
+      tripCode: this.tripCode,
+    } as PopUpData;
     this.popUpService.showAddEditNotesPopUp(popUpData);
   }
 
   editNote(type: string, typeID: number, notes: any) {
     const popUpData = {
-      type,
-      typeID,
+      type: type,
+      typeId: typeID,
       operationType: this.operations.Edit,
-      notes: notes.notes,
-      id: notes.id,
-    };
+      tripCode: this.tripCode,
+    } as PopUpData;
+    if (type === Type.Trip) {
+      popUpData.tripNotes = notes;
+    } else if (type == Type.Itinerary) {
+      popUpData.ItineraryNotes = notes;
+    }
     this.popUpService.showAddEditNotesPopUp(popUpData);
   }
 
   addPlace(type: string, typeID: number) {
     const popUpData = {
-      type,
-      typeID,
-    };
+      type: type,
+      typeId: typeID,
+      tripCode: this.tripCode,
+    } as PopUpData;
     this.popUpService.showAddPlacePopUp(popUpData);
   }
 
   deleteNote(type: string, id: number) {
-    // this.tripDetailsService.deleteNotes(id);
+    this.tripDetailsService.deleteNotes(type, id, this.tripCode);
+  }
+
+  deletePlace(type: string, id: number) {
+    this.tripDetailsService.deletePlace(type, id, this.tripCode);
   }
 
   filterPlace(event: any): void {

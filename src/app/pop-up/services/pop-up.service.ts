@@ -1,31 +1,35 @@
-import { Injectable } from '@angular/core';
-import { DynamicDialogRef, DialogService } from 'primeng/dynamicdialog';
-import { AddEditNotesPopUpComponent } from '../components/add-edit-notes-pop-up/add-edit-notes-pop-up.component';
-import { AddPlacePopUpComponent } from '../components/add-place-pop-up/add-place-pop-up.component';
-import { AddExpensesPopUpComponent } from '../components/add-expenses-pop-up/add-expenses-pop-up.component';
-import { ExpensesBreakDownPopUpComponent } from '../components/expenses-break-down-pop-up/expenses-break-down-pop-up.component';
 import { HttpClient } from '@angular/common/http';
-import { catchError } from 'rxjs';
-import { Environment } from 'src/app/environment/api_keys';
-import { BudgetResponse } from 'src/app/models/budget-response.model';
-import { Operations } from 'src/app/enums/operations.enum';
-import { AddEditBudgetPopUpComponent } from '../components/add-edit-budget-pop-up/add-edit-budget-pop-up.component';
-import { environment } from 'src/app/environment/environment';
+import { Injectable } from '@angular/core';
+import { DialogService, DynamicDialogRef } from 'primeng/dynamicdialog';
 import { Type } from 'src/app/enums/type.enum';
+import { environment } from 'src/app/environment/environment';
+import { TripDetailsService } from 'src/app/features/trip-details/services/trip-details.service';
+import { BudgetResponse } from 'src/app/models/budget-response.model';
+import { PopUpData } from 'src/app/models/pop-up-data.model';
+import { AddEditBudgetPopUpComponent } from '../components/add-edit-budget-pop-up/add-edit-budget-pop-up.component';
+import { AddEditNotesPopUpComponent } from '../components/add-edit-notes-pop-up/add-edit-notes-pop-up.component';
+import { AddExpensesPopUpComponent } from '../components/add-expenses-pop-up/add-expenses-pop-up.component';
+import { AddPlacePopUpComponent } from '../components/add-place-pop-up/add-place-pop-up.component';
+import { ExpensesBreakDownPopUpComponent } from '../components/expenses-break-down-pop-up/expenses-break-down-pop-up.component';
 
 @Injectable({
   providedIn: 'root',
 })
 export class PopUpService {
-  private readonly saveNotesAPI = ``;
   private readonly savePlaceAPI = ``;
   private readonly basicSerpAPI = `https://serpapi.com/search.json?engine=google_maps`;
+  popUpData!: PopUpData;
 
   ref: DynamicDialogRef | undefined;
 
-  constructor(private http: HttpClient, public dialogService: DialogService) {}
+  constructor(
+    private http: HttpClient,
+    public dialogService: DialogService,
+    private tripDetailsService: TripDetailsService
+  ) {}
 
   showAddEditNotesPopUp(popUpData: any) {
+    this.popUpData = popUpData;
     this.ref = this.dialogService.open(AddEditNotesPopUpComponent, {
       header: `${popUpData.operationType} Notes in ${popUpData.type}`,
       data: {
@@ -35,6 +39,7 @@ export class PopUpService {
   }
 
   showAddPlacePopUp(popUpData: any) {
+    this.popUpData = popUpData;
     this.ref = this.dialogService.open(AddPlacePopUpComponent, {
       header: `Add Place in ${popUpData.type}`,
       data: {
@@ -73,18 +78,15 @@ export class PopUpService {
 
   addNotes(type: string, data: any) {
     let notesApi = '';
-    if (type === Type.TripNotes) {
+    if (type === Type.Trip) {
       notesApi = environment.endpoints.tripNotes;
-    } else if (type === Type.ItineraryNotes) {
+    } else if (type === Type.Itinerary) {
       notesApi = environment.endpoints.itineraryNotes;
-    } else if (type === Type.TripPlaceNotes) {
-      notesApi = environment.endpoints.tripPlaceNotes;
-    } else if (type === Type.ItineraryPlaceNotes) {
-      notesApi = environment.endpoints.itineraryPlaceNotes;
     }
     notesApi = `${notesApi}/add`;
     this.http.post(notesApi, data).subscribe({
       next: (_) => {
+        this.tripDetailsService.getTripDetails(this.popUpData.tripCode);
         this.onClose();
       },
       error: (error) => {},
@@ -93,27 +95,31 @@ export class PopUpService {
 
   editNotes(type: string, data: any) {
     let notesApi = '';
-    if (type === Type.TripNotes) {
+    if (type === Type.Trip) {
       notesApi = environment.endpoints.tripNotes;
-    } else if (type === Type.ItineraryNotes) {
+    } else if (type === Type.Itinerary) {
       notesApi = environment.endpoints.itineraryNotes;
-    } else if (type === Type.TripPlaceNotes) {
-      notesApi = environment.endpoints.tripPlaceNotes;
-    } else if (type === Type.ItineraryPlaceNotes) {
-      notesApi = environment.endpoints.itineraryPlaceNotes;
     }
     notesApi = `${notesApi}/${data.id}`;
-    this.http.post(this.saveNotesAPI, data).subscribe({
+    this.http.put(notesApi, data).subscribe({
       next: (_) => {
+        this.tripDetailsService.getTripDetails(this.popUpData.tripCode);
         this.onClose();
       },
       error: (error) => {},
     });
   }
 
-  savePlace(data: any) {
-    this.http.post(this.savePlaceAPI, data).subscribe({
+  savePlace(type: string, data: any) {
+    let placeApi = '';
+    if (type === Type.Trip) {
+      placeApi = environment.endpoints.tripPlace;
+    } else if (type === Type.Itinerary) {
+      placeApi = environment.endpoints.itineraryPlace;
+    }
+    this.http.post(`${placeApi}/add`, data).subscribe({
       next: (_) => {
+        this.tripDetailsService.getTripDetails(this.popUpData.tripCode);
         this.onClose();
       },
       error: (error) => {},

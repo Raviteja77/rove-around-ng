@@ -8,10 +8,8 @@ export const environment = {
     logout: `${baseUrl}/api/v1/auth/logout`,
     trip: `${baseUrl}/api/trip`,
     tripNotes: `${baseUrl}/api/trip-notes`,
-    tripPlaceNotes: `${baseUrl}/api/trip-location-notes`,
     itineraryNotes: `${baseUrl}/api/itinerary-notes`,
-    itineraryPlaceNotes: `${baseUrl}/api/itinerary-location-notes`,
-    tripPlace: `${baseUrl}/api/trip-location`,
-    itineraryPlace: `${baseUrl}/api/itinerary-location`,
+    tripPlace: `${baseUrl}/api/trip-locations`,
+    itineraryPlace: `${baseUrl}/api/itinerary-locations`,
   },
 };

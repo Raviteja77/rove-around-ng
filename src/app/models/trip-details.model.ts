@@ -1,7 +1,9 @@
+import { SerpGoogleLocation } from './serp-google-location.model';
+
 export interface TripDetails {
   trip: Trip;
   travelers: Traveler[];
-  tripLocations: any[];
+  tripLocations: TripLocation[];
   itineraries: Itinerary[];
   budget: Budget;
   expenses: Expense[];
@@ -32,17 +34,49 @@ export interface Traveler {
   status: boolean;
 }
 
+export interface TripLocation {
+  id: number;
+  userId: number;
+  googleResponse: string;
+  position: number;
+  tripId: number;
+  status: boolean;
+  serpGoogleResponse?: SerpGoogleLocation;
+}
+
 export interface Itinerary {
   tripId: number;
   itineraryId: number;
   date: number;
   status: boolean;
-  itineraryLocations: any[];
-  itineraryNotes: any[];
+  itineraryLocations: ItineraryLocation[];
+  itineraryNotes: ItineraryNote[];
+}
+
+export interface ItineraryLocation {
+  id: number;
+  userId: number;
+  itineraryId: number;
+  googleResponse: string;
+  position: number;
+  status: boolean;
+  serpGoogleResponse?: SerpGoogleLocation;
+}
+
+export interface ItineraryNote {
+  id: number;
+  userId: number;
+  itineraryId: number;
+  note: string;
+  status: boolean;
+  createdBy: number;
+  createdOn: any;
+  updatedBy: number;
+  updatedOn: any;
 }
 
 export interface Budget {
-  budgetId: number;
+  id: number;
   tripId: number;
   amount: number;
   status: boolean;
@@ -64,10 +98,10 @@ export interface TripNote {
   id: number;
   userId: number;
   tripId: number;
-  note: string;
+  note: any;
   status: boolean;
   createdBy: number;
-  createdOn: number;
+  createdOn: any;
   updatedBy: number;
-  updatedOn: number;
+  updatedOn: any;
 }

@@ -22,7 +22,10 @@
           contentStyleClass="trip-details-content"
         >
           <div class="flex flex-column gap-10">
-            <div class="flex flex-column gap-5">
+            <div
+              class="flex flex-column gap-5"
+              *ngIf="tripDetails.tripNotes.length"
+            >
               <ng-container *ngFor="let notes of tripDetails.tripNotes">
                 <div
                   class="flex justify-content-between align-items-center gap-10"
@@ -31,13 +34,21 @@
                     {{ notes.note }}
                   </div>
                   <div class="flex gap-10">
-                    <p-button icon="pi pi-pen-to-square"></p-button>
-                    <p-button icon="pi pi-trash"></p-button>
+                    <p-button
+                      (onClick)="
+                        editNote(type.Trip, tripDetails.trip.id, notes)
+                      "
+                      icon="pi pi-pen-to-square"
+                    ></p-button>
+                    <p-button
+                      (onClick)="deleteNote(type.Trip, notes.id)"
+                      icon="pi pi-trash"
+                    ></p-button>
                   </div>
                 </div>
               </ng-container>
             </div>
-            <p-button>
+            <p-button (onClick)="addNotes(type.Trip, tripDetails.trip.id)">
               <div class="flex gap-10">
                 <div class="pi pi-plus"></div>
                 <div>Add Notes</div>
@@ -51,12 +62,38 @@
           headerStyleClass="trip-details-header"
           contentStyleClass="trip-details-content"
         >
-          <p-button (onClick)="addPlace(type.Trip, tripDetails.trip.id)">
-            <div class="flex gap-10">
-              <div class="pi pi-plus"></div>
-              <div>Add Place</div>
+          <div class="flex flex-column gap-10">
+            <div class="flex flex-column gap-5">
+              <ng-container *ngFor="let location of tripDetails.tripLocations">
+                <div class="flex">
+                  <div>
+                    <img
+                      [src]="
+                        location.serpGoogleResponse?.place_results?.thumbnail
+                      "
+                      alt=""
+                    />
+                  </div>
+                  <div class="flex justify-content-between">
+                    <div>
+                      {{ location.serpGoogleResponse?.place_results?.title }} ,
+                      {{ location.serpGoogleResponse?.place_results?.address }}
+                    </div>
+                    <p-button
+                      (onClick)="deletePlace(type.Trip, location.id)"
+                      icon="pi pi-trash"
+                    ></p-button>
+                  </div>
+                </div>
+              </ng-container>
             </div>
-          </p-button>
+            <p-button (onClick)="addPlace(type.Trip, tripDetails.trip.id)">
+              <div class="flex gap-10">
+                <div class="pi pi-plus"></div>
+                <div>Add Place</div>
+              </div>
+            </p-button>
+          </div>
         </p-accordionTab>
         <p-divider></p-divider>
       </p-accordion>
@@ -109,12 +146,49 @@
                   <ng-container
                     *ngIf="selectedItineraryTab[index].label === 'Places'"
                   >
-                    <p-button>
-                      <div class="flex gap-10">
-                        <div class="pi pi-plus"></div>
-                        <div>Add Place</div>
+                    <div class="flex flex-column gap-10">
+                      <div class="flex flex-column gap-5">
+                        <ng-container
+                          *ngFor="let location of itinerary.itineraryLocations"
+                        >
+                          <div class="flex">
+                            <div>
+                              <img
+                                [src]="
+                                  location.serpGoogleResponse?.place_results
+                                    ?.thumbnail
+                                "
+                                alt=""
+                              />
+                            </div>
+                            <div class="flex justify-content-between">
+                              <div>
+                                {{
+                                  location.serpGoogleResponse?.place_results
+                                    ?.title
+                                }}
+                              </div>
+                              <p-button
+                                (onClick)="
+                                  deletePlace(type.Itinerary, location.id)
+                                "
+                                icon="pi pi-trash"
+                              ></p-button>
+                            </div>
+                          </div>
+                        </ng-container>
                       </div>
-                    </p-button>
+                      <p-button
+                        (onClick)="
+                          addPlace(type.Itinerary, itinerary.itineraryId)
+                        "
+                      >
+                        <div class="flex gap-10">
+                          <div class="pi pi-plus"></div>
+                          <div>Add Place</div>
+                        </div>
+                      </p-button>
+                    </div>
                   </ng-container>
                   <ng-container
                     *ngIf="selectedItineraryTab[index].label === 'Notes'"
@@ -128,16 +202,32 @@
                             class="flex justify-content-between align-items-center gap-10"
                           >
                             <div class="note">
-                              {{ notes.notes }}
+                              {{ notes.note }}
                             </div>
                             <div class="flex gap-10">
-                              <p-button icon="pi pi-pen-to-square"></p-button>
-                              <p-button icon="pi pi-trash"></p-button>
+                              <p-button
+                                icon="pi pi-pen-to-square"
+                                (onClick)="
+                                  editNote(
+                                    type.Itinerary,
+                                    itinerary.itineraryId,
+                                    notes
+                                  )
+                                "
+                              ></p-button>
+                              <p-button
+                                icon="pi pi-trash"
+                                (onClick)="deleteNote(type.Itinerary, notes.id)"
+                              ></p-button>
                             </div>
                           </div>
                         </ng-container>
                       </div>
-                      <p-button>
+                      <p-button
+                        (onClick)="
+                          addNotes(type.Itinerary, itinerary.itineraryId)
+                        "
+                      >
                         <div class="flex gap-10">
                           <div class="pi pi-plus"></div>
                           <div>Add Notes</div>

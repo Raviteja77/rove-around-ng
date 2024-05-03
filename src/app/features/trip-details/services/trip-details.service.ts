@@ -1,6 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { of } from 'rxjs';
+import { BehaviorSubject } from 'rxjs';
 import { Type } from 'src/app/enums/type.enum';
 import { environment } from 'src/app/environment/environment';
 import { TripDetails } from 'src/app/models/trip-details.model';
@@ -9,37 +9,52 @@ import { TripDetails } from 'src/app/models/trip-details.model';
   providedIn: 'root',
 })
 export class TripDetailsService {
-  private readonly getTripDetailsAPI = ``;
-  private readonly deleteNotesAPI = ``;
   private readonly deletePlaceAPI = ``;
+
+  public tripDetails$: BehaviorSubject<TripDetails> =
+    new BehaviorSubject<TripDetails>({} as TripDetails);
 
   constructor(private http: HttpClient) {}
 
   getTripDetails(code: string) {
-    return this.http.get<TripDetails>(`${environment.endpoints.trip}/${code}`);
+    this.http
+      .get<TripDetails>(`${environment.endpoints.trip}/${code}`)
+      .subscribe({
+        next: (data) => {
+          this.tripDetails$.next(data);
+        },
+        error: (error) => {},
+      });
   }
 
-  deleteNotes(type: string, id: number) {
+  deleteNotes(type: string, id: number, tripCode: string) {
     let deleteApi = '';
-    if (type === Type.TripNotes) {
+    if (type === Type.Trip) {
       deleteApi = environment.endpoints.tripNotes;
-    } else if (type === Type.ItineraryNotes) {
+    } else if (type === Type.Itinerary) {
       deleteApi = environment.endpoints.itineraryNotes;
-    } else if (type === Type.TripPlaceNotes) {
-      deleteApi = environment.endpoints.tripPlaceNotes;
-    } else if (type === Type.ItineraryPlaceNotes) {
-      deleteApi = environment.endpoints.itineraryPlaceNotes;
     }
     deleteApi = `${deleteApi}/${id}`;
-    this.http.delete(deleteApi).subscribe({
-      next: () => {},
+    this.http.post(deleteApi, {}).subscribe({
+      next: () => {
+        this.getTripDetails(tripCode);
+      },
       error: (error) => {},
     });
   }
 
-  deletePlace(id: number) {
-    this.http.post(this.deletePlaceAPI, { id }).subscribe({
-      next: () => {},
+  deletePlace(type: string, id: number, tripCode: string) {
+    let deleteApi = '';
+    if (type === Type.Trip) {
+      deleteApi = environment.endpoints.tripPlace;
+    } else if (type === Type.Itinerary) {
+      deleteApi = environment.endpoints.itineraryPlace;
+    }
+    deleteApi = `${deleteApi}/${id}`;
+    this.http.post(deleteApi, { id }).subscribe({
+      next: () => {
+        this.getTripDetails(tripCode);
+      },
       error: (error) => {},
     });
   }
