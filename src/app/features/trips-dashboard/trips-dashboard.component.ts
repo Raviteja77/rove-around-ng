@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { TripsDashboardService } from './services/trips-dashboard.service';
-import { Trip } from 'src/app/models/trip.model';
 import { Router } from '@angular/router';
+import { Trip } from 'src/app/models/trip.model';
+import { TripsDashboardService } from './services/trips-dashboard.service';
 
 @Component({
   selector: 'app-trips-dashboard',
@@ -43,7 +43,9 @@ export class TripsDashboardComponent implements OnInit {
           const currentDate = new Date();
           const startDate = new Date(trip.startDate);
           const endDate = new Date(trip.endDate);
-          trip.destinationLongName = JSON.parse(trip.destination)?.address_components[0]?.long_name;
+          trip.destinationLongName = JSON.parse(
+            trip.destination
+          )?.address_components[0]?.long_name;
           if (endDate < currentDate) {
             trip.tripStatus = 'Completed';
             this.isCompletedTripsAvailable = true;
@@ -62,6 +64,12 @@ export class TripsDashboardComponent implements OnInit {
         this.trips = data;
       },
       error: (error) => {},
+    });
+  }
+
+  deleteTrip(id: number) {
+    this.tripsDashboardService.deleteTrip(id).subscribe((res) => {
+      this.router.navigate(['dashbroad']);
     });
   }
 

@@ -19,4 +19,8 @@ export class TripsDashboardService {
     const user = this.authService.getStoredUserStateManagement()?.user;
     return this.http.get<Trip[]>(`${this.tripsAPI}/${user.userId}`);
   }
+
+  deleteTrip(id: number) {
+    return this.http.post(`${environment.endpoints.trip}/${id}`, {});
+  }
 }

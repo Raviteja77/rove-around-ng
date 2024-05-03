@@ -3,6 +3,7 @@ import { DynamicDialogConfig } from 'primeng/dynamicdialog';
 import { Type } from 'src/app/enums/type.enum';
 import { UserAuthenticationService } from 'src/app/features/user-authentication/services/user-authentication.service';
 import { PopUpData } from 'src/app/models/pop-up-data.model';
+import { SerpGoogleLocation } from 'src/app/models/serp-google-location.model';
 import {
   ItineraryLocation,
   TripLocation,
@@ -35,12 +36,30 @@ export class AddPlacePopUpComponent implements OnInit {
   onSubmit() {
     this.popUpService
       .getPlaceDetails(this.place.address_components[0].long_name)
-      .subscribe((response) => {
+      .subscribe((response: any) => {
+        console.log(response);
+        const formattedRes: SerpGoogleLocation = {
+          place_results: {
+            title: response?.place_results?.title,
+            thumbnail: response?.place_results?.thumbnail,
+            gps_coordinates: response?.place_results?.gps_coordinates,
+            description:
+              Object.keys(response?.place_results?.description).length > 0
+                ? response?.place_results?.description?.snippet
+                : response?.place_results?.description,
+            address: response?.place_results?.address || '',
+            rating: response?.place_results?.rating || 0,
+            reviews: response?.place_results?.reviews || 0,
+            open_state: response?.place_results?.open || '',
+            hours: response?.place_results?.hours || [],
+            website: response?.place_results?.website,
+          },
+        };
         let placeResponse;
         if (this.data.type === Type.Trip) {
           placeResponse = {
             userId: this.user.userId,
-            googleResponse: JSON.stringify(response),
+            googleResponse: JSON.stringify(formattedRes),
             position: 0,
             tripId: this.data.typeId,
             status: true,
@@ -48,7 +67,7 @@ export class AddPlacePopUpComponent implements OnInit {
         } else if (this.data.type === Type.Itinerary) {
           placeResponse = {
             userId: this.user.userId,
-            googleResponse: JSON.stringify(response),
+            googleResponse: JSON.stringify(formattedRes),
             position: 0,
             itineraryId: this.data.typeId,
             status: true,

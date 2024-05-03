@@ -13,7 +13,7 @@
               </p>
             </div>
             <div>
-              <img [src]="googleResponse.place_results.thumbnail"/>
+              <img [src]="googleResponse.place_results.thumbnail" />
             </div>
           </div>
         </div>
@@ -265,7 +265,7 @@
         </div>
         <p-progressBar [value]="50" [showValue]="false"></p-progressBar>
         <div class="flex gap-10">
-          <p-button (onClick)="editBudget()">
+          <p-button (onClick)="editBudget(tripDetails.budget)">
             <div class="flex gap-10">
               <div class="pi pi-pencil"></div>
               <div>
@@ -287,6 +287,10 @@
     <div></div>
   </div>
   <div>
-    <app-googlemap [googleResponse]="googleResponse" [destination]="destination" [locationMarkers]="markers"></app-googlemap>
+    <app-googlemap
+      [googleResponse]="googleResponse"
+      [destination]="destination"
+      [locationMarkers]="markers"
+    ></app-googlemap>
   </div>
 </div>

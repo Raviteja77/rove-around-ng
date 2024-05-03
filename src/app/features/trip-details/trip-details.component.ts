@@ -4,11 +4,15 @@ import { ActivatedRoute, Router } from '@angular/router';
 import { MenuItem } from 'primeng/api';
 import { Operations } from 'src/app/enums/operations.enum';
 import { Type } from 'src/app/enums/type.enum';
+import { Markers } from 'src/app/models/markers.model';
 import { PopUpData } from 'src/app/models/pop-up-data.model';
-import { Itinerary, TripDetails } from 'src/app/models/trip-details.model';
+import {
+  Budget,
+  Itinerary,
+  TripDetails,
+} from 'src/app/models/trip-details.model';
 import { PopUpService } from 'src/app/pop-up/services/pop-up.service';
 import { TripDetailsService } from './services/trip-details.service';
-import { Markers } from 'src/app/models/markers.model';
 
 @Component({
   selector: 'app-trip-details',
@@ -161,8 +165,12 @@ export class TripDetailsComponent implements OnInit {
 
   addBudget() {}
 
-  editBudget() {
-    const popUpData = {};
+  editBudget(budget: Budget) {
+    const popUpData = {
+      operationType: budget.amount === 0 ? Operations.Add : Operations.Edit,
+      budget: budget,
+      tripCode: this.tripCode,
+    } as PopUpData;
     this.popUpService.showAddEditBudgetPopUp(popUpData);
   }
 

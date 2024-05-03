@@ -1,18 +1,17 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { DialogService, DynamicDialogRef } from 'primeng/dynamicdialog';
+import { catchError } from 'rxjs';
 import { Type } from 'src/app/enums/type.enum';
 import { environment } from 'src/app/environment/environment';
 import { TripDetailsService } from 'src/app/features/trip-details/services/trip-details.service';
-import { BudgetResponse } from 'src/app/models/budget-response.model';
 import { PopUpData } from 'src/app/models/pop-up-data.model';
+import { Budget } from 'src/app/models/trip-details.model';
 import { AddEditBudgetPopUpComponent } from '../components/add-edit-budget-pop-up/add-edit-budget-pop-up.component';
 import { AddEditNotesPopUpComponent } from '../components/add-edit-notes-pop-up/add-edit-notes-pop-up.component';
 import { AddExpensesPopUpComponent } from '../components/add-expenses-pop-up/add-expenses-pop-up.component';
 import { AddPlacePopUpComponent } from '../components/add-place-pop-up/add-place-pop-up.component';
 import { ExpensesBreakDownPopUpComponent } from '../components/expenses-break-down-pop-up/expenses-break-down-pop-up.component';
-import { Environment } from 'src/app/environment/api_keys';
-import { catchError } from 'rxjs';
 
 @Injectable({
   providedIn: 'root',
@@ -51,6 +50,7 @@ export class PopUpService {
   }
 
   showAddEditBudgetPopUp(popUpData: any) {
+    this.popUpData = popUpData;
     this.ref = this.dialogService.open(AddEditBudgetPopUpComponent, {
       header: `${popUpData.operationType} Budget`,
       data: {
@@ -135,15 +135,21 @@ export class PopUpService {
     //     (res) => res,
     //     catchError((_) => [])
     //   );
-    return this.http.get('assets/mock-data/location-data.json');
+    return this.http.get('assets/mock-data/location-data.json').pipe(
+      (res) => res,
+      catchError((_) => [])
+    );
   }
 
-  saveBudget(data: BudgetResponse) {
-    this.http.post('', data).subscribe({
-      next: (_) => {
-        this.onClose();
-      },
-      error: (error) => {},
-    });
+  saveBudget(data: Budget) {
+    this.http
+      .put(`${environment.endpoints.budgetApi}/${data.id}`, data)
+      .subscribe({
+        next: (_) => {
+          this.tripDetailsService.getTripDetails(this.popUpData.tripCode);
+          this.onClose();
+        },
+        error: (error) => {},
+      });
   }
 }

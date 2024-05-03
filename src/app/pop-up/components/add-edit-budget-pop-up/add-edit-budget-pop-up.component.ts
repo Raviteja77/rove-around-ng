@@ -1,8 +1,9 @@
 import { Component } from '@angular/core';
 import { DynamicDialogConfig } from 'primeng/dynamicdialog';
 import { Operations } from 'src/app/enums/operations.enum';
+import { PopUpData } from 'src/app/models/pop-up-data.model';
+import { Budget } from 'src/app/models/trip-details.model';
 import { PopUpService } from '../../services/pop-up.service';
-import { BudgetResponse } from 'src/app/models/budget-response.model';
 
 @Component({
   selector: 'app-add-edit-budget-pop-up',
@@ -10,8 +11,8 @@ import { BudgetResponse } from 'src/app/models/budget-response.model';
   styleUrls: ['./add-edit-budget-pop-up.component.scss'],
 })
 export class AddEditBudgetPopUpComponent {
-  amount: string = '';
-  data: any = {};
+  amount: number = 0;
+  data!: PopUpData;
 
   constructor(
     private dynamicDialogConfig: DynamicDialogConfig,
@@ -19,15 +20,17 @@ export class AddEditBudgetPopUpComponent {
   ) {
     this.data = this.dynamicDialogConfig.data;
     if (this.data.operationType === Operations.Edit) {
-      this.amount = this.data.budget;
+      this.amount = this.data?.budget?.amount || 0;
     }
   }
 
   onSubmit() {
-    const response = {
-      ...this.data,
-      budget: this.amount,
-    } as BudgetResponse;
+    const response: Budget = {
+      id: this.data.budget?.id || 0,
+      tripId: this.data.budget?.tripId || 0,
+      amount: this.amount,
+      status: true,
+    };
     this.popUpService.saveBudget(response);
   }
 

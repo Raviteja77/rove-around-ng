@@ -11,5 +11,6 @@ export const environment = {
     itineraryNotes: `${baseUrl}/api/itinerary-notes`,
     tripPlace: `${baseUrl}/api/trip-locations`,
     itineraryPlace: `${baseUrl}/api/itinerary-locations`,
+    budgetApi: `${baseUrl}/api/budget`,
   },
 };
