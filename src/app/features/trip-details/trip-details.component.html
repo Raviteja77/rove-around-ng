@@ -76,7 +76,7 @@
           <div class="flex flex-column gap-10">
             <div class="flex flex-column gap-5">
               <ng-container *ngFor="let location of tripDetails.tripLocations">
-                <div class="flex">
+                <div class="flex gap-10">
                   <div>
                     <img
                       [src]="
@@ -85,10 +85,58 @@
                       alt=""
                     />
                   </div>
-                  <div class="flex justify-content-between">
-                    <div>
-                      {{ location.serpGoogleResponse?.place_results?.title }} ,
-                      {{ location.serpGoogleResponse?.place_results?.address }}
+                  <div class="flex justify-content-between flex-grow-1">
+                    <div class="flex flex-column gap-5">
+                      <div class="font-size-24">
+                        <strong>
+                          {{
+                            location.serpGoogleResponse?.place_results?.title
+                          }}
+                        </strong>
+                      </div>
+                      <div class="font-size-12">
+                        {{
+                          location.serpGoogleResponse?.place_results?.address
+                        }}
+                      </div>
+                      <div class="flex">
+                        <div
+                          *ngIf="
+                            location.serpGoogleResponse?.place_results
+                              ?.open_state
+                          "
+                          style="width: 200px"
+                        >
+                          Opens:
+                          <strong>{{
+                            location.serpGoogleResponse?.place_results
+                              ?.open_state
+                          }}</strong>
+                        </div>
+                        <div
+                          *ngIf="
+                            location.serpGoogleResponse?.place_results?.rating
+                          "
+                          style="width: 200px"
+                        >
+                          Rating:
+                          <strong>{{
+                            location.serpGoogleResponse?.place_results?.rating
+                          }}</strong>
+                        </div>
+                        <div
+                          *ngIf="
+                            location.serpGoogleResponse?.place_results?.reviews
+                          "
+                          style="width: 200px"
+                        >
+                          Reviews:
+                          <strong>{{
+                            location.serpGoogleResponse?.place_results?.reviews
+                          }}</strong>
+                        </div>
+                        <div></div>
+                      </div>
                     </div>
                     <p-button
                       (onClick)="deletePlace(type.Trip, location.id)"
@@ -162,9 +210,10 @@
                         <ng-container
                           *ngFor="let location of itinerary.itineraryLocations"
                         >
-                          <div class="flex">
+                          <div class="flex gap-10">
                             <div>
                               <img
+                                style="width: 150px; height: 80px"
                                 [src]="
                                   location.serpGoogleResponse?.place_results
                                     ?.thumbnail
@@ -172,12 +221,66 @@
                                 alt=""
                               />
                             </div>
-                            <div class="flex justify-content-between">
-                              <div>
-                                {{
-                                  location.serpGoogleResponse?.place_results
-                                    ?.title
-                                }}
+                            <div
+                              class="flex justify-content-between flex-grow-1"
+                            >
+                              <div class="flex flex-column gap-5">
+                                <div class="font-size-24">
+                                  <strong>
+                                    {{
+                                      location.serpGoogleResponse?.place_results
+                                        ?.title
+                                    }}
+                                  </strong>
+                                </div>
+                                <div class="font-size-12">
+                                  {{
+                                    location.serpGoogleResponse?.place_results
+                                      ?.address
+                                  }}
+                                </div>
+                                <div class="flex">
+                                  <div
+                                    *ngIf="
+                                      location.serpGoogleResponse?.place_results
+                                        ?.open_state
+                                    "
+                                    style="width: 200px"
+                                  >
+                                    Opens:
+                                    <strong>{{
+                                      location.serpGoogleResponse?.place_results
+                                        ?.open_state
+                                    }}</strong>
+                                  </div>
+                                  <div
+                                    *ngIf="
+                                      location.serpGoogleResponse?.place_results
+                                        ?.rating
+                                    "
+                                    style="width: 200px"
+                                  >
+                                    Rating:
+                                    <strong>{{
+                                      location.serpGoogleResponse?.place_results
+                                        ?.rating
+                                    }}</strong>
+                                  </div>
+                                  <div
+                                    *ngIf="
+                                      location.serpGoogleResponse?.place_results
+                                        ?.reviews
+                                    "
+                                    style="width: 200px"
+                                  >
+                                    Reviews:
+                                    <strong>{{
+                                      location.serpGoogleResponse?.place_results
+                                        ?.reviews
+                                    }}</strong>
+                                  </div>
+                                  <div></div>
+                                </div>
                               </div>
                               <p-button
                                 (onClick)="
@@ -273,7 +376,10 @@
             Total Expenses: <strong>$ {{ totalExpenses }}</strong>
           </div>
         </div>
-        <p-progressBar [value]="0" [showValue]="false"></p-progressBar>
+        <p-progressBar
+          [value]="calculateProgressBar()"
+          [showValue]="false"
+        ></p-progressBar>
         <div class="flex gap-10">
           <p-button (onClick)="editBudget(tripDetails.budget)">
             <div class="flex gap-10">
@@ -292,7 +398,7 @@
             </div>
           </p-button>
         </div>
-        <div>
+        <div *ngIf="tripDetails.expenses.length > 0">
           <p-table
             [value]="tripDetails.expenses"
             [tableStyle]="{ 'min-width': '50rem' }"
@@ -328,6 +434,7 @@
             </ng-template>
           </p-table>
         </div>
+        <div *ngIf="tripDetails.expenses.length === 0">No Expenses in Trip</div>
       </div>
     </div>
     <div></div>

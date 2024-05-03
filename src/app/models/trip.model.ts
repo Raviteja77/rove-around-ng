@@ -1,3 +1,5 @@
+import { SerpGoogleLocation } from './serp-google-location.model';
+
 export interface Trip {
   id: number;
   tripCode: string;
@@ -11,4 +13,6 @@ export interface Trip {
   destinationImage: string;
   numberOfPlaces: number;
   numberOfUsers: number;
+  googleResponse: string;
+  serpGoogleResponse: SerpGoogleLocation;
 }

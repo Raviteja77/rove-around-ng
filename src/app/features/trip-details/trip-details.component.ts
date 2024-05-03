@@ -283,4 +283,18 @@ export class TripDetailsComponent implements OnInit {
       detail: 'Link copyed to clipbroad',
     });
   }
+
+  calculateProgressBar() {
+    if (this.tripDetails.budget.amount === 0) {
+      if (this.totalExpenses === 0) {
+        return 0;
+      }
+      return 100;
+    } else if (this.tripDetails.budget.amount < this.totalExpenses) {
+      return 100;
+    } else if (this.tripDetails.budget.amount > this.totalExpenses) {
+      return (this.totalExpenses / this.tripDetails.budget.amount) * 100;
+    }
+    return 0;
+  }
 }

@@ -46,6 +46,9 @@ export class TripsDashboardComponent implements OnInit {
           trip.destinationLongName = JSON.parse(
             trip.destination
           )?.address_components[0]?.long_name;
+
+          trip.serpGoogleResponse = JSON.parse(trip.googleResponse);
+          console.log(trip.serpGoogleResponse);
           if (endDate < currentDate) {
             trip.tripStatus = 'Completed';
             this.isCompletedTripsAvailable = true;

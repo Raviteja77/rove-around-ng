@@ -139,7 +139,7 @@ export class PopUpService {
     //     (res) => res,
     //     catchError((_) => [])
     //   );
-    return this.http.get('assets/mock-data/location-data.json').pipe(
+    return this.http.get('assets/mock-data/empire-state-data.json').pipe(
       (res) => res,
       catchError((_) => [])
     );

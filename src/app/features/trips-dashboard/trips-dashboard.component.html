@@ -20,16 +20,22 @@
       <ng-container *ngIf="trip.tripStatus === selectedStatus.value">
         <p-card (click)="tripClicked(trip.tripCode)">
           <div class="trip-card">
-            <div class="destination-image">
-              <img [src]="" alt="" />
+            <div style="width: 100%; height: 100%" class="destination-image">
+              <img
+                style="width: 100%; height: 100%"
+                [src]="trip.serpGoogleResponse.place_results.thumbnail"
+                alt=""
+              />
             </div>
-            <p-button
-              (onClick)="deleteTrip(trip.id)"
-              icon="pi pi-trash"
-            ></p-button>
             <div class="trip-card-content">
-              <div class="destination-name">
-                Trip to {{ trip.destinationLongName }}
+              <div class="flex justify-content-between align-items-center">
+                <div class="destination-name">
+                  Trip to {{ trip.destinationLongName }}
+                </div>
+                <p-button
+                  (onClick)="deleteTrip(trip.id)"
+                  icon="pi pi-trash"
+                ></p-button>
               </div>
               <div class="trip-dates">
                 {{ trip.startDate | date : "MMM - dd, YYYY" }} -
