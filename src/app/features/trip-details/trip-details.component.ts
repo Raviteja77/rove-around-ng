@@ -8,6 +8,7 @@ import { PopUpData } from 'src/app/models/pop-up-data.model';
 import { Itinerary, TripDetails } from 'src/app/models/trip-details.model';
 import { PopUpService } from 'src/app/pop-up/services/pop-up.service';
 import { TripDetailsService } from './services/trip-details.service';
+import { Markers } from 'src/app/models/markers.model';
 
 @Component({
   selector: 'app-trip-details',
@@ -22,6 +23,7 @@ export class TripDetailsComponent implements OnInit {
   notesInput: any = [];
   tripDetails!: TripDetails;
   isTripEndInSameYear: boolean = false;
+  public markers: Markers[][] = [];
   public googleResponse: any = null;
   public destination: any = null;
 
@@ -50,26 +52,44 @@ export class TripDetailsComponent implements OnInit {
   getTripDetails() {
     this.tripDetailsService.tripDetails$.subscribe((data) => {
       if (data) {
-        data.tripLocations.forEach((tripLocation) => {
+        this.markers = [];
+        let tempLocationMarkers: Markers[] = [];
+        data.tripLocations?.forEach((tripLocation) => {
           tripLocation.serpGoogleResponse = JSON.parse(
             tripLocation.googleResponse
           );
+          const tempLocationMarker = this.locationMarkers(tripLocation, 'trip');
+          if (tempLocationMarker.title != '') {
+            tempLocationMarkers.push(tempLocationMarker);
+          }
         });
+        if (tempLocationMarkers.length > 0) {
+          this.markers.push(tempLocationMarkers);
+        }
         this.itineraryTabMenus = [];
         this.selectedItineraryTab = [];
         this.tripDetails = data;
-        this.destination = JSON.parse(this.tripDetails.trip.destination)
-        this.tripDetails.trip.destinationLongName = this.destination.address_components[0].long_name;
+        this.destination = JSON.parse(this.tripDetails?.trip?.destination);
+        this.tripDetails.trip.destinationLongName =
+          this.destination.address_components[0].long_name;
         this.googleResponse = JSON.parse(this.tripDetails.trip.googleResponse);
         this.isTripEndInSameYear =
           new Date(this.tripDetails.trip.startDate).getFullYear() ===
           new Date(this.tripDetails.trip.endDate).getFullYear();
-        this.tripDetails.itineraries.forEach(
+        tempLocationMarkers = [];
+        this.tripDetails.itineraries?.forEach(
           (itinerary: Itinerary, index: number) => {
             itinerary.itineraryLocations.forEach((itineraryLocation) => {
               itineraryLocation.serpGoogleResponse = JSON.parse(
                 itineraryLocation.googleResponse
               );
+              const tempLocationMarker = this.locationMarkers(
+                itineraryLocation,
+                'itinerary'
+              );
+              if (tempLocationMarker.title != '') {
+                tempLocationMarkers.push(tempLocationMarker);
+              }
             });
             this.itineraryTabMenus.push([
               { label: 'Places', icon: 'pi pi-map-marker' },
@@ -78,7 +98,9 @@ export class TripDetailsComponent implements OnInit {
             this.selectedItineraryTab.push(this.itineraryTabMenus[index][0]);
           }
         );
-        console.log(data);
+        if (tempLocationMarkers.length > 0) {
+          this.markers.push(tempLocationMarkers);
+        }
       } else {
         this.router.navigate(['dashboard']);
       }
@@ -131,14 +153,7 @@ export class TripDetailsComponent implements OnInit {
     this.tripDetailsService.deletePlace(type, id, this.tripCode);
   }
 
-  filterPlace(event: any): void {
-    console.log(event);
-    // this.geocoder.geocode({
-    //   address: event.query
-    // }).subscribe(({results}) => {
-    //   console.log(results);
-    // });
-  }
+  filterPlace(event: any): void {}
 
   onActiveItineraryTabChange(event: any, index: number) {
     this.selectedItineraryTab[index] = event;
@@ -159,4 +174,17 @@ export class TripDetailsComponent implements OnInit {
   }
 
   viewBudgetBreakDown() {}
+
+  locationMarkers(data: any, type: string) {
+    const marker: Markers = {
+      lat:
+        data?.serpGoogleResponse?.place_results?.gps_coordinates?.latitude || 0,
+      lng:
+        data?.serpGoogleResponse?.place_results?.gps_coordinates?.longitude ||
+        0,
+      title: data?.serpGoogleResponse?.place_results?.title || '',
+      type: type,
+    };
+    return marker;
+  }
 }

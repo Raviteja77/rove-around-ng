@@ -70,7 +70,6 @@ export class UserAuthenticationComponent implements OnInit {
           };
           this.userAuthenticationService.setUserStateManagement();
           this.userAuthenticationService.isUserLoggedIn$$.next(true);
-          console.log(response.token);
         },
         error: (e) => {
           this.userAuthenticationService.userStateManagement = {
@@ -100,7 +99,6 @@ export class UserAuthenticationComponent implements OnInit {
     } else {
       this.userAuthenticationService.register(this.signUpForm.value).subscribe({
         next: (response: any) => {
-          console.log(response);
           if (response === 208) {
             alert('The entered email is already registered');
           } else if (response == 201) {

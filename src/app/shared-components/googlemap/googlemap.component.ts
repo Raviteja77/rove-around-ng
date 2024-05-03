@@ -1,5 +1,6 @@
 import { AfterViewInit, Component, Input, OnChanges, SimpleChanges, ViewChild } from '@angular/core';
 import { MapInfoWindow, MapMarker } from '@angular/google-maps';
+import { Markers } from 'src/app/models/markers.model';
 
 @Component({
   selector: 'app-googlemap',
@@ -13,10 +14,13 @@ export class GooglemapComponent implements OnChanges, AfterViewInit {
 
   @Input() googleResponse: any;
   @Input() destination: any;
+  @Input() locationMarkers: Markers[][] = [];
+
+  title: string = '';
 
   zoom = 10;
   markerOptions: google.maps.MarkerOptions = { draggable: false };
-  markerPositions: google.maps.LatLngLiteral[] = [];
+  markerPositions: any[] = [];
   cityPolygon: google.maps.Polygon | undefined;
 
   constructor() {}
@@ -26,6 +30,70 @@ export class GooglemapComponent implements OnChanges, AfterViewInit {
       lat: this.googleResponse.place_results.gps_coordinates.latitude,
       lng: this.googleResponse.place_results.gps_coordinates.longitude
     };
+    this.getMarkerOptions();
+    this.title = this.googleResponse?.place_results?.description?.snippet;
+  }
+
+  getMarkerOptions(): void {
+    this.markerOptions = {};
+    if(this.locationMarkers.length === 0) {
+      this.markerPositions = [];
+      return;
+    }
+    this.locationMarkers?.forEach(marker => {
+      marker?.forEach((el, index) => {
+        if(el.type === 'trip') {
+          this.markerOptions = {
+            icon: {
+              url: 'https://maps.google.com/mapfiles/ms/icons/red-dot.png',
+            },
+          };
+        } else {
+          switch(index) {
+            case 0:
+              this.markerOptions = {
+                icon: {
+                  url: 'https://maps.google.com/mapfiles/ms/icons/green-dot.png',
+                },
+              };
+              break;
+            case 1:
+              this.markerOptions = {
+                icon: {
+                  url: 'https://maps.google.com/mapfiles/ms/icons/yellow-dot.png',
+                },
+              };
+              break;
+            case 2:
+              this.markerOptions = {
+                icon: {
+                  url: 'https://maps.google.com/mapfiles/ms/icons/brown-dot.png',
+                },
+              };
+              break;
+            case 3:
+              this.markerOptions = {
+                icon: {
+                  url: 'https://maps.google.com/mapfiles/ms/icons/blue-dot.png',
+                },
+              };
+              break;
+            case 4:
+              this.markerOptions = {
+                icon: {
+                  url: 'https://maps.google.com/mapfiles/ms/icons/purple-dot.png',
+                },
+              };
+              break;
+          }
+        }
+        const position: google.maps.LatLngLiteral = {
+          lat: el.lat,
+          lng: el.lng,
+        };
+        this.markerPositions.push({ position, options: this.markerOptions });
+      });
+    });
   }
   
   ngAfterViewInit(): void {
@@ -38,7 +106,12 @@ export class GooglemapComponent implements OnChanges, AfterViewInit {
     }
   }
 
-  openInfoWindow() {
+  openInfoWindow(markerData?: any, addDyanmicTitle?: boolean) {
+    if(addDyanmicTitle) {
+      this.title = markerData.title;
+    } else {
+      this.title = this.googleResponse?.place_results?.description?.snippet;
+    }
     if (this.infoWindow && this.center) {
       this.infoWindow.position = this.center;
       this.infoWindow.open();

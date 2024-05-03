@@ -36,7 +36,6 @@ export class AddPlacePopUpComponent implements OnInit {
     this.popUpService
       .getPlaceDetails(this.place.address_components[0].long_name)
       .subscribe((response) => {
-        console.log(response);
         let placeResponse;
         if (this.data.type === Type.Trip) {
           placeResponse = {

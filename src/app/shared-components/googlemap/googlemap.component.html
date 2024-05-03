@@ -3,17 +3,17 @@
             [zoom]="zoom" 
             (mapClick)="addMarker($event)">
                 <map-marker #marker="mapMarker"
-                            *ngFor="let markerPosition of markerPositions" 
-                            [position]="markerPosition" 
-                            [options]="markerOptions"
-                            (mapClick)="openInfoWindow()">
+                            *ngFor="let markerData of markerPositions" 
+                            [position]="markerData.position"
+                            [options]="markerData.options"
+                            (mapClick)="openInfoWindow(markerData)">
                 </map-marker>
                 <map-info-window>
                     <div class="flex justify-content-center pb-2">
                         <i class="pi pi-map-marker"></i>
                     </div>
                     <div class="text-center">
-                        {{ googleResponse.place_results.description.snippet }}
+                        {{ googleResponse?.place_results?.description?.snippet }}
                     </div>
                 </map-info-window>
 </google-map>

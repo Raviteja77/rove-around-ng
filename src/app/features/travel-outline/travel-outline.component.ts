@@ -27,30 +27,22 @@ export class TravelOutlineComponent implements OnInit{
     // })
   }
 
-  search(event: any) {
-    console.log(event);
-  }
+  search(event: any) {}
 
   handlePlaceSelection(event: any): void {
     this.place = event;
   }
 
   hi() {
-    console.log(this.rangeDates);
     // this.addTrip("hello world");
     this.popUpService
       .getPlaceDetails(this.place.address_components[0].long_name)
       .subscribe((response) => {
-        console.log(response);
-        
         this.addTrip(JSON.stringify(response), JSON.stringify(this.place));
       });
   }
 
-  startRoving() {
-    console.log(this.place);
-    // this.addTrip("hello world");
-  }
+  startRoving() {}
 
   addTrip(googleResponse: string, destination: string) {
     let user = sessionStorage.getItem('userStateManagement');
@@ -69,7 +61,6 @@ export class TravelOutlineComponent implements OnInit{
         },
         error: (error) => {},
       });
-      console.log(user);
     }
     
   }
