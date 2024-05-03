@@ -1,0 +1,15 @@
+<div style="height: 100vh">
+  <app-header></app-header>
+  <div
+    class="flex flex-column align-items-center justify-content-center gap-10"
+    style="height: 50%"
+  >
+    <div></div>
+    <div class="font-size-20">You have been invited to this trip</div>
+    <div class="font-size-24"><strong>Do you want to accept?</strong></div>
+    <div class="flex gap-10">
+      <p-button [outlined]="true" label="No" (onClick)="notAccept()"></p-button>
+      <p-button label="Yes" (onClick)="accept()"></p-button>
+    </div>
+  </div>
+</div>
