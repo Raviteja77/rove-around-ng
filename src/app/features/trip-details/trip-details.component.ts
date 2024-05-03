@@ -1,7 +1,7 @@
 import { Component, ElementRef, OnInit, Renderer2 } from '@angular/core';
 import { MapGeocoder } from '@angular/google-maps';
 import { ActivatedRoute, Router } from '@angular/router';
-import { MenuItem } from 'primeng/api';
+import { MenuItem, MessageService } from 'primeng/api';
 import { Operations } from 'src/app/enums/operations.enum';
 import { Type } from 'src/app/enums/type.enum';
 import { Markers } from 'src/app/models/markers.model';
@@ -59,7 +59,8 @@ export class TripDetailsComponent implements OnInit {
     private tripDetailsService: TripDetailsService,
     private popUpService: PopUpService,
     private renderer: Renderer2,
-    private elementRef: ElementRef
+    private elementRef: ElementRef,
+    private messageService: MessageService
   ) {}
 
   ngOnInit(): void {
@@ -73,7 +74,6 @@ export class TripDetailsComponent implements OnInit {
   getTripDetails() {
     this.tripDetailsService.tripDetails$.subscribe((data) => {
       if (data) {
-        
         this.markers = [];
         let tempLocationMarkers: Markers[] = [];
         data.tripLocations?.forEach((tripLocation) => {
@@ -222,7 +222,14 @@ export class TripDetailsComponent implements OnInit {
     this.tripDetailsService.deleteExpenses(expenseId, this.tripCode);
   }
 
-  viewBudgetBreakDown() {}
+  viewBudgetBreakDown() {
+    this.popUpService.showExpensesBreakDownPopUp({
+      expenses: this.tripDetails.expenses,
+      tripCode: this.tripCode,
+      type: '',
+      typeId: 0,
+    });
+  }
 
   locationMarkers(data: any, type: string) {
     const marker: Markers = {
@@ -248,12 +255,32 @@ export class TripDetailsComponent implements OnInit {
   }
 
   updateBackgroundImage(url: string): void {
-    const targetElement = this.elementRef.nativeElement.querySelector('#trip-details');
+    const targetElement =
+      this.elementRef.nativeElement.querySelector('#trip-details');
     this.setBackgroundImage(targetElement, url);
   }
 
   setBackgroundImage(element: HTMLElement, imageUrl: string) {
     this.renderer.setStyle(element, 'background-image', `url('${imageUrl}')`);
     this.renderer.setStyle(element, 'background-size', 'cover');
+  }
+
+  addToClipBoard() {
+    const selBox = document.createElement('textarea');
+    selBox.style.position = 'fixed';
+    selBox.style.left = '0';
+    selBox.style.top = '0';
+    selBox.style.opacity = '0';
+    selBox.value = `http://localhost:4200/invitation/${this.tripCode}`;
+    document.body.appendChild(selBox);
+    selBox.focus();
+    selBox.select();
+    document.execCommand('copy');
+    document.body.removeChild(selBox);
+    this.messageService.add({
+      severity: 'success',
+      summary: 'Success',
+      detail: 'Link copyed to clipbroad',
+    });
   }
 }

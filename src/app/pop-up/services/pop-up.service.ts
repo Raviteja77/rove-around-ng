@@ -69,9 +69,12 @@ export class PopUpService {
     });
   }
 
-  showExpensesBreakDownPopUp() {
+  showExpensesBreakDownPopUp(popUpData: PopUpData) {
     this.ref = this.dialogService.open(ExpensesBreakDownPopUpComponent, {
       header: 'Expenses break down',
+      data: {
+        ...popUpData,
+      },
     });
   }
 

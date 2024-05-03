@@ -69,6 +69,12 @@ export class AddExpensesPopUpComponent implements OnInit {
         this.paidBy.find(
           (user) => user?.value === this.data?.expense?.userId
         ) || this.paidBy[0];
+      this.selectedCategory = this.categories.find(
+        (category) => category.value === this.data.expense?.categoryId
+      );
+      this.selectedSplit = this.split.find(
+        (split) => split.name === this.data.expense?.splitType
+      );
     }
   }
 

@@ -6,6 +6,7 @@ import { AutoCompleteModule } from 'primeng/autocomplete';
 import { ButtonModule } from 'primeng/button';
 import { CalendarModule } from 'primeng/calendar';
 import { CardModule } from 'primeng/card';
+import { ChartModule } from 'primeng/chart';
 import { DividerModule } from 'primeng/divider';
 import { DropdownModule } from 'primeng/dropdown';
 import { DialogService, DynamicDialogModule } from 'primeng/dynamicdialog';
@@ -36,6 +37,7 @@ import { TooltipModule } from 'primeng/tooltip';
     ToastModule,
     InputTextModule,
     TableModule,
+    ChartModule,
   ],
   exports: [
     CardModule,
@@ -53,6 +55,7 @@ import { TooltipModule } from 'primeng/tooltip';
     ToastModule,
     InputTextModule,
     TableModule,
+    ChartModule,
   ],
   providers: [DialogService, MessageService],
 })

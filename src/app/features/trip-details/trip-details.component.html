@@ -2,8 +2,17 @@
   <div style="width: 55%">
     <app-header></app-header>
     <div class="trip-details flex" id="trip-details">
-      <p-card [header]="'Trip to ' + tripDetails.trip.destinationLongName">
+      <p-card>
         <div class="flex flex-column gap-20">
+          <div class="flex justify-content-between">
+            <div class="font-size-25" style="font-weight: 700">
+              Trip to {{ tripDetails.trip.destinationLongName }}
+            </div>
+            <p-button
+              (onClick)="addToClipBoard()"
+              icon="pi pi-user-plus"
+            ></p-button>
+          </div>
           <div class="flex justify-content-between">
             <div class="flex">
               <i class="pi pi-calendar-plus"></i>
@@ -331,3 +340,12 @@
     ></app-googlemap>
   </div>
 </div>
+
+<p-toast
+  [showTransformOptions]="'translateY(100%)'"
+  [showTransitionOptions]="'1000ms'"
+  [hideTransitionOptions]="'1000ms'"
+  [showTransformOptions]="'translateX(100%)'"
+  [life]="10000"
+>
+</p-toast>

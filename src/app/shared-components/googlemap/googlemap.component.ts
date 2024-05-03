@@ -1,11 +1,18 @@
-import { AfterViewInit, Component, Input, OnChanges, SimpleChanges, ViewChild } from '@angular/core';
-import { MapInfoWindow, MapMarker } from '@angular/google-maps';
+import {
+  AfterViewInit,
+  Component,
+  Input,
+  OnChanges,
+  SimpleChanges,
+  ViewChild,
+} from '@angular/core';
+import { MapInfoWindow } from '@angular/google-maps';
 import { Markers } from 'src/app/models/markers.model';
 
 @Component({
   selector: 'app-googlemap',
   templateUrl: './googlemap.component.html',
-  styleUrls: ['./googlemap.component.scss']
+  styleUrls: ['./googlemap.component.scss'],
 })
 export class GooglemapComponent implements OnChanges, AfterViewInit {
   @ViewChild(MapInfoWindow) infoWindow: MapInfoWindow | undefined;
@@ -28,35 +35,35 @@ export class GooglemapComponent implements OnChanges, AfterViewInit {
   ngOnChanges(changes: SimpleChanges): void {
     this.center = {
       lat: this.googleResponse.place_results.gps_coordinates.latitude,
-      lng: this.googleResponse.place_results.gps_coordinates.longitude
+      lng: this.googleResponse.place_results.gps_coordinates.longitude,
     };
     this.getMarkerOptions();
-    this.title = this.googleResponse?.place_results?.description?.snippet;
+    this.title = this.googleResponse?.place_results?.description;
   }
 
   getMarkerOptions(): void {
     this.markerOptions = {};
-    if(this.locationMarkers.length === 0) {
+    if (this.locationMarkers.length === 0) {
       this.markerPositions = [];
       return;
     }
-    this.locationMarkers?.forEach(marker => {
+    this.locationMarkers?.forEach((marker) => {
       marker?.forEach((el, index) => {
-        if(el.type === 'trip') {
+        if (el.type === 'trip') {
           this.markerOptions = {
             icon: {
               url: 'https://maps.google.com/mapfiles/ms/icons/red-dot.png',
             },
-            title: el.title
+            title: el.title,
           };
         } else {
-          switch(index) {
+          switch (index) {
             case 0:
               this.markerOptions = {
                 icon: {
                   url: 'https://maps.google.com/mapfiles/ms/icons/green-dot.png',
                 },
-                title: el.title
+                title: el.title,
               };
               break;
             case 1:
@@ -64,7 +71,7 @@ export class GooglemapComponent implements OnChanges, AfterViewInit {
                 icon: {
                   url: 'https://maps.google.com/mapfiles/ms/icons/yellow-dot.png',
                 },
-                title: el.title
+                title: el.title,
               };
               break;
             case 2:
@@ -72,7 +79,7 @@ export class GooglemapComponent implements OnChanges, AfterViewInit {
                 icon: {
                   url: 'https://maps.google.com/mapfiles/ms/icons/brown-dot.png',
                 },
-                title: el.title
+                title: el.title,
               };
               break;
             case 3:
@@ -80,7 +87,7 @@ export class GooglemapComponent implements OnChanges, AfterViewInit {
                 icon: {
                   url: 'https://maps.google.com/mapfiles/ms/icons/blue-dot.png',
                 },
-                title: el.title
+                title: el.title,
               };
               break;
             case 4:
@@ -88,7 +95,7 @@ export class GooglemapComponent implements OnChanges, AfterViewInit {
                 icon: {
                   url: 'https://maps.google.com/mapfiles/ms/icons/purple-dot.png',
                 },
-                title: el.title
+                title: el.title,
               };
               break;
           }
@@ -101,7 +108,7 @@ export class GooglemapComponent implements OnChanges, AfterViewInit {
       });
     });
   }
-  
+
   ngAfterViewInit(): void {
     this.openInfoWindow();
   }
@@ -113,7 +120,7 @@ export class GooglemapComponent implements OnChanges, AfterViewInit {
   }
 
   openInfoWindow(markerData?: any, addDyanmicTitle?: boolean) {
-    if(addDyanmicTitle) {
+    if (addDyanmicTitle) {
       this.title = markerData.options.title;
     } else {
       this.title = this.googleResponse?.place_results?.description?.snippet;
