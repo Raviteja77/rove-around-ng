@@ -11,6 +11,8 @@ import { AddEditNotesPopUpComponent } from '../components/add-edit-notes-pop-up/
 import { AddExpensesPopUpComponent } from '../components/add-expenses-pop-up/add-expenses-pop-up.component';
 import { AddPlacePopUpComponent } from '../components/add-place-pop-up/add-place-pop-up.component';
 import { ExpensesBreakDownPopUpComponent } from '../components/expenses-break-down-pop-up/expenses-break-down-pop-up.component';
+import { Environment } from 'src/app/environment/api_keys';
+import { catchError } from 'rxjs';
 
 @Injectable({
   providedIn: 'root',

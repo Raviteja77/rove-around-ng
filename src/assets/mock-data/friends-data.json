@@ -1,0 +1,283 @@
+{
+    "search_metadata": {
+        "id": "66346193f218019461af88be",
+        "status": "Success",
+        "json_endpoint": "https://serpapi.com/searches/a53c896b552bb13b/66346193f218019461af88be.json",
+        "created_at": "2024-05-03 04:01:23 UTC",
+        "processed_at": "2024-05-03 04:01:23 UTC",
+        "google_maps_url": "https://www.google.com/maps/search/Apartment+Building+from+the+TV+Show+Friends?hl=en",
+        "raw_html_file": "https://serpapi.com/searches/a53c896b552bb13b/66346193f218019461af88be.html",
+        "total_time_taken": 2.27
+    },
+    "search_parameters": {
+        "engine": "google_maps",
+        "type": "search",
+        "q": "Apartment Building from the TV Show Friends",
+        "google_domain": "google.com",
+        "hl": "en"
+    },
+    "search_information": {
+        "local_results_state": "Showing results for type: \"place\" instead of type: \"search\"",
+        "query_displayed": "Apartment Building from the TV Show Friends"
+    },
+    "place_results": {
+        "title": "Apartment Building from the TV Show Friends",
+        "place_id": "ChIJtWuiQJNZwokRoypxRVFLq78",
+        "data_id": "0x89c2599340a26bb5:0xbfab4b5145712aa3",
+        "data_cid": "13811215494691236515",
+        "reviews_link": "https://serpapi.com/search.json?data_id=0x89c2599340a26bb5%3A0xbfab4b5145712aa3&engine=google_maps_reviews&hl=en",
+        "photos_link": "https://serpapi.com/search.json?data_id=0x89c2599340a26bb5%3A0xbfab4b5145712aa3&engine=google_maps_photos&hl=en",
+        "gps_coordinates": {
+            "latitude": 40.732302,
+            "longitude": -74.0052444
+        },
+        "place_id_search": "https://serpapi.com/search.json?engine=google_maps&google_domain=google.com&hl=en&place_id=ChIJtWuiQJNZwokRoypxRVFLq78",
+        "provider_id": "/g/12hm1ctx_",
+        "thumbnail": "https://lh5.googleusercontent.com/p/AF1QipMMp8HSns5SUFnpAxILu5mgTZtisBZpYmg5Dlpp=w86-h114-k-no",
+        "type": [
+            "Multi-unit residential building"
+        ],
+        "type_ids": [
+            "multi_unit_residential_building"
+        ],
+        "address": "90 Bedford St, New York, NY 10014",
+        "images": [
+            {
+                "title": "All",
+                "thumbnail": "https://lh5.googleusercontent.com/p/AF1QipMMp8HSns5SUFnpAxILu5mgTZtisBZpYmg5Dlpp=w224-h298-k-no"
+            },
+            {
+                "title": "Street View & 360°",
+                "thumbnail": "https://streetviewpixels-pa.googleapis.com/v1/thumbnail?panoid=IELAEhi7k0pQonzTitXfrA&cb_client=maps_sv.tactile.gps&w=224&h=298&yaw=23.37184&pitch=0&thumbfov=100"
+            },
+            {
+                "title": "Videos",
+                "thumbnail": "https://lh5.googleusercontent.com/p/AF1QipO2d1A3EDZDxjhFYjt3X3fP_eZsPxtkJOfYh1Gf=w224-h398-k-no"
+            }
+        ],
+        "at_this_place": {
+            "type": [
+                {
+                    "title": "Food & Drink",
+                    "places": 1
+                },
+                {
+                    "title": "Shopping",
+                    "places": 1
+                },
+                {
+                    "title": "Services",
+                    "places": 2
+                },
+                {
+                    "title": "Other",
+                    "places": 1
+                }
+            ],
+            "places": [
+                {
+                    "position": 1,
+                    "title": "Little Owl",
+                    "data_id": "0x89c259933fa17e4d:0x7de1e5ee1aae79f7",
+                    "data_cid": "9070783935313508855",
+                    "reviews_link": "https://serpapi.com/search.json?data_id=0x89c259933fa17e4d%3A0x7de1e5ee1aae79f7&engine=google_maps_reviews&hl=en",
+                    "photos_link": "https://serpapi.com/search.json?data_id=0x89c259933fa17e4d%3A0x7de1e5ee1aae79f7&engine=google_maps_photos&hl=en",
+                    "gps_coordinates": {
+                        "latitude": 40.732397999999996,
+                        "longitude": -74.005318
+                    },
+                    "place_id_search": "https://serpapi.com/search.json?data=%214m5%213m4%211s0x89c259933fa17e4d%3A0x7de1e5ee1aae79f7%218m2%213d40.732397999999996%214d-74.005318&engine=google_maps&google_domain=google.com&hl=en&type=place",
+                    "rating": 4.5,
+                    "reviews": 1126,
+                    "type": "Mediterranean restaurant",
+                    "type_id": "mediterranean_restaurant",
+                    "address": "90 Bedford St, New York, NY 10014",
+                    "location": "Floor 1",
+                    "open_state": "Closed ⋅ Opens 11 AM",
+                    "hours": [
+                        {
+                            "friday": "11 AM–10 PM"
+                        },
+                        {
+                            "saturday": "9 AM–3 PM"
+                        },
+                        {
+                            "sunday": "9 AM–3 PM"
+                        },
+                        {
+                            "monday": "11 AM–10 PM"
+                        },
+                        {
+                            "tuesday": "11 AM–10 PM"
+                        },
+                        {
+                            "wednesday": "11 AM–10 PM"
+                        },
+                        {
+                            "thursday": "11 AM–10 PM"
+                        }
+                    ],
+                    "thumbanil": "https://lh5.googleusercontent.com/p/AF1QipPZZDEM_bhZInTwjM_DmfTNe9SA5bNbkyuYTQ38=w86-h86-n-k-no"
+                },
+                {
+                    "position": 2,
+                    "title": "KB- Home",
+                    "data_id": "0x89c2595c545d7577:0x2a41bc8ee669c815",
+                    "data_cid": "3044922145016236053",
+                    "reviews_link": "https://serpapi.com/search.json?data_id=0x89c2595c545d7577%3A0x2a41bc8ee669c815&engine=google_maps_reviews&hl=en",
+                    "photos_link": "https://serpapi.com/search.json?data_id=0x89c2595c545d7577%3A0x2a41bc8ee669c815&engine=google_maps_photos&hl=en",
+                    "gps_coordinates": {
+                        "latitude": 40.732347399999995,
+                        "longitude": -74.0053204
+                    },
+                    "place_id_search": "https://serpapi.com/search.json?data=%214m5%213m4%211s0x89c2595c545d7577%3A0x2a41bc8ee669c815%218m2%213d40.732347399999995%214d-74.0053204&engine=google_maps&google_domain=google.com&hl=en&type=place",
+                    "rating": 1,
+                    "reviews": 1,
+                    "type": "Housing development",
+                    "type_id": "housing_development",
+                    "address": "Apartment Building from the TV Show Friends, Bedford St, New York, NY 10014",
+                    "location": "Floor 1"
+                },
+                {
+                    "position": 3,
+                    "title": "eDevPark",
+                    "data_id": "0x89c2599340a26bb5:0xdc1f4c32a68d82b1",
+                    "data_cid": "15861480193048543921",
+                    "reviews_link": "https://serpapi.com/search.json?data_id=0x89c2599340a26bb5%3A0xdc1f4c32a68d82b1&engine=google_maps_reviews&hl=en",
+                    "photos_link": "https://serpapi.com/search.json?data_id=0x89c2599340a26bb5%3A0xdc1f4c32a68d82b1&engine=google_maps_photos&hl=en",
+                    "gps_coordinates": {
+                        "latitude": 40.732347399999995,
+                        "longitude": -74.0053204
+                    },
+                    "place_id_search": "https://serpapi.com/search.json?data=%214m5%213m4%211s0x89c2599340a26bb5%3A0xdc1f4c32a68d82b1%218m2%213d40.732347399999995%214d-74.0053204&engine=google_maps&google_domain=google.com&hl=en&type=place",
+                    "rating": 0,
+                    "reviews": 0,
+                    "type": "Graphic designer",
+                    "type_id": "graphic_designer",
+                    "address": "90 Bedford St, New York, NY 10014",
+                    "location": "Floor 1"
+                },
+                {
+                    "position": 4,
+                    "title": "Azl Limited",
+                    "data_id": "0x89c2599340a26bb5:0xdfac697eabad8ef3",
+                    "data_cid": "16117373159219236595",
+                    "reviews_link": "https://serpapi.com/search.json?data_id=0x89c2599340a26bb5%3A0xdfac697eabad8ef3&engine=google_maps_reviews&hl=en",
+                    "photos_link": "https://serpapi.com/search.json?data_id=0x89c2599340a26bb5%3A0xdfac697eabad8ef3&engine=google_maps_photos&hl=en",
+                    "gps_coordinates": {
+                        "latitude": 40.732347399999995,
+                        "longitude": -74.0053204
+                    },
+                    "place_id_search": "https://serpapi.com/search.json?data=%214m5%213m4%211s0x89c2599340a26bb5%3A0xdfac697eabad8ef3%218m2%213d40.732347399999995%214d-74.0053204&engine=google_maps&google_domain=google.com&hl=en&type=place",
+                    "rating": 0,
+                    "reviews": 0,
+                    "type": "Leather goods store",
+                    "type_id": "leather_goods_store",
+                    "address": "90 Bedford St, New York, NY 10014",
+                    "location": "Floor 1"
+                },
+                {
+                    "position": 5,
+                    "title": "ICOrankings",
+                    "data_id": "0x89c259e9c686e969:0xfe8d1afe8c1c366d",
+                    "data_cid": "18342346537924572781",
+                    "reviews_link": "https://serpapi.com/search.json?data_id=0x89c259e9c686e969%3A0xfe8d1afe8c1c366d&engine=google_maps_reviews&hl=en",
+                    "photos_link": "https://serpapi.com/search.json?data_id=0x89c259e9c686e969%3A0xfe8d1afe8c1c366d&engine=google_maps_photos&hl=en",
+                    "gps_coordinates": {
+                        "latitude": 40.732302,
+                        "longitude": -74.0052444
+                    },
+                    "place_id_search": "https://serpapi.com/search.json?data=%214m5%213m4%211s0x89c259e9c686e969%3A0xfe8d1afe8c1c366d%218m2%213d40.732302%214d-74.0052444&engine=google_maps&google_domain=google.com&hl=en&type=place",
+                    "rating": 0,
+                    "reviews": 0,
+                    "type": "Newspaper advertising department",
+                    "type_id": "newspaper_advertising_department",
+                    "address": "90 Bedford St, New York, NY 10014",
+                    "open_state": "Open 24 hours",
+                    "hours": [
+                        {
+                            "friday": "Open 24 hours"
+                        },
+                        {
+                            "saturday": "Open 24 hours"
+                        },
+                        {
+                            "sunday": "Open 24 hours"
+                        },
+                        {
+                            "monday": "Open 24 hours"
+                        },
+                        {
+                            "tuesday": "Open 24 hours"
+                        },
+                        {
+                            "wednesday": "Open 24 hours"
+                        },
+                        {
+                            "thursday": "Open 24 hours"
+                        }
+                    ],
+                    "thumbanil": "https://lh5.googleusercontent.com/p/AF1QipNVJ_FV1mCBSkGk8IkUGJ3Be80ioSqr4Cb6tnbq=w86-h86-n-k-no"
+                }
+            ]
+        },
+        "at_this_location": [
+            {
+                "position": 1,
+                "title": "Little Owl",
+                "data_id": "0x89c259933fa17e4d:0x7de1e5ee1aae79f7",
+                "data_cid": "9070783935313508855",
+                "reviews_link": "https://serpapi.com/search.json?data_id=0x89c259933fa17e4d%3A0x7de1e5ee1aae79f7&engine=google_maps_reviews&hl=en",
+                "photos_link": "https://serpapi.com/search.json?data_id=0x89c259933fa17e4d%3A0x7de1e5ee1aae79f7&engine=google_maps_photos&hl=en",
+                "gps_coordinates": {
+                    "latitude": 40.732398,
+                    "longitude": -74.005318
+                },
+                "place_id_search": "https://serpapi.com/search.json?data=%214m5%213m4%211s0x89c259933fa17e4d%3A0x7de1e5ee1aae79f7%218m2%213d40.732398%214d-74.005318&engine=google_maps&google_domain=google.com&hl=en&type=place",
+                "rating": 4.5
+            },
+            {
+                "position": 2,
+                "title": "eDevPark",
+                "data_id": "0x89c2599340a26bb5:0xdc1f4c32a68d82b1",
+                "data_cid": "15861480193048543921",
+                "reviews_link": "https://serpapi.com/search.json?data_id=0x89c2599340a26bb5%3A0xdc1f4c32a68d82b1&engine=google_maps_reviews&hl=en",
+                "photos_link": "https://serpapi.com/search.json?data_id=0x89c2599340a26bb5%3A0xdc1f4c32a68d82b1&engine=google_maps_photos&hl=en",
+                "gps_coordinates": {
+                    "latitude": 40.7323474,
+                    "longitude": -74.0053204
+                },
+                "place_id_search": "https://serpapi.com/search.json?data=%214m5%213m4%211s0x89c2599340a26bb5%3A0xdc1f4c32a68d82b1%218m2%213d40.7323474%214d-74.0053204&engine=google_maps&google_domain=google.com&hl=en&type=place",
+                "rating": 0
+            },
+            {
+                "position": 3,
+                "title": "Azl Limited",
+                "data_id": "0x89c2599340a26bb5:0xdfac697eabad8ef3",
+                "data_cid": "16117373159219236595",
+                "reviews_link": "https://serpapi.com/search.json?data_id=0x89c2599340a26bb5%3A0xdfac697eabad8ef3&engine=google_maps_reviews&hl=en",
+                "photos_link": "https://serpapi.com/search.json?data_id=0x89c2599340a26bb5%3A0xdfac697eabad8ef3&engine=google_maps_photos&hl=en",
+                "gps_coordinates": {
+                    "latitude": 40.7323474,
+                    "longitude": -74.0053204
+                },
+                "place_id_search": "https://serpapi.com/search.json?data=%214m5%213m4%211s0x89c2599340a26bb5%3A0xdfac697eabad8ef3%218m2%213d40.7323474%214d-74.0053204&engine=google_maps&google_domain=google.com&hl=en&type=place",
+                "rating": 0
+            },
+            {
+                "position": 4,
+                "title": "ICOrankings",
+                "data_id": "0x89c259e9c686e969:0xfe8d1afe8c1c366d",
+                "data_cid": "18342346537924572781",
+                "reviews_link": "https://serpapi.com/search.json?data_id=0x89c259e9c686e969%3A0xfe8d1afe8c1c366d&engine=google_maps_reviews&hl=en",
+                "photos_link": "https://serpapi.com/search.json?data_id=0x89c259e9c686e969%3A0xfe8d1afe8c1c366d&engine=google_maps_photos&hl=en",
+                "gps_coordinates": {
+                    "latitude": 40.732302,
+                    "longitude": -74.0052444
+                },
+                "place_id_search": "https://serpapi.com/search.json?data=%214m5%213m4%211s0x89c259e9c686e969%3A0xfe8d1afe8c1c366d%218m2%213d40.732302%214d-74.0052444&engine=google_maps&google_domain=google.com&hl=en&type=place",
+                "rating": 0
+            }
+        ]
+    }
+}

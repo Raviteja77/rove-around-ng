@@ -34,7 +34,7 @@ export class AddPlacePopUpComponent implements OnInit {
 
   onSubmit() {
     this.popUpService
-      .getPlaceDetails(this.place.long_name)
+      .getPlaceDetails(this.place.address_components[0].long_name)
       .subscribe((response) => {
         console.log(response);
         let placeResponse;
