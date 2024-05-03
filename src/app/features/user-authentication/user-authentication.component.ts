@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { ActivatedRoute } from '@angular/router';
 import { UserAuthenticationService } from './services/user-authentication.service';
+import { MessageService } from 'primeng/api';
 
 @Component({
   selector: 'app-user-authentication',
@@ -15,7 +16,8 @@ export class UserAuthenticationComponent implements OnInit {
   constructor(
     private fb: FormBuilder,
     private userAuthenticationService: UserAuthenticationService,
-    private activedRoute: ActivatedRoute
+    private activedRoute: ActivatedRoute,
+    private messageService: MessageService
   ) {
     this.signUpForm = this.fb.group({
       userName: ['', Validators.required],
@@ -100,8 +102,9 @@ export class UserAuthenticationComponent implements OnInit {
       this.userAuthenticationService.register(this.signUpForm.value).subscribe({
         next: (response: any) => {
           if (response === 208) {
-            alert('The entered email is already registered');
+            this.messageService.add({ severity: 'error', summary: 'Error', detail: 'The entered email/username is already registered' });
           } else if (response == 201) {
+            this.messageService.add({ severity: 'success', summary: 'Success', detail: 'Registration Successful' });
             this.toggleToOtherForm(
               'login',
               document.getElementById(
