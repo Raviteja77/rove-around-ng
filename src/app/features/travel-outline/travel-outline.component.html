@@ -1,10 +1,10 @@
 <app-header></app-header>
-<div class="container flex align-items-center justify-content-center">
-  <p-card>
-    <div class="flex justify-content-center align-items-center" style="width: 500px">
+<div class="flex align-items-center justify-content-center" style="height: 80vh;">
+  <p-card class="flex justify-content-center">
+    <div style="width: 600px">
       <div class="flex flex-column gap-30">
         <div class="font-size-30 flex justify-content-center align-items-center">
-          Outline a travel itinerary
+          Outline a Travel Itinerary
         </div>
         <div class="flex flex-column gap-20">
           <app-add-place (placeSelected)="handlePlaceSelection($event)"></app-add-place>

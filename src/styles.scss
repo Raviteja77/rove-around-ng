@@ -3,6 +3,7 @@
 @import "primeng/resources/primeng.css";
 @import "primeicons/primeicons.css";
 @import "primeflex/primeflex.scss";
+@import "./variables";
 
 body {
   margin: 0;
@@ -22,4 +23,28 @@ body {
 
 .pac-container {
   z-index: 10000 !important;
+}
+
+.p-button {
+  background: $secondary-color !important;
+  border: 1px solid $secondary-color !important;
+  color: $text-color !important;
+}
+
+.p-calendar {
+  width: 100%;
+}
+
+.p-datepicker table td {
+  padding: 0 !important;
+}
+
+.subheading {
+  font-weight: 600;
+  font-size: 24px;
+  color: #100102;
+}
+
+.p-progressbar .p-progressbar-value {
+  background: $primary-color;
 }

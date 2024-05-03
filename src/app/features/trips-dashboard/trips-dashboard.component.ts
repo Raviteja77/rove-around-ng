@@ -43,6 +43,7 @@ export class TripsDashboardComponent implements OnInit {
           const currentDate = new Date();
           const startDate = new Date(trip.startDate);
           const endDate = new Date(trip.endDate);
+          trip.destinationLongName = JSON.parse(trip.destination)?.address_components[0]?.long_name;
           if (endDate < currentDate) {
             trip.tripStatus = 'Completed';
             this.isCompletedTripsAvailable = true;

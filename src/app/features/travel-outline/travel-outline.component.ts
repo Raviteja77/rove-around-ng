@@ -43,7 +43,7 @@ export class TravelOutlineComponent implements OnInit{
       .subscribe((response) => {
         console.log(response);
         
-        this.addTrip(JSON.stringify(response), this.place.address_components[0].long_name);
+        this.addTrip(JSON.stringify(response), JSON.stringify(this.place));
       });
   }
 

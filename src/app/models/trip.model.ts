@@ -2,6 +2,7 @@ export interface Trip {
   id: number;
   tripCode: string;
   destination: string;
+  destinationLongName: string;
   startDate: string;
   endDate: string;
   budget: number;

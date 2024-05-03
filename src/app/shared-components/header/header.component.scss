@@ -1,0 +1,16 @@
+@import '../../../variables';
+
+.header {
+    background: $primary-color;
+
+    .header-logo {
+        width: 48px;
+        height: 48px;
+    }
+
+    .header-title {
+        font-weight: 500;
+        color: $secondary-color-light;
+    }
+
+}

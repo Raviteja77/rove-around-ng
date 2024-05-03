@@ -1,27 +1,35 @@
-import { Component, Input, ViewChild } from '@angular/core';
-import { MapGeocoder, MapInfoWindow, MapMarker } from '@angular/google-maps';
+import { AfterViewInit, Component, Input, OnChanges, SimpleChanges, ViewChild } from '@angular/core';
+import { MapInfoWindow, MapMarker } from '@angular/google-maps';
 
 @Component({
   selector: 'app-googlemap',
   templateUrl: './googlemap.component.html',
   styleUrls: ['./googlemap.component.scss']
 })
-export class GooglemapComponent {
+export class GooglemapComponent implements OnChanges, AfterViewInit {
   @ViewChild(MapInfoWindow) infoWindow: MapInfoWindow | undefined;
-  
-  @Input() coordinates: any[] = [35.1031, -80.5120]
 
-  center: google.maps.LatLngLiteral = { lat: this.coordinates[0], lng: this.coordinates[1] };
-  zoom = 8;
-  markerOptions: google.maps.MarkerOptions = {draggable: false};
+  center!: google.maps.LatLngLiteral;
+
+  @Input() googleResponse: any;
+  @Input() destination: any;
+
+  zoom = 10;
+  markerOptions: google.maps.MarkerOptions = { draggable: false };
   markerPositions: google.maps.LatLngLiteral[] = [];
+  cityPolygon: google.maps.Polygon | undefined;
 
-  constructor(geocoder: MapGeocoder) {
-    // geocoder.geocode({
-    //   address: '1600 Amphitheatre Parkway, Mountain View, CA'
-    // }).subscribe(({results}) => {
-    //   console.log(results);
-    // });
+  constructor() {}
+
+  ngOnChanges(changes: SimpleChanges): void {
+    this.center = {
+      lat: this.googleResponse.place_results.gps_coordinates.latitude,
+      lng: this.googleResponse.place_results.gps_coordinates.longitude
+    };
+  }
+  
+  ngAfterViewInit(): void {
+    this.openInfoWindow();
   }
 
   addMarker(event: google.maps.MapMouseEvent) {
@@ -30,10 +38,10 @@ export class GooglemapComponent {
     }
   }
 
-  openInfoWindow(marker: MapMarker) {
-    if(this.infoWindow) {
-      this.infoWindow.open(marker);
+  openInfoWindow() {
+    if (this.infoWindow && this.center) {
+      this.infoWindow.position = this.center;
+      this.infoWindow.open();
     }
   }
-
 }

@@ -13,6 +13,7 @@ const routes: Routes = [
       import('./features/user-authentication/user-authentication.module').then(
         (m) => m.UserAuthenticationModule
       ),
+    data: { animation: 'isRight'}
   },
   {
     path: 'dashboard',
@@ -20,6 +21,7 @@ const routes: Routes = [
       import('./features/trips-dashboard/trips-dashboard.module').then(
         (m) => m.TripsDashboardModule
       ),
+    data: { animation: 'isRight'}
   },
   {
     path: 'travel-outline',
@@ -27,6 +29,7 @@ const routes: Routes = [
       import('./features/travel-outline/travel-outline.module').then(
         (m) => m.TravelOutlineModule
       ),
+    data: { animation: 'isLeft'}
   },
   {
     path: 'trip-details/:code',
@@ -34,6 +37,7 @@ const routes: Routes = [
       import('./features/trip-details/trip-details.module').then(
         (m) => m.TripDetailsModule
       ),
+    data: { animation: 'isLeft'}
   },
 ];
 

@@ -15,6 +15,7 @@ export interface Trip {
   userId: number;
   tripCode: string;
   destination: string;
+  destinationLongName: string;
   googleResponse: string;
   startDate: number;
   endDate: number;

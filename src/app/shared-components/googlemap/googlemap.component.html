@@ -6,7 +6,14 @@
                             *ngFor="let markerPosition of markerPositions" 
                             [position]="markerPosition" 
                             [options]="markerOptions"
-                            (mapClick)="openInfoWindow(marker)">
+                            (mapClick)="openInfoWindow()">
                 </map-marker>
-                <map-info-window>Info Window content</map-info-window>
+                <map-info-window>
+                    <div class="flex justify-content-center pb-2">
+                        <i class="pi pi-map-marker"></i>
+                    </div>
+                    <div class="text-center">
+                        {{ googleResponse.place_results.description.snippet }}
+                    </div>
+                </map-info-window>
 </google-map>

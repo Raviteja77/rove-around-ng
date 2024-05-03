@@ -22,7 +22,8 @@ export class TripDetailsComponent implements OnInit {
   notesInput: any = [];
   tripDetails!: TripDetails;
   isTripEndInSameYear: boolean = false;
-  public coordinates: any[] = [];
+  public googleResponse: any = null;
+  public destination: any = null;
 
   itineraryTabMenus: MenuItem[][] = [];
   selectedItineraryTab: MenuItem[] = [];
@@ -46,14 +47,6 @@ export class TripDetailsComponent implements OnInit {
     this.getTripDetails();
   }
 
-  getCoordinatesFromGoogleResponse(googleResponse: string) {
-    const parsedGoogleResponse = JSON.parse(googleResponse);
-    this.coordinates = [
-      parsedGoogleResponse.place_results.gps_coordinates.latitude,
-      parsedGoogleResponse.place_results.gps_coordinates.longitude,
-    ];
-  }
-
   getTripDetails() {
     this.tripDetailsService.tripDetails$.subscribe((data) => {
       if (data) {
@@ -65,6 +58,9 @@ export class TripDetailsComponent implements OnInit {
         this.itineraryTabMenus = [];
         this.selectedItineraryTab = [];
         this.tripDetails = data;
+        this.destination = JSON.parse(this.tripDetails.trip.destination)
+        this.tripDetails.trip.destinationLongName = this.destination.address_components[0].long_name;
+        this.googleResponse = JSON.parse(this.tripDetails.trip.googleResponse);
         this.isTripEndInSameYear =
           new Date(this.tripDetails.trip.startDate).getFullYear() ===
           new Date(this.tripDetails.trip.endDate).getFullYear();
