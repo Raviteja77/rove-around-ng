@@ -1,23 +1,19 @@
-<google-map
-  width="45%"
-  [center]="center"
-  [zoom]="zoom"
-  (mapClick)="addMarker($event)"
->
-  <map-marker
-    #marker="mapMarker"
-    *ngFor="let markerData of markerPositions"
-    [position]="markerData.position"
-    [options]="markerData.options"
-    (mapClick)="openInfoWindow(markerData)"
-  >
-  </map-marker>
-  <map-info-window>
-    <div class="flex justify-content-center pb-2">
-      <i class="pi pi-map-marker"></i>
-    </div>
-    <div class="text-center">
-      {{ title }}
-    </div>
-  </map-info-window>
+<google-map width="55%" 
+            [center]="center" 
+            [zoom]="zoom" 
+            (mapClick)="addMarker($event)">
+                <map-marker #marker="mapMarker"
+                            *ngFor="let markerData of markerPositions" 
+                            [position]="markerData.position"
+                            [options]="markerData.options"
+                            (mapClick)="openInfoWindow(markerData, true)">
+                </map-marker>
+                <map-info-window>
+                    <div class="flex justify-content-center pb-2">
+                        <i class="pi pi-map-marker"></i>
+                    </div>
+                    <div class="text-center">
+                        {{ title }}
+                    </div>
+                </map-info-window>
 </google-map>
