@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, ElementRef, OnInit, Renderer2 } from '@angular/core';
 import { MapGeocoder } from '@angular/google-maps';
 import { ActivatedRoute, Router } from '@angular/router';
 import { MenuItem } from 'primeng/api';
@@ -57,7 +57,9 @@ export class TripDetailsComponent implements OnInit {
     private route: ActivatedRoute,
     private router: Router,
     private tripDetailsService: TripDetailsService,
-    private popUpService: PopUpService
+    private popUpService: PopUpService,
+    private renderer: Renderer2,
+    private elementRef: ElementRef
   ) {}
 
   ngOnInit(): void {
@@ -71,6 +73,7 @@ export class TripDetailsComponent implements OnInit {
   getTripDetails() {
     this.tripDetailsService.tripDetails$.subscribe((data) => {
       if (data) {
+        
         this.markers = [];
         let tempLocationMarkers: Markers[] = [];
         data.tripLocations?.forEach((tripLocation) => {
@@ -93,6 +96,7 @@ export class TripDetailsComponent implements OnInit {
         this.tripDetails.trip.destinationLongName =
           this.destination.address_components[0].long_name;
         this.googleResponse = JSON.parse(this.tripDetails.trip.googleResponse);
+        this.updateBackgroundImage(this.googleResponse.place_results.thumbnail);
         this.isTripEndInSameYear =
           new Date(this.tripDetails.trip.startDate).getFullYear() ===
           new Date(this.tripDetails.trip.endDate).getFullYear();
@@ -241,5 +245,15 @@ export class TripDetailsComponent implements OnInit {
       return user.userName;
     }
     return '--';
+  }
+
+  updateBackgroundImage(url: string): void {
+    const targetElement = this.elementRef.nativeElement.querySelector('#trip-details');
+    this.setBackgroundImage(targetElement, url);
+  }
+
+  setBackgroundImage(element: HTMLElement, imageUrl: string) {
+    this.renderer.setStyle(element, 'background-image', `url('${imageUrl}')`);
+    this.renderer.setStyle(element, 'background-size', 'cover');
   }
 }

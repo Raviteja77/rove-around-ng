@@ -1,7 +1,7 @@
 <div class="container flex gap-1">
   <div style="width: 55%">
     <app-header></app-header>
-    <div class="trip-details">
+    <div class="trip-details flex" id="trip-details">
       <p-card [header]="'Trip to ' + tripDetails.trip.destinationLongName">
         <div class="flex flex-column gap-20">
           <div class="flex justify-content-between">
@@ -11,9 +11,6 @@
                 {{ tripDetails.trip.startDate | date : "MMM - dd, YYYY" }} -
                 {{ tripDetails.trip.endDate | date : "MMM - dd, YYYY" }}
               </p>
-            </div>
-            <div>
-              <img [src]="googleResponse.place_results.thumbnail" />
             </div>
           </div>
         </div>
