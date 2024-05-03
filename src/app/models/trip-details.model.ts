@@ -1,8 +1,9 @@
 import { SerpGoogleLocation } from './serp-google-location.model';
+import { Iuser } from './user.model';
 
 export interface TripDetails {
   trip: Trip;
-  travelers: Traveler[];
+  travelers: Iuser[];
   tripLocations: TripLocation[];
   itineraries: Itinerary[];
   budget: Budget;
@@ -84,7 +85,7 @@ export interface Budget {
 }
 
 export interface Expense {
-  id: number;
+  id?: number;
   tripId: number;
   userId: number;
   categoryId: number;

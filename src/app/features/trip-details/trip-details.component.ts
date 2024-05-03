@@ -8,6 +8,7 @@ import { Markers } from 'src/app/models/markers.model';
 import { PopUpData } from 'src/app/models/pop-up-data.model';
 import {
   Budget,
+  Expense,
   Itinerary,
   TripDetails,
 } from 'src/app/models/trip-details.model';
@@ -30,9 +31,23 @@ export class TripDetailsComponent implements OnInit {
   public markers: Markers[][] = [];
   public googleResponse: any = null;
   public destination: any = null;
+  categories = [
+    'Flights',
+    'Transit',
+    'Car Rental',
+    'Lodging',
+    'Food',
+    'Drinks',
+    'Activities',
+    'Gas',
+    'Groceries',
+    'Shopping',
+    'Other',
+  ];
 
   itineraryTabMenus: MenuItem[][] = [];
   selectedItineraryTab: MenuItem[] = [];
+  totalExpenses: number = 0;
 
   operations = Operations;
   type = Type;
@@ -72,6 +87,7 @@ export class TripDetailsComponent implements OnInit {
         }
         this.itineraryTabMenus = [];
         this.selectedItineraryTab = [];
+        this.totalExpenses = 0;
         this.tripDetails = data;
         this.destination = JSON.parse(this.tripDetails?.trip?.destination);
         this.tripDetails.trip.destinationLongName =
@@ -102,6 +118,9 @@ export class TripDetailsComponent implements OnInit {
             this.selectedItineraryTab.push(this.itineraryTabMenus[index][0]);
           }
         );
+        this.tripDetails.expenses.forEach((expense) => {
+          this.totalExpenses += expense.amount;
+        });
         if (tempLocationMarkers.length > 0) {
           this.markers.push(tempLocationMarkers);
         }
@@ -140,6 +159,10 @@ export class TripDetailsComponent implements OnInit {
     this.popUpService.showAddEditNotesPopUp(popUpData);
   }
 
+  deleteNote(type: string, id: number) {
+    this.tripDetailsService.deleteNotes(type, id, this.tripCode);
+  }
+
   addPlace(type: string, typeID: number) {
     const popUpData = {
       type: type,
@@ -147,10 +170,6 @@ export class TripDetailsComponent implements OnInit {
       tripCode: this.tripCode,
     } as PopUpData;
     this.popUpService.showAddPlacePopUp(popUpData);
-  }
-
-  deleteNote(type: string, id: number) {
-    this.tripDetailsService.deleteNotes(type, id, this.tripCode);
   }
 
   deletePlace(type: string, id: number) {
@@ -163,8 +182,6 @@ export class TripDetailsComponent implements OnInit {
     this.selectedItineraryTab[index] = event;
   }
 
-  addBudget() {}
-
   editBudget(budget: Budget) {
     const popUpData = {
       operationType: budget.amount === 0 ? Operations.Add : Operations.Edit,
@@ -176,9 +193,29 @@ export class TripDetailsComponent implements OnInit {
 
   addExpenses() {
     const popUpData = {
+      type: Type.Trip,
+      typeId: this.tripDetails.trip.id,
       operationType: this.operations.Add,
-    };
+      tripCode: this.tripCode,
+      users: this.tripDetails.travelers,
+    } as PopUpData;
     this.popUpService.showAddExpensesPopUp(popUpData);
+  }
+
+  editExpenses(expense: Expense) {
+    const popUpData = {
+      type: Type.Trip,
+      typeId: this.tripDetails.trip.id,
+      operationType: this.operations.Edit,
+      tripCode: this.tripCode,
+      users: this.tripDetails.travelers,
+      expense: expense,
+    } as PopUpData;
+    this.popUpService.showAddExpensesPopUp(popUpData);
+  }
+
+  deleteExpenses(expenseId: number) {
+    this.tripDetailsService.deleteExpenses(expenseId, this.tripCode);
   }
 
   viewBudgetBreakDown() {}
@@ -194,5 +231,15 @@ export class TripDetailsComponent implements OnInit {
       type: type,
     };
     return marker;
+  }
+
+  getUserByPaidBy(userId: number) {
+    const user = this.tripDetails.travelers.find(
+      (user) => user.userId === userId
+    );
+    if (user) {
+      return user.userName;
+    }
+    return '--';
   }
 }

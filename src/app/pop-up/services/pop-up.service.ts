@@ -6,7 +6,7 @@ import { Type } from 'src/app/enums/type.enum';
 import { environment } from 'src/app/environment/environment';
 import { TripDetailsService } from 'src/app/features/trip-details/services/trip-details.service';
 import { PopUpData } from 'src/app/models/pop-up-data.model';
-import { Budget } from 'src/app/models/trip-details.model';
+import { Budget, Expense } from 'src/app/models/trip-details.model';
 import { AddEditBudgetPopUpComponent } from '../components/add-edit-budget-pop-up/add-edit-budget-pop-up.component';
 import { AddEditNotesPopUpComponent } from '../components/add-edit-notes-pop-up/add-edit-notes-pop-up.component';
 import { AddExpensesPopUpComponent } from '../components/add-expenses-pop-up/add-expenses-pop-up.component';
@@ -60,8 +60,9 @@ export class PopUpService {
   }
 
   showAddExpensesPopUp(popUpData: any) {
+    this.popUpData = popUpData;
     this.ref = this.dialogService.open(AddExpensesPopUpComponent, {
-      header: 'Add Expenses',
+      header: `${popUpData.operationType} Expenses`,
       data: {
         ...popUpData,
       },
@@ -144,6 +145,28 @@ export class PopUpService {
   saveBudget(data: Budget) {
     this.http
       .put(`${environment.endpoints.budgetApi}/${data.id}`, data)
+      .subscribe({
+        next: (_) => {
+          this.tripDetailsService.getTripDetails(this.popUpData.tripCode);
+          this.onClose();
+        },
+        error: (error) => {},
+      });
+  }
+
+  addExpense(data: Expense) {
+    this.http.post(`${environment.endpoints.expenseApi}/add`, data).subscribe({
+      next: (_) => {
+        this.tripDetailsService.getTripDetails(this.popUpData.tripCode);
+        this.onClose();
+      },
+      error: (error) => {},
+    });
+  }
+
+  editExpense(data: Expense) {
+    this.http
+      .put(`${environment.endpoints.expenseApi}/${data.id}`, data)
       .subscribe({
         next: (_) => {
           this.tripDetailsService.getTripDetails(this.popUpData.tripCode);

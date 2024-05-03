@@ -1,20 +1,21 @@
 import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
 import { AccordionModule } from 'primeng/accordion';
+import { MessageService } from 'primeng/api';
 import { AutoCompleteModule } from 'primeng/autocomplete';
 import { ButtonModule } from 'primeng/button';
 import { CalendarModule } from 'primeng/calendar';
 import { CardModule } from 'primeng/card';
 import { DividerModule } from 'primeng/divider';
 import { DropdownModule } from 'primeng/dropdown';
-import { InputTextareaModule } from 'primeng/inputtextarea';
-import { TabMenuModule } from 'primeng/tabmenu';
-import { TooltipModule } from 'primeng/tooltip';
 import { DialogService, DynamicDialogModule } from 'primeng/dynamicdialog';
-import { ProgressBarModule } from 'primeng/progressbar';
-import { ToastModule } from 'primeng/toast';
-import { MessageService } from 'primeng/api';
 import { InputTextModule } from 'primeng/inputtext';
+import { InputTextareaModule } from 'primeng/inputtextarea';
+import { ProgressBarModule } from 'primeng/progressbar';
+import { TableModule } from 'primeng/table';
+import { TabMenuModule } from 'primeng/tabmenu';
+import { ToastModule } from 'primeng/toast';
+import { TooltipModule } from 'primeng/tooltip';
 
 @NgModule({
   declarations: [],
@@ -34,6 +35,7 @@ import { InputTextModule } from 'primeng/inputtext';
     ProgressBarModule,
     ToastModule,
     InputTextModule,
+    TableModule,
   ],
   exports: [
     CardModule,
@@ -50,6 +52,7 @@ import { InputTextModule } from 'primeng/inputtext';
     ProgressBarModule,
     ToastModule,
     InputTextModule,
+    TableModule,
   ],
   providers: [DialogService, MessageService],
 })

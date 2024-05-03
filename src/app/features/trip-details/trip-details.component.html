@@ -1,5 +1,5 @@
 <div class="container flex gap-1">
-  <div style="width: 45%">
+  <div style="width: 55%">
     <app-header></app-header>
     <div class="trip-details">
       <p-card [header]="'Trip to ' + tripDetails.trip.destinationLongName">
@@ -260,10 +260,14 @@
           </p-button>
         </div>
         <div class="flex justify-content-between">
-          <div>$ {{ tripDetails.budget.amount }}</div>
-          <div>$ {{ tripDetails.budget.amount }}</div>
+          <div class="font-size-30">
+            Budget <strong>$ {{ tripDetails.budget.amount }}</strong>
+          </div>
+          <div>
+            Total Expenses: <strong>$ {{ totalExpenses }}</strong>
+          </div>
         </div>
-        <p-progressBar [value]="50" [showValue]="false"></p-progressBar>
+        <p-progressBar [value]="0" [showValue]="false"></p-progressBar>
         <div class="flex gap-10">
           <p-button (onClick)="editBudget(tripDetails.budget)">
             <div class="flex gap-10">
@@ -281,6 +285,42 @@
               <div>View breakdown</div>
             </div>
           </p-button>
+        </div>
+        <div>
+          <p-table
+            [value]="tripDetails.expenses"
+            [tableStyle]="{ 'min-width': '50rem' }"
+          >
+            <ng-template pTemplate="header">
+              <tr>
+                <th>Paid By</th>
+                <th>Category</th>
+                <th>Ammount</th>
+                <th>Split Type</th>
+                <th>Actions</th>
+              </tr>
+            </ng-template>
+            <ng-template pTemplate="body" let-expense>
+              <tr>
+                <td>{{ getUserByPaidBy(expense.userId) }}</td>
+                <td>{{ categories[expense.categoryId - 1] }}</td>
+                <td>{{ expense.amount }}$</td>
+                <td>{{ expense.splitType }}</td>
+                <td>
+                  <div class="flex gap-10">
+                    <p-button
+                      icon="pi pi-pen-to-square"
+                      (onClick)="editExpenses(expense)"
+                    ></p-button>
+                    <p-button
+                      icon="pi pi-trash"
+                      (onClick)="deleteExpenses(expense.id)"
+                    ></p-button>
+                  </div>
+                </td>
+              </tr>
+            </ng-template>
+          </p-table>
         </div>
       </div>
     </div>

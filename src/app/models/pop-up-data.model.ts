@@ -1,4 +1,5 @@
-import { Budget, ItineraryNote, TripNote } from './trip-details.model';
+import { Budget, Expense, ItineraryNote, TripNote } from './trip-details.model';
+import { Iuser } from './user.model';
 
 export interface PopUpData {
   tripCode: string;
@@ -8,4 +9,7 @@ export interface PopUpData {
   tripNotes?: TripNote;
   ItineraryNotes?: ItineraryNote;
   budget?: Budget;
+  users?: Iuser[];
+  expense?: Expense;
+  expenses?: Expense[];
 }

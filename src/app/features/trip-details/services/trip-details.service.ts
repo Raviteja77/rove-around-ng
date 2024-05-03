@@ -59,5 +59,16 @@ export class TripDetailsService {
     });
   }
 
+  deleteExpenses(id: number, tripCode: string) {
+    this.http
+      .post(`${environment.endpoints.expenseApi}/${id}`, { id })
+      .subscribe({
+        next: () => {
+          this.getTripDetails(tripCode);
+        },
+        error: (error) => {},
+      });
+  }
+
   addPlace() {}
 }
