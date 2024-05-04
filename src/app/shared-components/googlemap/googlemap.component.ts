@@ -47,8 +47,8 @@ export class GooglemapComponent implements OnChanges, AfterViewInit {
       this.markerPositions = [];
       return;
     }
-    this.locationMarkers?.forEach((marker) => {
-      marker?.forEach((el, index) => {
+    this.locationMarkers?.forEach((marker, index) => {
+      marker?.forEach((el) => {
         if (el.type === 'trip') {
           this.markerOptions = {
             icon: {
@@ -77,7 +77,7 @@ export class GooglemapComponent implements OnChanges, AfterViewInit {
             case 2:
               this.markerOptions = {
                 icon: {
-                  url: 'https://maps.google.com/mapfiles/ms/icons/brown-dot.png',
+                  url: 'https://maps.google.com/mapfiles/ms/icons/orange-dot.png',
                 },
                 title: el.title,
               };
@@ -110,7 +110,9 @@ export class GooglemapComponent implements OnChanges, AfterViewInit {
   }
 
   ngAfterViewInit(): void {
-    this.openInfoWindow();
+    setTimeout(() => {
+      this.openInfoWindow();
+    }, 1000)
   }
 
   addMarker(event: google.maps.MapMouseEvent) {
@@ -122,8 +124,15 @@ export class GooglemapComponent implements OnChanges, AfterViewInit {
   openInfoWindow(markerData?: any, addDyanmicTitle?: boolean) {
     if (addDyanmicTitle) {
       this.title = markerData.options.title;
+      this.center = markerData.position;
+    } else if(!this.googleResponse?.place_results?.description){
+      return;
     } else {
-      this.title = this.googleResponse?.place_results?.description?.snippet;
+      this.title = this.googleResponse?.place_results?.description;
+      this.center = {
+        lat: this.googleResponse.place_results.gps_coordinates.latitude,
+        lng: this.googleResponse.place_results.gps_coordinates.longitude,
+      }
     }
     if (this.infoWindow && this.center) {
       this.infoWindow.position = this.center;

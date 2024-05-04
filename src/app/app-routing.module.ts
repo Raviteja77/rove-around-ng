@@ -13,7 +13,6 @@ const routes: Routes = [
       import('./features/user-authentication/user-authentication.module').then(
         (m) => m.UserAuthenticationModule
       ),
-    data: { animation: 'isRight' },
   },
   {
     path: 'dashboard',

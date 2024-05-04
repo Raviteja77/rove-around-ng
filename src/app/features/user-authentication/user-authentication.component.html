@@ -3,7 +3,7 @@
         <form [formGroup]="signUpForm" (ngSubmit)="onRegisterSubmit()">
             <h1>Create Account</h1>
             <span>or use your email for registration</span>
-            <input pInput class="form-control" type="text" placeholder="Name" formControlName="userName">
+            <input pInput class="form-control" type="text" placeholder="username" formControlName="userName">
             <div *ngIf="signUpForm.get('userName')?.invalid && (signUpForm.get('userName')?.dirty || signUpForm.get('userName')?.touched)">
                 <span class="error-message" *ngIf="signUpForm.get('userName')?.errors?.['required']"> Username is required</span>
             </div>
@@ -56,5 +56,5 @@
          [showTransitionOptions]="'1000ms'" 
          [hideTransitionOptions]="'1000ms'" 
          [showTransformOptions]="'translateX(100%)'" 
-         [life]="10000">
+         [life]="5000">
 </p-toast>

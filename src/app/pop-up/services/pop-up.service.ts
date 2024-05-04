@@ -12,6 +12,8 @@ import { AddEditNotesPopUpComponent } from '../components/add-edit-notes-pop-up/
 import { AddExpensesPopUpComponent } from '../components/add-expenses-pop-up/add-expenses-pop-up.component';
 import { AddPlacePopUpComponent } from '../components/add-place-pop-up/add-place-pop-up.component';
 import { ExpensesBreakDownPopUpComponent } from '../components/expenses-break-down-pop-up/expenses-break-down-pop-up.component';
+import { Environment } from 'src/app/environment/api_keys';
+import { MessageService } from 'primeng/api';
 
 @Injectable({
   providedIn: 'root',
@@ -26,7 +28,8 @@ export class PopUpService {
   constructor(
     private http: HttpClient,
     public dialogService: DialogService,
-    private tripDetailsService: TripDetailsService
+    private tripDetailsService: TripDetailsService,
+    private messageService: MessageService
   ) {}
 
   showAddEditNotesPopUp(popUpData: any) {
@@ -66,6 +69,8 @@ export class PopUpService {
       data: {
         ...popUpData,
       },
+      height: '520px',
+      width: '350px'
     });
   }
 
@@ -93,6 +98,7 @@ export class PopUpService {
     this.http.post(notesApi, data).subscribe({
       next: (_) => {
         this.tripDetailsService.getTripDetails(this.popUpData.tripCode);
+        this.messageService.add({ severity: 'success', summary: 'Success', detail: 'Notes added Successfully' });
         this.onClose();
       },
       error: (error) => {},
@@ -110,6 +116,7 @@ export class PopUpService {
     this.http.put(notesApi, data).subscribe({
       next: (_) => {
         this.tripDetailsService.getTripDetails(this.popUpData.tripCode);
+        this.messageService.add({ severity: 'success', summary: 'Success', detail: 'Notes updated Successfully' });
         this.onClose();
       },
       error: (error) => {},
@@ -126,6 +133,7 @@ export class PopUpService {
     this.http.post(`${placeApi}/add`, data).subscribe({
       next: (_) => {
         this.tripDetailsService.getTripDetails(this.popUpData.tripCode);
+        this.messageService.add({ severity: 'success', summary: 'Success', detail: 'Place added Successfully' });
         this.onClose();
       },
       error: (error) => {},
@@ -133,16 +141,16 @@ export class PopUpService {
   }
 
   getPlaceDetails(place: string) {
-    // return this.http
-    //   .get(`${this.basicSerpAPI}&q=${place}&key=${Environment.SERP_API_KEY}`)
-    //   .pipe(
-    //     (res) => res,
-    //     catchError((_) => [])
-    //   );
-    return this.http.get('assets/mock-data/empire-state-data.json').pipe(
-      (res) => res,
-      catchError((_) => [])
-    );
+    return this.http
+      .get(`${this.basicSerpAPI}&q=${place}&key=${Environment.SERP_API_KEY}`)
+      .pipe(
+        (res) => res,
+        catchError((_) => [])
+      );
+    // return this.http.get('assets/mock-data/location-data.json').pipe(
+    //   (res) => res,
+    //   catchError((_) => [])
+    // );
   }
 
   saveBudget(data: Budget) {
@@ -151,6 +159,7 @@ export class PopUpService {
       .subscribe({
         next: (_) => {
           this.tripDetailsService.getTripDetails(this.popUpData.tripCode);
+          this.messageService.add({ severity: 'success', summary: 'Success', detail: 'Budget updated Successfully' });
           this.onClose();
         },
         error: (error) => {},
@@ -161,6 +170,7 @@ export class PopUpService {
     this.http.post(`${environment.endpoints.expenseApi}/add`, data).subscribe({
       next: (_) => {
         this.tripDetailsService.getTripDetails(this.popUpData.tripCode);
+        this.messageService.add({ severity: 'success', summary: 'Success', detail: 'Expense added Successfully' });
         this.onClose();
       },
       error: (error) => {},
@@ -173,6 +183,7 @@ export class PopUpService {
       .subscribe({
         next: (_) => {
           this.tripDetailsService.getTripDetails(this.popUpData.tripCode);
+          this.messageService.add({ severity: 'success', summary: 'Success', detail: 'Expense updated Successfully' });
           this.onClose();
         },
         error: (error) => {},

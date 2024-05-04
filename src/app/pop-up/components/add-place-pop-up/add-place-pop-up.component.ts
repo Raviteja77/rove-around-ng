@@ -44,7 +44,7 @@ export class AddPlacePopUpComponent implements OnInit {
             thumbnail: response?.place_results?.thumbnail,
             gps_coordinates: response?.place_results?.gps_coordinates,
             description:
-              Object.keys(response?.place_results?.description).length > 0
+            response?.place_results?.description && Object.keys(response?.place_results?.description).length > 0
                 ? response?.place_results?.description?.snippet
                 : response?.place_results?.description,
             address: response?.place_results?.address || '',

@@ -3,6 +3,7 @@ import { ActivatedRoute, Router } from '@angular/router';
 import { Iuser } from 'src/app/models/user.model';
 import { UserAuthenticationService } from '../user-authentication/services/user-authentication.service';
 import { TripInvitationService } from './services/trip-invitation.service';
+import { MessageService } from 'primeng/api';
 
 @Component({
   selector: 'app-trip-invitation',
@@ -17,7 +18,8 @@ export class TripInvitationComponent implements OnInit {
     private route: ActivatedRoute,
     private router: Router,
     private tripInvitationService: TripInvitationService,
-    private authService: UserAuthenticationService
+    private authService: UserAuthenticationService,
+    private messageService: MessageService
   ) {}
 
   ngOnInit(): void {
@@ -28,7 +30,7 @@ export class TripInvitationComponent implements OnInit {
   }
 
   notAccept() {
-    this.router.navigate(['dashbroad']);
+    this.router.navigate(['dashboard']);
   }
 
   accept() {
@@ -37,7 +39,11 @@ export class TripInvitationComponent implements OnInit {
       tripCode: this.tripCode,
     };
     this.tripInvitationService.addTraveler(response).subscribe({
-      next: () => {
+      next: (res) => {
+        if(res === 208) {
+          this.messageService.add({ severity: 'success', summary: 'Success', detail: 'Already exists in the trip' });
+          return;
+        }
         this.router.navigate(['trip-details', this.tripCode]);
       },
       error: () => {},

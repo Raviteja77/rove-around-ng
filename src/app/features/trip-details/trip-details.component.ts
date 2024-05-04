@@ -100,9 +100,9 @@ export class TripDetailsComponent implements OnInit {
         this.isTripEndInSameYear =
           new Date(this.tripDetails.trip.startDate).getFullYear() ===
           new Date(this.tripDetails.trip.endDate).getFullYear();
-        tempLocationMarkers = [];
-        this.tripDetails.itineraries?.forEach(
-          (itinerary: Itinerary, index: number) => {
+          this.tripDetails.itineraries?.forEach(
+            (itinerary: Itinerary, index: number) => {
+            tempLocationMarkers = [];
             itinerary.itineraryLocations.forEach((itineraryLocation) => {
               itineraryLocation.serpGoogleResponse = JSON.parse(
                 itineraryLocation.googleResponse
@@ -115,6 +115,9 @@ export class TripDetailsComponent implements OnInit {
                 tempLocationMarkers.push(tempLocationMarker);
               }
             });
+            if(tempLocationMarkers.length != 0) {
+              this.markers.push(tempLocationMarkers);
+            }
             this.itineraryTabMenus.push([
               { label: 'Places', icon: 'pi pi-map-marker' },
               { label: 'Notes', icon: 'pi pi-clipboard' },
@@ -125,9 +128,6 @@ export class TripDetailsComponent implements OnInit {
         this.tripDetails.expenses.forEach((expense) => {
           this.totalExpenses += expense.amount;
         });
-        if (tempLocationMarkers.length > 0) {
-          this.markers.push(tempLocationMarkers);
-        }
       } else {
         this.router.navigate(['dashboard']);
       }
@@ -280,7 +280,7 @@ export class TripDetailsComponent implements OnInit {
     this.messageService.add({
       severity: 'success',
       summary: 'Success',
-      detail: 'Link copyed to clipbroad',
+      detail: 'Link copied to clipbroad',
     });
   }
 

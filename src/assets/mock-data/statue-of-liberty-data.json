@@ -1,0 +1,2645 @@
+{
+    "search_metadata": {
+      "id": "663558ed2fe30260fa184ee2",
+      "status": "Success",
+      "json_endpoint": "https://serpapi.com/searches/d149dbdabc847083/663558ed2fe30260fa184ee2.json",
+      "created_at": "2024-05-03 21:36:45 UTC",
+      "processed_at": "2024-05-03 21:36:45 UTC",
+      "google_maps_url": "https://www.google.com/maps/search/Statue+of+Liberty+National+Monument?hl=en",
+      "raw_html_file": "https://serpapi.com/searches/d149dbdabc847083/663558ed2fe30260fa184ee2.html",
+      "total_time_taken": 1.26
+    },
+    "search_parameters": {
+      "engine": "google_maps",
+      "type": "search",
+      "q": "Statue of Liberty National Monument",
+      "google_domain": "google.com",
+      "hl": "en"
+    },
+    "search_information": {
+      "local_results_state": "Showing results for type: \"place\" instead of type: \"search\"",
+      "query_displayed": "Statue of Liberty National Monument"
+    },
+    "place_results": {
+      "title": "Statue of Liberty",
+      "place_id": "ChIJPTacEpBQwokRKwIlDXelxkA",
+      "data_id": "0x89c25090129c363d:0x40c6a5770d25022b",
+      "data_cid": "4667599994556318251",
+      "reviews_link": "https://serpapi.com/search.json?data_id=0x89c25090129c363d%3A0x40c6a5770d25022b&engine=google_maps_reviews&hl=en",
+      "photos_link": "https://serpapi.com/search.json?data_id=0x89c25090129c363d%3A0x40c6a5770d25022b&engine=google_maps_photos&hl=en",
+      "gps_coordinates": {
+        "latitude": 40.6892494,
+        "longitude": -74.04450039999999
+      },
+      "place_id_search": "https://serpapi.com/search.json?engine=google_maps&google_domain=google.com&hl=en&place_id=ChIJPTacEpBQwokRKwIlDXelxkA",
+      "provider_id": "/m/072p8",
+      "thumbnail": "https://lh5.googleusercontent.com/p/AF1QipNOkjsKcMBL_Fia95bCQvwISPZBNG_Addfw3AYm=w86-h114-k-no",
+      "rating": 4.7,
+      "reviews": 100310,
+      "type": [
+        "Historical landmark",
+        "Monument",
+        "Tourist attraction"
+      ],
+      "type_ids": [
+        "historical_landmark",
+        "monument",
+        "tourist_attraction"
+      ],
+      "description": "Iconic National Monument opened in 1886, offering guided tours & a museum, plus harbor & city views.",
+      "extensions": [
+        {
+          "accessibility": [
+            "Wheelchair accessible entrance",
+            "Wheelchair accessible parking lot"
+          ]
+        },
+        {
+          "planning": [
+            "Getting tickets in advance recommended"
+          ]
+        },
+        {
+          "children": [
+            "Good for kids"
+          ]
+        }
+      ],
+      "address": "New York, NY 10004",
+      "website": "https://www.nps.gov/stli/index.htm",
+      "phone": "(212) 363-3200",
+      "open_state": "Closed ⋅ Opens 9 AM Sat",
+      "plus_code": "MXQ4+M5 New York",
+      "admission": [
+        {
+          "title": "Statue of Liberty",
+          "icon": "https://www.gstatic.com/ads-travel/ttd/official_admission_32x32.png",
+          "options": [
+            {
+              "link": "https://www.cityexperiences.com/new-york/city-cruises/statue/new-york-pedestal-reserve/",
+              "price": "$25.03",
+              "extracted_price": 25.03,
+              "official_site": true,
+              "extensions": [
+                "Audio guide"
+              ]
+            }
+          ]
+        },
+        {
+          "title": "Trip.com",
+          "icon": "https://encrypted-tbn1.gstatic.com/faviconV2?url=https://us.trip.com/&client=DESTINATION_EXPLORE&type=FAVICON&size=32&fallback_opts=TYPE,SIZE,URL&nfrp=1",
+          "options": [
+            {
+              "title": "Statue Of Liberty Cruises With Landing General Admission(Departure from Battery Park) Adult Ticket-10:00–11:00 - Same-Day Booking",
+              "link": "https://us.trip.com/travel-guide/attraction/jersey-city/statue-of-liberty-79045/?aid=1076145&sid=4330723&s-productIdTop=64488074&source=bm&currency=USD",
+              "price": "$10.36",
+              "extracted_price": 10.36,
+              "extensions": [
+                "Instant confirmation",
+                "Mobile Ticket"
+              ]
+            },
+            {
+              "title": "Statue of Liberty Island Cruise Standard Ticket-Option 1",
+              "link": "https://us.trip.com/travel-guide/attraction/jersey-city/statue-of-liberty-79045/?aid=1076145&sid=4330723&s-productIdTop=53696785&source=bm&currency=USD",
+              "price": "$13.00",
+              "extracted_price": 13.0,
+              "extensions": [
+                "Instant confirmation",
+                "Mobile Ticket"
+              ]
+            },
+            {
+              "title": "Statue Of Liberty Cruises With Landing General Admission(Departure from Battery Park) Adult Ticket-10:00–11:00",
+              "link": "https://us.trip.com/travel-guide/attraction/jersey-city/statue-of-liberty-79045/?aid=1076145&sid=4330723&s-productIdTop=62014622&source=bm&currency=USD",
+              "price": "$19.06",
+              "extracted_price": 19.06,
+              "extensions": [
+                "Instant confirmation",
+                "Mobile Ticket"
+              ]
+            },
+            {
+              "title": "Statue of Liberty Liberty Super Express Downtown Adult Ticket-11:00 - Same-Day Booking",
+              "link": "https://us.trip.com/travel-guide/attraction/jersey-city/statue-of-liberty-79045/?aid=1076145&sid=4330723&s-productIdTop=64745126&source=bm&currency=USD",
+              "price": "$25.55",
+              "extracted_price": 25.55,
+              "extensions": [
+                "Instant confirmation",
+                "Mobile Ticket"
+              ]
+            },
+            {
+              "title": "Statue Of Liberty Cruises With Landing General Admission(Departure from Liberty State Park) Adult Ticket-10:00",
+              "link": "https://us.trip.com/travel-guide/attraction/jersey-city/statue-of-liberty-79045/?aid=1076145&sid=4330723&s-productIdTop=62047935&source=bm&currency=USD",
+              "price": "$27.35",
+              "extracted_price": 27.35,
+              "extensions": [
+                "Instant confirmation",
+                "Mobile Ticket"
+              ]
+            },
+            {
+              "title": "Statue of Liberty and Ellis Island Ticket: Ferry from New Jersey-Statue of Liberty and Ellis Island Ticket: Ferry from New Jersey - 09:00",
+              "link": "https://us.trip.com/things-to-do/detail/48179792?language=EN&locale=en&allianceid=1076145&sid=4330723&source=bm&currency=USD",
+              "price": "$29.98",
+              "extracted_price": 29.98,
+              "extensions": [
+                "Instant confirmation",
+                "Mobile Ticket"
+              ]
+            }
+          ]
+        },
+        {
+          "title": "Tripening",
+          "icon": "https://encrypted-tbn1.gstatic.com/faviconV2?url=https://www.tripening.com/&client=DESTINATION_EXPLORE&type=FAVICON&size=32&fallback_opts=TYPE,SIZE,URL&nfrp=1",
+          "options": [
+            {
+              "title": "Statue of Liberty Sunset Cruise",
+              "link": "https://www.tripening.com/attractions/us-ny-new-york/608013-statue-of-liberty-sunset-cruise?source=bm&language=en-US&currency=USD",
+              "price": "$29.00",
+              "extracted_price": 29.0,
+              "extensions": [
+                "Free cancellation",
+                "Mobile Ticket"
+              ]
+            },
+            {
+              "title": "Statue of Liberty Express",
+              "link": "https://www.tripening.com/attractions/us-ny-new-york/461233-statue-of-liberty-express?source=bm&language=en-US&currency=USD",
+              "price": "$59.99",
+              "extracted_price": 59.99,
+              "extensions": [
+                "Mobile Ticket"
+              ]
+            },
+            {
+              "title": "Statue of Liberty Cruise & Choice of 911 Museum OR Statue of Liberty Tour",
+              "link": "https://www.tripening.com/attractions/us-ny-new-york/50264-statue-of-liberty-cruise-choice-of-911-museum-or-statue-of-liberty-tour?source=bm&language=en-US&currency=USD",
+              "price": "$79.99",
+              "extracted_price": 79.99,
+              "extensions": [
+                "Free cancellation",
+                "Mobile Ticket"
+              ]
+            },
+            {
+              "title": "NYC Statue of Liberty Kayak",
+              "link": "https://www.tripening.com/attractions/us-ny-new-york/560102-nyc-statue-of-liberty-kayak?source=bm&language=en-US&currency=USD",
+              "price": "$95.00",
+              "extracted_price": 95.0,
+              "extensions": [
+                "Free cancellation",
+                "Mobile Ticket"
+              ]
+            },
+            {
+              "title": "Bateaux Statue of Liberty Lunch Cruise",
+              "link": "https://www.tripening.com/attractions/us-ny-new-york/38248-bateaux-statue-of-liberty-lunch-cruise?source=bm&language=en-US&currency=USD",
+              "price": "$109.57",
+              "extracted_price": 109.57,
+              "extensions": [
+                "Free cancellation",
+                "Mobile Ticket"
+              ]
+            }
+          ]
+        },
+        {
+          "title": "Rakuten Travel Experiences",
+          "icon": "https://encrypted-tbn3.gstatic.com/faviconV2?url=https://experiences.travel.rakuten.co.jp/&client=DESTINATION_EXPLORE&type=FAVICON&size=32&fallback_opts=TYPE,SIZE,URL&nfrp=1",
+          "options": [
+            {
+              "link": "https://experiences.travel.rakuten.co.jp/experiences/37279?scid=we_txp_google-ttd",
+              "price": "$29.54",
+              "extracted_price": 29.54,
+              "extensions": [
+                "Instant confirmation",
+                "Mobile Ticket"
+              ]
+            }
+          ]
+        },
+        {
+          "title": "Headout",
+          "icon": "https://encrypted-tbn0.gstatic.com/faviconV2?url=https://www.headout.com/&client=DESTINATION_EXPLORE&type=FAVICON&size=32&fallback_opts=TYPE,SIZE,URL&nfrp=1",
+          "options": [
+            {
+              "title": "Entry Tickets to Statue of Liberty & Ellis Island with Audio Guide",
+              "link": "https://www.headout.com/statue-of-liberty-cruises/statue-of-liberty-ellis-island-general-admission-audio-guide-e-846/?utm_source=google&utm_medium=ttd&utm_term=846&product_id=846&option_id=1183&source=bm&language=en-US&currencyCode=USD",
+              "price": "$34.00",
+              "extracted_price": 34.0,
+              "extensions": [
+                "Mobile Ticket",
+                "Audio guide"
+              ]
+            }
+          ]
+        },
+        {
+          "title": "Undercover Tourist",
+          "icon": "https://encrypted-tbn1.gstatic.com/faviconV2?url=https://www.undercovertourist.com/&client=DESTINATION_EXPLORE&type=FAVICON&size=32&fallback_opts=TYPE,SIZE,URL&nfrp=1",
+          "options": [
+            {
+              "title": "Circle Line Sightseeing: Landmarks Cruise",
+              "link": "https://www.undercovertourist.com/new-york-city/Circle-line-sightseeing-landmarks-cruise-ticket/",
+              "price": "$37.95",
+              "extracted_price": 37.95,
+              "extensions": [
+                "Multi-attraction pass",
+                "Mobile Ticket"
+              ]
+            },
+            {
+              "title": "Big Bus New York Hop-On, Hop-Off Tour: 1-Day Discover Ticket",
+              "link": "https://www.undercovertourist.com/new-york-city/special-discount-offer-big-bus-new-york-hop-on-hop-off-ticket/",
+              "price": "$58.00",
+              "extracted_price": 58.0,
+              "extensions": [
+                "Multi-attraction pass",
+                "Mobile Ticket"
+              ]
+            },
+            {
+              "title": "Big Bus New York: 2-Hour Panoramic Night Tour",
+              "link": "https://www.undercovertourist.com/new-york-city/big-bus-new-york-night-tour-ticket/",
+              "price": "$62.10",
+              "extracted_price": 62.1,
+              "extensions": [
+                "Multi-attraction pass",
+                "Mobile Ticket"
+              ]
+            },
+            {
+              "title": "New York Explorer Pass by Go City - 2 Choice Pass",
+              "link": "https://www.undercovertourist.com/new-york-city/nyc-explorer-pass-2attraction-combo-ticket/",
+              "price": "$76.95",
+              "extracted_price": 76.95,
+              "extensions": [
+                "Multi-attraction pass",
+                "Mobile Ticket"
+              ]
+            },
+            {
+              "title": "Big Bus New York Hop-On, Hop-Off Tour: 1-Day Essential Ticket",
+              "link": "https://www.undercovertourist.com/new-york-city/big-bus-new-york-hop-on-hop-off-essential-ticket/",
+              "price": "$77.00",
+              "extracted_price": 77.0,
+              "extensions": [
+                "Multi-attraction pass",
+                "Mobile Ticket"
+              ]
+            },
+            {
+              "title": "Secrets of the Statue of Liberty and Ellis Island Tour Ticket",
+              "link": "https://www.undercovertourist.com/new-york-city/secrets-of-the-statue-of-liberty-and-ellis-island-tour-ticket/",
+              "price": "$79.00",
+              "extracted_price": 79.0,
+              "extensions": [
+                "Mobile Ticket"
+              ]
+            },
+            {
+              "title": "Big Bus New York Hop-On, Hop-Off Tour: 2-Day Explore Ticket",
+              "link": "https://www.undercovertourist.com/new-york-city/big-bus-new-york-explore-ticket/",
+              "price": "$97.00",
+              "extracted_price": 97.0,
+              "extensions": [
+                "Multi-attraction pass",
+                "Mobile Ticket"
+              ]
+            },
+            {
+              "title": "New York Explorer Pass by Go City - 3 Choice Pass",
+              "link": "https://www.undercovertourist.com/new-york-city/nyc-explorer-pass-3attraction-combo-ticket/",
+              "price": "$102.18",
+              "extracted_price": 102.18,
+              "extensions": [
+                "Multi-attraction pass",
+                "Mobile Ticket"
+              ]
+            },
+            {
+              "title": "New York Explorer Pass by Go City - 4 Choice Pass",
+              "link": "https://www.undercovertourist.com/new-york-city/nyc-explorer-pass-4attraction-combo-ticket/",
+              "price": "$134.93",
+              "extracted_price": 134.93,
+              "extensions": [
+                "Multi-attraction pass",
+                "Mobile Ticket"
+              ]
+            },
+            {
+              "title": "The New York Pass by Go City - 1 Day Pass",
+              "link": "https://www.undercovertourist.com/new-york-city/1-day-new-york-pass-ticket/",
+              "price": "$144.20",
+              "extracted_price": 144.2,
+              "extensions": [
+                "Multi-attraction pass",
+                "Mobile Ticket"
+              ]
+            }
+          ]
+        },
+        {
+          "title": "WAUG",
+          "icon": "https://encrypted-tbn2.gstatic.com/faviconV2?url=https://www.waug.com/&client=DESTINATION_EXPLORE&type=FAVICON&size=32&fallback_opts=TYPE,SIZE,URL&nfrp=1",
+          "options": [
+            {
+              "title": "Admission Ticket",
+              "link": "https://www.waug.com/google-things?type=goods&id=124960&language=en-US&currency=USD",
+              "price": "$38.58",
+              "extracted_price": 38.58
+            }
+          ]
+        },
+        {
+          "title": "Groupon",
+          "icon": "https://encrypted-tbn3.gstatic.com/faviconV2?url=https://www.groupon.com/&client=DESTINATION_EXPLORE&type=FAVICON&size=32&fallback_opts=TYPE,SIZE,URL&nfrp=1",
+          "options": [
+            {
+              "title": "New York City Freedom Liberty Cruise",
+              "link": "https://www.groupon.com/deals/viator-big-city-tours?&utm_source=google&source=bm&utm_medium=cpc&utm_campaign=us_dt_sea_ggl_txt_GTTD_sr_cbp_ch1_nbr_s*bm",
+              "price": "$43.99",
+              "extracted_price": 43.99
+            },
+            {
+              "title": "911 ground zero&Lady Liberty",
+              "link": "https://www.groupon.com/deals/viator-attractions4us-llc-17?&utm_source=google&source=bm&utm_medium=cpc&utm_campaign=us_dt_sea_ggl_txt_GTTD_sr_cbp_ch1_nbr_s*bm",
+              "price": "$49.99",
+              "extracted_price": 49.99
+            },
+            {
+              "title": "Statue & Ellis",
+              "link": "https://www.groupon.com/deals/viator-city-tales-sightseeing-private-tours?&utm_source=google&source=bm&utm_medium=cpc&utm_campaign=us_dt_sea_ggl_txt_GTTD_sr_cbp_ch1_nbr_s*bm",
+              "price": "$54.99",
+              "extracted_price": 54.99
+            },
+            {
+              "title": "Statue Reserve Access",
+              "link": "https://www.groupon.com/deals/viator-attractions4us-llc-72?&utm_source=google&source=bm&utm_medium=cpc&utm_campaign=us_dt_sea_ggl_txt_GTTD_sr_cbp_ch1_nbr_s*bm",
+              "price": "$59.99",
+              "extracted_price": 59.99
+            },
+            {
+              "title": "4-Hour Statue Tour",
+              "link": "https://www.groupon.com/deals/viator-walks-of-new-york?&utm_source=google&source=bm&utm_medium=cpc&utm_campaign=us_dt_sea_ggl_txt_GTTD_sr_cbp_ch1_nbr_s*bm",
+              "price": "$65.28",
+              "extracted_price": 65.28
+            },
+            {
+              "title": "Early Access with Statue",
+              "link": "https://www.groupon.com/deals/viator-attractions4us-llc-17?&utm_source=google&source=bm&utm_medium=cpc&utm_campaign=us_dt_sea_ggl_txt_GTTD_sr_cbp_ch1_nbr_s*bm",
+              "price": "$69.99",
+              "extracted_price": 69.99
+            },
+            {
+              "title": "Secrets of the Statue of Liberty and Ellis Island Guided Tour",
+              "link": "https://www.groupon.com/deals/viator-inside-out-tours-llc-10?&utm_source=google&source=bm&utm_medium=cpc&utm_campaign=us_dt_sea_ggl_txt_GTTD_sr_cbp_ch1_nbr_s*bm",
+              "price": "$79.00",
+              "extracted_price": 79.0
+            },
+            {
+              "title": "Ellis Island & Statue of Liberty Tour - 8:30am First Tour",
+              "link": "https://www.groupon.com/deals/viator-attractions4us-llc-49?&utm_source=google&source=bm&utm_medium=cpc&utm_campaign=us_dt_sea_ggl_txt_GTTD_sr_cbp_ch1_nbr_s*bm",
+              "price": "$79.99",
+              "extracted_price": 79.99
+            }
+          ]
+        },
+        {
+          "title": "Viator",
+          "icon": "https://encrypted-tbn3.gstatic.com/faviconV2?url=https://www.viator.com/&client=DESTINATION_EXPLORE&type=FAVICON&size=32&fallback_opts=TYPE,SIZE,URL&nfrp=1",
+          "options": [
+            {
+              "title": "Statue Standard Ticket ONLY",
+              "link": "https://www.viator.com/en-US/tours/New-York-City/Statue-of-Liberty-and-Ellis-Island-Ferry-Ticket-with-optional-Pedestal-Upgrade/d687-15081P224?googlettd=true&src=papi&campaign=bm",
+              "price": "$47.99",
+              "extracted_price": 47.99,
+              "extensions": [
+                "Free cancellation",
+                "Instant confirmation"
+              ]
+            },
+            {
+              "title": "Statue Reserve Ticket preferry",
+              "link": "https://www.viator.com/en-US/tours/New-York-City/Statue-of-Liberty-and-Ellis-Island-Ferry-Ticket-with-optional-Pedestal-Upgrade/d687-15081P224?googlettd=true&src=papi&campaign=bm",
+              "price": "$49.99",
+              "extracted_price": 49.99,
+              "extensions": [
+                "Free cancellation",
+                "Instant confirmation"
+              ]
+            },
+            {
+              "title": "Edge & Statue 60 Min Cruise",
+              "link": "https://www.viator.com/en-US/tours/New-York-City/The-Edge-Observation-Deck-Reserve-and-Hudson-Yards-Tour/d687-74526P33?googlettd=true&src=papi&campaign=bm",
+              "price": "$59.99",
+              "extracted_price": 59.99,
+              "extensions": [
+                "Free cancellation",
+                "Instant confirmation"
+              ]
+            },
+            {
+              "title": "Statue of Liberty and St Patrick's Cathedral Official Tour",
+              "link": "https://www.viator.com/en-US/tours/New-York-City/Statue-of-Liberty-60-Minute-Cruise-and-St-Patricks-Cathedral-Official-Tour/d687-15081P287?googlettd=true&src=papi&campaign=bm",
+              "price": "$65.99",
+              "extracted_price": 65.99,
+              "extensions": [
+                "Free cancellation",
+                "Instant confirmation"
+              ]
+            },
+            {
+              "title": "Statue of Liberty Express Roundtrip Ferry Ticket",
+              "link": "https://www.viator.com/en-US/tours/New-York-City/Statue-of-Liberty-Express-roundtrip-ferry/d687-336379P4?googlettd=true&src=papi&campaign=bm",
+              "price": "$69.99",
+              "extracted_price": 69.99,
+              "extensions": [
+                "Free cancellation",
+                "Instant confirmation"
+              ]
+            },
+            {
+              "title": "Observation Deck Ticket WTC and Landmark NYC Cruise and Skyline",
+              "link": "https://www.viator.com/en-US/tours/New-York-City/One-World-Trade-Observation-Deck-Ticket-and-Statue-of-liberty-60-minute-Cruise/d687-336379P51?googlettd=true&src=papi&campaign=bm",
+              "price": "$75.99",
+              "extracted_price": 75.99,
+              "extensions": [
+                "Free cancellation",
+                "Instant confirmation"
+              ]
+            }
+          ]
+        },
+        {
+          "title": "Tiqets",
+          "icon": "https://encrypted-tbn1.gstatic.com/faviconV2?url=https://www.tiqets.com/&client=DESTINATION_EXPLORE&type=FAVICON&size=32&fallback_opts=TYPE,SIZE,URL&nfrp=1",
+          "options": [
+            {
+              "title": "Statue of Liberty + The Guggenheim",
+              "link": "https://www.tiqets.com/en-US/statue-of-liberty-the-guggenheim-b9697/?tq_source=ttd_product_feed&utm_source=bm",
+              "price": "$57.00",
+              "extracted_price": 57.0,
+              "extensions": [
+                "Multi-attraction pass",
+                "Skip the line"
+              ]
+            },
+            {
+              "title": "Statue of Liberty + Edge Hudson Yards",
+              "link": "https://www.tiqets.com/en-US/statue-of-liberty-edge-hudson-yards-b9663/?tq_source=ttd_product_feed&utm_source=bm",
+              "price": "$58.82",
+              "extracted_price": 58.82,
+              "extensions": [
+                "Multi-attraction pass"
+              ]
+            },
+            {
+              "title": "Statue of Liberty + Top of the Rock",
+              "link": "https://www.tiqets.com/en-US/statue-of-liberty-top-of-the-rock-b9494/?tq_source=ttd_product_feed&utm_source=bm",
+              "price": "$69.87",
+              "extracted_price": 69.87,
+              "extensions": [
+                "Multi-attraction pass"
+              ]
+            },
+            {
+              "title": "Statue of Liberty + Empire State Building",
+              "link": "https://www.tiqets.com/en-US/statue-of-liberty-empire-state-building-b1195/?tq_source=ttd_product_feed&utm_source=bm",
+              "price": "$71.16",
+              "extracted_price": 71.16,
+              "extensions": [
+                "Multi-attraction pass",
+                "Skip the line"
+              ]
+            },
+            {
+              "title": "The New York Sightseeing Flex Pass: Choice of 2 - 6 Attractions",
+              "link": "https://www.tiqets.com/en-US/new-york-attractions-c260932/tickets-for-sightseeing-flex-pass-nyc-p975999/?tq_source=ttd_product_feed&utm_source=bm",
+              "price": "$79.00",
+              "extracted_price": 79.0,
+              "extensions": [
+                "Multi-attraction pass",
+                "Instant confirmation"
+              ]
+            },
+            {
+              "title": "Statue of Liberty + Empire State Building: 102nd Floor Top Deck & 86th Floor Observatory",
+              "link": "https://www.tiqets.com/en-US/statue-of-liberty-empire-state-building-102nd-floor-top-deck-86th-floor-observatory-b38582/?tq_source=ttd_product_feed&utm_source=bm",
+              "price": "$105.11",
+              "extracted_price": 105.11,
+              "extensions": [
+                "Multi-attraction pass"
+              ]
+            },
+            {
+              "title": "Statue of Liberty + Empire State Building: Express",
+              "link": "https://www.tiqets.com/en-US/statue-of-liberty-empire-state-building-express-b47443/?tq_source=ttd_product_feed&utm_source=bm",
+              "price": "$110.92",
+              "extracted_price": 110.92,
+              "extensions": [
+                "Multi-attraction pass",
+                "Skip the line"
+              ]
+            },
+            {
+              "title": "The New York Sightseeing Day Pass: Admission to 150+ Attractions",
+              "link": "https://www.tiqets.com/en-US/new-york-attractions-c260932/tickets-for-new-york-sightseeing-day-pass-p1043530/?tq_source=ttd_product_feed&utm_source=bm",
+              "price": "$159.00",
+              "extracted_price": 159.0,
+              "extensions": [
+                "Multi-attraction pass",
+                "Instant confirmation"
+              ]
+            }
+          ]
+        },
+        {
+          "title": "Cool Destinations",
+          "icon": "https://encrypted-tbn1.gstatic.com/faviconV2?url=https://www.cooldestinations.com/&client=DESTINATION_EXPLORE&type=FAVICON&size=32&fallback_opts=TYPE,SIZE,URL&nfrp=1",
+          "options": [
+            {
+              "title": "Statue of Liberty & Ellis Island Ferry Ticket-1st tour 8:30am (Statue Reserve Ticket preferry)",
+              "link": "https://www.cooldestinations.com/activity/new-york-city/statue-of-liberty-and-ellis-island-ferry-ticket-with-optional-pedestal-upgrade/?ttd_source=bm&language=en-US&currency=USD&q_activity_id=29350&q_option_id=29350-TG2",
+              "price": "$65.31",
+              "extracted_price": 65.31,
+              "extensions": [
+                "Multi-attraction pass",
+                "Free cancellation"
+              ]
+            },
+            {
+              "title": "Statue of Liberty & Ellis Island Ferry Ticket-1st tour 8:30am (Statue Reserve 30 min guide)",
+              "link": "https://www.cooldestinations.com/activity/new-york-city/statue-of-liberty-and-ellis-island-ferry-ticket-with-optional-pedestal-upgrade/?ttd_source=bm&language=en-US&currency=USD&q_activity_id=29350&q_option_id=29350-TG4",
+              "price": "$81.64",
+              "extracted_price": 81.64,
+              "extensions": [
+                "Multi-attraction pass",
+                "Free cancellation"
+              ]
+            },
+            {
+              "title": "Statue of Liberty & Ellis Island Ferry Ticket-1st tour 8:30am (Statue Fully Guided Tour)",
+              "link": "https://www.cooldestinations.com/activity/new-york-city/statue-of-liberty-and-ellis-island-ferry-ticket-with-optional-pedestal-upgrade/?ttd_source=bm&language=en-US&currency=USD&q_activity_id=29350&q_option_id=29350-TG7",
+              "price": "$116.63",
+              "extracted_price": 116.63,
+              "extensions": [
+                "Multi-attraction pass",
+                "Free cancellation"
+              ]
+            }
+          ]
+        },
+        {
+          "title": "Fever",
+          "icon": "https://encrypted-tbn0.gstatic.com/faviconV2?url=https://feverup.com/&client=DESTINATION_EXPLORE&type=FAVICON&size=32&fallback_opts=TYPE,SIZE,URL&nfrp=1",
+          "options": [
+            {
+              "title": "New York: VIP First Ferry Access Statue of Liberty & Ellis Island Tour",
+              "link": "https://feverup.com/m/134675?session_id=81848433&date=2024-05-04&utm_source=google&utm_medium=bm&utm_term=en-US&utm_campaign=134675_nyc",
+              "price": "$69.00",
+              "extracted_price": 69.0,
+              "extensions": [
+                "Instant confirmation",
+                "Mobile Ticket"
+              ]
+            }
+          ]
+        },
+        {
+          "title": "Evendo",
+          "icon": "https://encrypted-tbn1.gstatic.com/faviconV2?url=https://evendo.com/&client=DESTINATION_EXPLORE&type=FAVICON&size=32&fallback_opts=TYPE,SIZE,URL&nfrp=1",
+          "options": [
+            {
+              "title": "Statue of Liberty Express Roundtrip Ferry Ticket- 8:30am Morning",
+              "link": "https://evendo.com/product/statue-of-liberty-express-roundtrip-ferry-ticket/390562-818480?utm_source=gttd&utm_medium=organic&utm_campaign=bm&language=en-US&currency=USD",
+              "price": "$69.99",
+              "extracted_price": 69.99,
+              "extensions": [
+                "Free cancellation",
+                "Instant confirmation"
+              ]
+            },
+            {
+              "title": "Statue of Liberty Ferry & 9/11 Museum Ticket From New Jersey Shared Tour",
+              "link": "https://evendo.com/product/statue-of-liberty-ferry-9-11-museum-ticket-from-new-jersey-shared-tour/391078-818996?utm_source=gttd&utm_medium=organic&utm_campaign=bm&language=en-US&currency=USD",
+              "price": "$75.99",
+              "extracted_price": 75.99,
+              "extensions": [
+                "Free cancellation",
+                "Instant confirmation"
+              ]
+            },
+            {
+              "title": "Statue of Liberty, Ellis Island Pre-Ferry tour Starts 8:30am",
+              "link": "https://evendo.com/product/statue-of-liberty-ellis-island-battery-park-skip-the-line-tour/165511-573117?utm_source=gttd&utm_medium=organic&utm_campaign=bm&language=en-US&currency=USD",
+              "price": "$109.99",
+              "extracted_price": 109.99,
+              "extensions": [
+                "Free cancellation",
+                "Instant confirmation"
+              ]
+            }
+          ]
+        },
+        {
+          "title": "Agoda",
+          "icon": "https://encrypted-tbn0.gstatic.com/faviconV2?url=https://agoda.com/&client=DESTINATION_EXPLORE&type=FAVICON&size=32&fallback_opts=TYPE,SIZE,URL&nfrp=1",
+          "options": [
+            {
+              "title": "2-Choice Pass",
+              "link": "https://agoda.com/activities/detail?cid=1909881&cityId=318&activityId=951033&currency=USD&googleSrc=bm",
+              "price": "$77.95",
+              "extracted_price": 77.95
+            },
+            {
+              "title": "3-Choice Pass",
+              "link": "https://agoda.com/activities/detail?cid=1909881&cityId=318&activityId=951033&currency=USD&googleSrc=bm",
+              "price": "$101.15",
+              "extracted_price": 101.15
+            },
+            {
+              "title": "4-Choice Pass",
+              "link": "https://agoda.com/activities/detail?cid=1909881&cityId=318&activityId=951033&currency=USD&googleSrc=bm",
+              "price": "$133.63",
+              "extracted_price": 133.63
+            },
+            {
+              "title": "5-Choice Pass",
+              "link": "https://agoda.com/activities/detail?cid=1909881&cityId=318&activityId=951033&currency=USD&googleSrc=bm",
+              "price": "$156.83",
+              "extracted_price": 156.83
+            },
+            {
+              "title": "6-Choice Pass",
+              "link": "https://agoda.com/activities/detail?cid=1909881&cityId=318&activityId=951033&currency=USD&googleSrc=bm",
+              "price": "$180.03",
+              "extracted_price": 180.03
+            }
+          ]
+        },
+        {
+          "title": "Passforless",
+          "icon": "https://encrypted-tbn1.gstatic.com/faviconV2?url=https://www.passforless.com/&client=DESTINATION_EXPLORE&type=FAVICON&size=32&fallback_opts=TYPE,SIZE,URL&nfrp=1",
+          "options": [
+            {
+              "title": "NYC Explorer Pass 2 Attractions",
+              "link": "https://www.passforless.com/new-york-explorer-pass-tour-947.html#947_2",
+              "price": "$80.64",
+              "extracted_price": 80.64,
+              "extensions": [
+                "Multi-attraction pass",
+                "Instant confirmation"
+              ]
+            },
+            {
+              "title": "NYC Explorer Pass 3 Attractions",
+              "link": "https://www.passforless.com/new-york-explorer-pass-tour-947.html#947_3",
+              "price": "$104.64",
+              "extracted_price": 104.64,
+              "extensions": [
+                "Multi-attraction pass",
+                "Instant confirmation"
+              ]
+            },
+            {
+              "title": "NYC Explorer Pass 4 Attractions",
+              "link": "https://www.passforless.com/new-york-explorer-pass-tour-947.html#947_4",
+              "price": "$138.24",
+              "extracted_price": 138.24,
+              "extensions": [
+                "Multi-attraction pass",
+                "Instant confirmation"
+              ]
+            },
+            {
+              "title": "NYC Explorer Pass 5 Attractions",
+              "link": "https://www.passforless.com/new-york-explorer-pass-tour-947.html#947_5",
+              "price": "$162.24",
+              "extracted_price": 162.24,
+              "extensions": [
+                "Multi-attraction pass",
+                "Instant confirmation"
+              ]
+            },
+            {
+              "title": "NYC Explorer Pass 6 Attractions",
+              "link": "https://www.passforless.com/new-york-explorer-pass-tour-947.html#947_6",
+              "price": "$186.24",
+              "extracted_price": 186.24,
+              "extensions": [
+                "Multi-attraction pass",
+                "Instant confirmation"
+              ]
+            },
+            {
+              "title": "NYC Explorer Pass 7 Attractions",
+              "link": "https://www.passforless.com/new-york-explorer-pass-tour-947.html#947_7",
+              "price": "$210.24",
+              "extracted_price": 210.24,
+              "extensions": [
+                "Multi-attraction pass",
+                "Instant confirmation"
+              ]
+            },
+            {
+              "title": "NYC Explorer Pass 10 Attractions",
+              "link": "https://www.passforless.com/new-york-explorer-pass-tour-947.html#947_10",
+              "price": "$277.44",
+              "extracted_price": 277.44,
+              "extensions": [
+                "Multi-attraction pass",
+                "Instant confirmation"
+              ]
+            }
+          ]
+        },
+        {
+          "title": "Civitatis",
+          "icon": "https://encrypted-tbn2.gstatic.com/faviconV2?url=https://www.civitatis.com/&client=DESTINATION_EXPLORE&type=FAVICON&size=32&fallback_opts=TYPE,SIZE,URL&nfrp=1",
+          "options": [
+            {
+              "link": "https://www.civitatis.com/redirect-ttd/2317/bm?lang=en-US&currency=USD",
+              "price": "$84.00",
+              "extracted_price": 84.0,
+              "extensions": [
+                "Multi-attraction pass",
+                "Free cancellation"
+              ]
+            }
+          ]
+        },
+        {
+          "title": "Go City",
+          "icon": "https://encrypted-tbn1.gstatic.com/faviconV2?url=https://gocity.com/&client=DESTINATION_EXPLORE&type=FAVICON&size=32&fallback_opts=TYPE,SIZE,URL&nfrp=1",
+          "options": [
+            {
+              "title": "New York 2-Attraction Pass: 105+ Attractions",
+              "link": "https://gocity.com/en/new-york/passes/explorer?duration=2&utm_medium=organic&utm_source=googleTTD",
+              "price": "$84.00",
+              "extracted_price": 84.0,
+              "extensions": [
+                "Multi-attraction pass",
+                "Instant confirmation"
+              ]
+            },
+            {
+              "title": "New York 3-Attraction Pass: 105+ Attractions",
+              "link": "https://gocity.com/en/new-york/passes/explorer?duration=3&utm_medium=organic&utm_source=googleTTD",
+              "price": "$109.00",
+              "extracted_price": 109.0,
+              "extensions": [
+                "Multi-attraction pass",
+                "Instant confirmation"
+              ]
+            },
+            {
+              "title": "New York 4-Attraction Pass: 105+ Attractions",
+              "link": "https://gocity.com/en/new-york/passes/explorer?duration=4&utm_medium=organic&utm_source=googleTTD",
+              "price": "$144.00",
+              "extracted_price": 144.0,
+              "extensions": [
+                "Multi-attraction pass",
+                "Instant confirmation"
+              ]
+            },
+            {
+              "title": "New York 1-Day Pass: 105+ Attractions",
+              "link": "https://gocity.com/en/new-york/passes/all-inclusive?duration=1&utm_medium=organic&utm_source=googleTTD",
+              "price": "$154.00",
+              "extracted_price": 154.0,
+              "extensions": [
+                "Multi-attraction pass",
+                "Instant confirmation"
+              ]
+            },
+            {
+              "title": "New York 5-Attraction Pass: 105+ Attractions",
+              "link": "https://gocity.com/en/new-york/passes/explorer?duration=5&utm_medium=organic&utm_source=googleTTD",
+              "price": "$169.00",
+              "extracted_price": 169.0,
+              "extensions": [
+                "Multi-attraction pass",
+                "Instant confirmation"
+              ]
+            },
+            {
+              "title": "New York 6-Attraction Pass: 105+ Attractions",
+              "link": "https://gocity.com/en/new-york/passes/explorer?duration=6&utm_medium=organic&utm_source=googleTTD",
+              "price": "$194.00",
+              "extracted_price": 194.0,
+              "extensions": [
+                "Multi-attraction pass",
+                "Instant confirmation"
+              ]
+            },
+            {
+              "title": "New York 2-Day Pass: 105+ Attractions",
+              "link": "https://gocity.com/en/new-york/passes/all-inclusive?duration=2&utm_medium=organic&utm_source=googleTTD",
+              "price": "$214.00",
+              "extracted_price": 214.0,
+              "extensions": [
+                "Multi-attraction pass",
+                "Instant confirmation"
+              ]
+            },
+            {
+              "title": "New York 7-Attraction Pass: 105+ Attractions",
+              "link": "https://gocity.com/en/new-york/passes/explorer?duration=7&utm_medium=organic&utm_source=googleTTD",
+              "price": "$219.00",
+              "extracted_price": 219.0,
+              "extensions": [
+                "Multi-attraction pass",
+                "Instant confirmation"
+              ]
+            },
+            {
+              "title": "New York 3-Day Pass: 105+ Attractions",
+              "link": "https://gocity.com/en/new-york/passes/all-inclusive?duration=3&utm_medium=organic&utm_source=googleTTD",
+              "price": "$259.00",
+              "extracted_price": 259.0,
+              "extensions": [
+                "Multi-attraction pass",
+                "Instant confirmation"
+              ]
+            },
+            {
+              "title": "New York 10-Attraction Pass: 105+ Attractions",
+              "link": "https://gocity.com/en/new-york/passes/explorer?duration=10&utm_medium=organic&utm_source=googleTTD",
+              "price": "$289.00",
+              "extracted_price": 289.0,
+              "extensions": [
+                "Multi-attraction pass",
+                "Instant confirmation"
+              ]
+            }
+          ]
+        },
+        {
+          "title": "KKday",
+          "icon": "https://encrypted-tbn0.gstatic.com/faviconV2?url=https://www.kkday.com/&client=DESTINATION_EXPLORE&type=FAVICON&size=32&fallback_opts=TYPE,SIZE,URL&nfrp=1",
+          "options": [
+            {
+              "title": "NEW YORK C3",
+              "link": "https://www.kkday.com/en/product/28434?cid=11798&pkg_oid=528664&ccy=USD",
+              "price": "$104.00",
+              "extracted_price": 104.0,
+              "extensions": [
+                "Multi-attraction pass",
+                "Free cancellation"
+              ]
+            },
+            {
+              "title": "NEW YORK CityPASS",
+              "link": "https://www.kkday.com/en/product/60?cid=11798&pkg_oid=528657&ccy=USD",
+              "price": "$146.00",
+              "extracted_price": 146.0,
+              "extensions": [
+                "Multi-attraction pass",
+                "Free cancellation"
+              ]
+            }
+          ]
+        },
+        {
+          "title": "VacationsMadeEasy",
+          "icon": "https://encrypted-tbn1.gstatic.com/faviconV2?url=https://www.vacationsmadeeasy.com/&client=DESTINATION_EXPLORE&type=FAVICON&size=32&fallback_opts=TYPE,SIZE,URL&nfrp=1",
+          "options": [
+            {
+              "title": "1-Day New York Pass",
+              "link": "https://www.vacationsmadeeasy.com/bookActivity.cfm?listingID=521360&subListingID=2153416&language=en-US&source=bm",
+              "price": "$154.00",
+              "extracted_price": 154.0,
+              "extensions": [
+                "Multi-attraction pass",
+                "Free cancellation"
+              ]
+            },
+            {
+              "title": "2-Day New York Pass",
+              "link": "https://www.vacationsmadeeasy.com/bookActivity.cfm?listingID=521360&subListingID=2153420&language=en-US&source=bm",
+              "price": "$214.00",
+              "extracted_price": 214.0,
+              "extensions": [
+                "Multi-attraction pass",
+                "Free cancellation"
+              ]
+            },
+            {
+              "title": "3-Day New York Pass",
+              "link": "https://www.vacationsmadeeasy.com/bookActivity.cfm?listingID=521360&subListingID=2153418&language=en-US&source=bm",
+              "price": "$259.00",
+              "extracted_price": 259.0,
+              "extensions": [
+                "Multi-attraction pass",
+                "Free cancellation"
+              ]
+            },
+            {
+              "title": "4-Day New York Pass",
+              "link": "https://www.vacationsmadeeasy.com/bookActivity.cfm?listingID=521360&subListingID=2153421&language=en-US&source=bm",
+              "price": "$299.00",
+              "extracted_price": 299.0,
+              "extensions": [
+                "Multi-attraction pass",
+                "Free cancellation"
+              ]
+            },
+            {
+              "title": "5-Day New York Pass",
+              "link": "https://www.vacationsmadeeasy.com/bookActivity.cfm?listingID=521360&subListingID=2153423&language=en-US&source=bm",
+              "price": "$339.00",
+              "extracted_price": 339.0,
+              "extensions": [
+                "Multi-attraction pass",
+                "Free cancellation"
+              ]
+            },
+            {
+              "title": "6-Day New York Pass",
+              "link": "https://www.vacationsmadeeasy.com/bookActivity.cfm?listingID=521360&subListingID=2153419&language=en-US&source=bm",
+              "price": "$359.00",
+              "extracted_price": 359.0,
+              "extensions": [
+                "Multi-attraction pass",
+                "Free cancellation"
+              ]
+            }
+          ]
+        },
+        {
+          "title": "New York Pass®",
+          "icon": "https://encrypted-tbn3.gstatic.com/faviconV2?url=https://newyorkpass.com/&client=DESTINATION_EXPLORE&type=FAVICON&size=32&fallback_opts=TYPE,SIZE,URL&nfrp=1",
+          "options": [
+            {
+              "title": "1-Day New York Pass: 105+ Attractions",
+              "link": "https://newyorkpass.com/en/buy-a-pass?duration=1&utm_medium=organic&utm_source=googleTTD",
+              "price": "$154.00",
+              "extracted_price": 154.0,
+              "extensions": [
+                "Multi-attraction pass",
+                "Instant confirmation"
+              ]
+            },
+            {
+              "title": "2-Day New York Pass: 105+ Attractions",
+              "link": "https://newyorkpass.com/en/buy-a-pass?duration=2&utm_medium=organic&utm_source=googleTTD",
+              "price": "$214.00",
+              "extracted_price": 214.0,
+              "extensions": [
+                "Multi-attraction pass",
+                "Instant confirmation"
+              ]
+            },
+            {
+              "title": "3-Day New York Pass: 105+ Attractions",
+              "link": "https://newyorkpass.com/en/buy-a-pass?duration=3&utm_medium=organic&utm_source=googleTTD",
+              "price": "$259.00",
+              "extracted_price": 259.0,
+              "extensions": [
+                "Multi-attraction pass",
+                "Instant confirmation"
+              ]
+            },
+            {
+              "title": "4-Day New York Pass: 105+ Attractions",
+              "link": "https://newyorkpass.com/en/buy-a-pass?duration=4&utm_medium=organic&utm_source=googleTTD",
+              "price": "$299.00",
+              "extracted_price": 299.0,
+              "extensions": [
+                "Multi-attraction pass",
+                "Instant confirmation"
+              ]
+            },
+            {
+              "title": "5-Day New York Pass: 105+ Attractions",
+              "link": "https://newyorkpass.com/en/buy-a-pass?duration=5&utm_medium=organic&utm_source=googleTTD",
+              "price": "$339.00",
+              "extracted_price": 339.0,
+              "extensions": [
+                "Multi-attraction pass",
+                "Instant confirmation"
+              ]
+            },
+            {
+              "title": "6-Day New York Pass: 105+ Attractions",
+              "link": "https://newyorkpass.com/en/buy-a-pass?duration=6&utm_medium=organic&utm_source=googleTTD",
+              "price": "$359.00",
+              "extracted_price": 359.0,
+              "extensions": [
+                "Multi-attraction pass",
+                "Instant confirmation"
+              ]
+            },
+            {
+              "title": "7-Day New York Pass: 105+ Attractions",
+              "link": "https://newyorkpass.com/en/buy-a-pass?duration=7&utm_medium=organic&utm_source=googleTTD",
+              "price": "$379.00",
+              "extracted_price": 379.0,
+              "extensions": [
+                "Multi-attraction pass",
+                "Instant confirmation"
+              ]
+            }
+          ]
+        }
+      ],
+      "experiences": [
+        {
+          "title": "Statue of Liberty Tour with Ellis Island & Museum of Immigration",
+          "link": "https://www.viator.com/en-US/tours/New-York-City/Statue-of-Liberty-Tour-with-Optional-Pedestal-Access/d687-62527P7?googlettd=true&src=papi&campaign=e",
+          "price": "$59",
+          "extracted_price": 59,
+          "rating": 4.3,
+          "reviews": 281,
+          "thumbnail": "https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcQyMzAef0eUHrmd6hKQan67FKMIG13V-F1dWhkgTAnHszj7mFAX",
+          "source": "Viator",
+          "icon": "https://encrypted-tbn3.gstatic.com/faviconV2?url=https://www.viator.com/&client=DESTINATION_EXPLORE&type=FAVICON&size=32&fallback_opts=TYPE,SIZE,URL&nfrp=1",
+          "duration": "4h"
+        },
+        {
+          "title": "Statue of Liberty Express Tour",
+          "link": "https://www.exp1.com/new-york-tours/statue-of-liberty-express-tour/?utm_source=gtd&utm_medium=gtd&utm_campaign=mlw",
+          "price": "$69",
+          "extracted_price": 69,
+          "rating": 5.0,
+          "reviews": 98,
+          "thumbnail": "https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcSDuKvUobu27sqdnIiW7KpBzK5HpsIpPeYD6rNPrQIozkPZsFob",
+          "source": "ExperienceFirst",
+          "icon": "https://encrypted-tbn2.gstatic.com/faviconV2?url=https://www.exp1.com/&client=DESTINATION_EXPLORE&type=FAVICON&size=32&fallback_opts=TYPE,SIZE,URL&nfrp=1",
+          "duration": "3h"
+        },
+        {
+          "title": "Combo: One World Observatory + Statue of Liberty Tickets with Ferry Transfers",
+          "link": "https://www.headout.com/one-world-observatory-tickets/combo-one-world-observatory-statue-of-liberty-tickets-with-ferry-transfers-e-26888/?utm_source=google&utm_medium=ttd&utm_term=26888&product_id=26888&option_id=55713&source=e&language=en-US&currencyCode=USD",
+          "price": "$71",
+          "extracted_price": 71,
+          "rating": 4.2,
+          "reviews": 2512,
+          "thumbnail": "https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcRSc4dj5GMEe4k7StmR9ilUgTqhamoPQXQWH-Qjk_IxPQh6h2Bl",
+          "source": "Headout",
+          "icon": "https://encrypted-tbn0.gstatic.com/faviconV2?url=https://www.headout.com/&client=DESTINATION_EXPLORE&type=FAVICON&size=32&fallback_opts=TYPE,SIZE,URL&nfrp=1"
+        },
+        {
+          "title": "Statue of Liberty & Ellis Island Tour: All Options",
+          "link": "https://www.cooldestinations.com/activity/new-york-city/statue-of-liberty-and-ellis-island-award-winning-small-group-tour-w-fast-track/?ttd_source=e&language=en-US&currency=USD&q_activity_id=20779&q_option_id=20779-TG7",
+          "price": "$54",
+          "extracted_price": 54,
+          "rating": 4.8,
+          "reviews": 8540,
+          "thumbnail": "https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcTKrB_ekBY_k0qByFNZiw66ce6J4GJR0TlBeG3WQuul5m-9k0Ts",
+          "source": "Cool Destinations",
+          "icon": "https://encrypted-tbn1.gstatic.com/faviconV2?url=https://www.cooldestinations.com/&client=DESTINATION_EXPLORE&type=FAVICON&size=32&fallback_opts=TYPE,SIZE,URL&nfrp=1"
+        },
+        {
+          "title": "Statue of Liberty and Ellis Island Early Morning Tour",
+          "link": "https://hellotickets.com/us/new-york/statue-of-liberty-and-ellis-island-tour/a/pa-69?source=e&language=en-US",
+          "price": "$60",
+          "extracted_price": 60,
+          "rating": 4.8,
+          "reviews": 69,
+          "thumbnail": "https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcQpHDcAUgA6L8Ze82hT6a7olOel3S4lrvwrH7PvKJ0Ljjok5IT9",
+          "source": "Hellotickets",
+          "icon": "https://encrypted-tbn1.gstatic.com/faviconV2?url=https://hellotickets.com/&client=DESTINATION_EXPLORE&type=FAVICON&size=32&fallback_opts=TYPE,SIZE,URL&nfrp=1"
+        },
+        {
+          "title": "Statue of Liberty Roundtrip Ferry ticket 1st tour 8:30am",
+          "link": "https://evendo.com/product/statue-of-liberty-ellis-island-and-skip-the-line-ferry-we-are-open/152829-560426?utm_source=gttd&utm_medium=organic&utm_campaign=e&language=en-US&currency=USD",
+          "price": "$60",
+          "extracted_price": 60,
+          "rating": 3.6,
+          "reviews": 22,
+          "thumbnail": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRgZj_87z_kQHOBqDFR4E9Ga3tCBxjQGuaJ-8WCq3IYQ3fZZSd4",
+          "source": "Evendo",
+          "icon": "https://encrypted-tbn1.gstatic.com/faviconV2?url=https://evendo.com/&client=DESTINATION_EXPLORE&type=FAVICON&size=32&fallback_opts=TYPE,SIZE,URL&nfrp=1",
+          "duration": "3h"
+        },
+        {
+          "title": "Statue of Liberty Tour and Ellis Island Guided Tour",
+          "link": "https://www.tripadvisor.com/AttractionProductHighlight-g60763-d11461383-Statue_of_Liberty_Ellis_Island_Guided_Tour-New_York_City_New_York.html?supsp=e&m=66204",
+          "price": "$65",
+          "extracted_price": 65,
+          "rating": 5.0,
+          "reviews": 603,
+          "thumbnail": "https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcTyE8vqTsUb2z0QtgOGYPtCMLyVyfsgBDQs-a6IKzdbKpXv_5NL",
+          "source": "Tripadvisor",
+          "icon": "https://encrypted-tbn2.gstatic.com/faviconV2?url=https://www.tripadvisor.com/&client=DESTINATION_EXPLORE&type=FAVICON&size=32&fallback_opts=TYPE,SIZE,URL&nfrp=1"
+        },
+        {
+          "title": "Statue of Liberty Tour with Ellis Island & Museum of Immigration",
+          "link": "https://www.cooldestinations.com/activity/new-york-city/statue-of-liberty-tour-with-pedestal-access-and-ellis-island/?ttd_source=e&language=en-US&currency=USD&q_activity_id=28212&q_option_id=28212-TG2",
+          "price": "$75",
+          "extracted_price": 75,
+          "rating": 4.5,
+          "reviews": 201,
+          "thumbnail": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSH89zTLd4ZHW7Bycyl19kNasi7_3zO6HYMWNA4Dq3Y4uASZ39B",
+          "source": "Cool Destinations",
+          "icon": "https://encrypted-tbn1.gstatic.com/faviconV2?url=https://www.cooldestinations.com/&client=DESTINATION_EXPLORE&type=FAVICON&size=32&fallback_opts=TYPE,SIZE,URL&nfrp=1"
+        },
+        {
+          "title": "Statue of Liberty Roundtrip Ferry ticket 1st tour 8:30am",
+          "link": "https://www.viator.com/en-US/tours/New-York-City/Statue-of-Liberty-Pedestal-Ellis-Island-and-Pre-Ferry-Tour/d687-74526P4?googlettd=true&src=papi&campaign=e",
+          "price": "$60",
+          "extracted_price": 60,
+          "rating": 3.6,
+          "reviews": 22,
+          "thumbnail": "https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcSphfPoEDnhRwD7qP_suBDdJeYtNYf0cxywSdMw4_2X81hW4AUM",
+          "source": "Viator",
+          "icon": "https://encrypted-tbn3.gstatic.com/faviconV2?url=https://www.viator.com/&client=DESTINATION_EXPLORE&type=FAVICON&size=32&fallback_opts=TYPE,SIZE,URL&nfrp=1",
+          "duration": "4h"
+        },
+        {
+          "title": "Statue of Liberty and Brooklyn Bridge Boat Tour",
+          "link": "https://www.viator.com/en-US/tours/New-York-City/Statue-of-Liberty-and-Brooklyn-Bridge-Boat-Tour/d687-103533P4?googlettd=true&src=papi&campaign=e",
+          "price": "$50",
+          "extracted_price": 50,
+          "rating": 5.0,
+          "reviews": 122,
+          "thumbnail": "https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcTeyLh3fM7nkbV9K1OLt6BcCmbFwWb1szHAsfNIqY9qJxtX2DZB",
+          "source": "Viator",
+          "icon": "https://encrypted-tbn3.gstatic.com/faviconV2?url=https://www.viator.com/&client=DESTINATION_EXPLORE&type=FAVICON&size=32&fallback_opts=TYPE,SIZE,URL&nfrp=1",
+          "duration": "30m"
+        },
+        {
+          "title": "Private Statue of Liberty and Ellis Island Tour",
+          "link": "https://www.groupon.com/deals/viator-new-york-tour1-17?&utm_source=google&source=e&utm_medium=cpc&utm_campaign=us_dt_sea_ggl_txt_GTTD_sr_cbp_ch1_nbr_s*e",
+          "price": "$75",
+          "extracted_price": 75,
+          "rating": 5.0,
+          "reviews": 335,
+          "thumbnail": "https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcTFd_JdSceNOyJz9kt1IQ_fLVLiujGHtG-ZxqW5o6lpiRvS7PFz",
+          "source": "Groupon",
+          "icon": "https://encrypted-tbn3.gstatic.com/faviconV2?url=https://www.groupon.com/&client=DESTINATION_EXPLORE&type=FAVICON&size=32&fallback_opts=TYPE,SIZE,URL&nfrp=1"
+        },
+        {
+          "title": "Helicopter Ride New York City, City Lights Night Photo Flight - 25-30 Minutes",
+          "link": "https://www.adrenaline.com/new-york-city/helicopter-rides/helicopter-ride-new-york-city-lights-25min/",
+          "price": "$285",
+          "extracted_price": 285,
+          "rating": 4.9,
+          "reviews": 17,
+          "thumbnail": "https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcSGFOJzwwupDUG0kdKzNiwoTKQIEbtBDhxSNCMqhKsFSmKrYOO3",
+          "source": "Adrenaline.com",
+          "icon": "https://encrypted-tbn1.gstatic.com/faviconV2?url=https://www.adrenaline.com/&client=DESTINATION_EXPLORE&type=FAVICON&size=32&fallback_opts=TYPE,SIZE,URL&nfrp=1"
+        },
+        {
+          "title": "Ellis Island Private Tour with Statue of Liberty Access",
+          "link": "https://hellotickets.com/us/new-york/statue-of-liberty-and-ellis-island-private-tour/a/pa-68?source=e&language=en-US",
+          "price": "$76",
+          "extracted_price": 76,
+          "rating": 4.5,
+          "reviews": 171,
+          "thumbnail": "https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcQNyjoD2ASdYLT8rc26-8WPqohVHmcCW_c0rlchiKLAE-KRdXOt",
+          "source": "Hellotickets",
+          "icon": "https://encrypted-tbn1.gstatic.com/faviconV2?url=https://hellotickets.com/&client=DESTINATION_EXPLORE&type=FAVICON&size=32&fallback_opts=TYPE,SIZE,URL&nfrp=1"
+        },
+        {
+          "title": "Private Statue of Liberty and Ellis Island Tour",
+          "link": "https://evendo.com/product/skip-the-line-private-statue-of-liberty-and-ellis-island-tour-ticket/166492-574098?utm_source=gttd&utm_medium=organic&utm_campaign=e&language=en-US&currency=USD",
+          "price": "$190",
+          "extracted_price": 190,
+          "rating": 4.9,
+          "reviews": 262,
+          "thumbnail": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRg3N9VF-eVSzTKS1VFHFx039JhrpGtqIRV9UgfvicbRLQZ6WYK",
+          "source": "Evendo",
+          "icon": "https://encrypted-tbn1.gstatic.com/faviconV2?url=https://evendo.com/&client=DESTINATION_EXPLORE&type=FAVICON&size=32&fallback_opts=TYPE,SIZE,URL&nfrp=1",
+          "duration": "4h"
+        },
+        {
+          "title": "Private Statue of Liberty and Ellis Island Tour",
+          "link": "https://www.cooldestinations.com/activity/new-york-city/skip-the-line-private-statue-of-liberty-and-ellis-island-tour/?ttd_source=e&language=en-US&currency=USD&q_activity_id=21641&q_option_id=21641-1",
+          "price": "$230",
+          "extracted_price": 230,
+          "rating": 5.0,
+          "reviews": 250,
+          "thumbnail": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTBIJiGybZIPbF5jbyqeKPCBW2hAZFvwxykGsVMwDIBLj-z9Fiu",
+          "source": "Cool Destinations",
+          "icon": "https://encrypted-tbn1.gstatic.com/faviconV2?url=https://www.cooldestinations.com/&client=DESTINATION_EXPLORE&type=FAVICON&size=32&fallback_opts=TYPE,SIZE,URL&nfrp=1"
+        },
+        {
+          "title": "Private Luxury Daytime Boat Tour in New York City - 1 Hour",
+          "link": "https://www.viator.com/en-US/tours/New-York-City/New-York-City-Luxury-Boat-Tour/d687-34556P2?googlettd=true&src=papi&campaign=e",
+          "price": "$350",
+          "extracted_price": 350,
+          "rating": 4.9,
+          "reviews": 25,
+          "thumbnail": "https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcQuZg7Otyq0v3Nz8VzivlMxkIzzanqSL1MF-7ef9xvesA84ypYv",
+          "source": "Viator",
+          "icon": "https://encrypted-tbn3.gstatic.com/faviconV2?url=https://www.viator.com/&client=DESTINATION_EXPLORE&type=FAVICON&size=32&fallback_opts=TYPE,SIZE,URL&nfrp=1",
+          "duration": "1h"
+        },
+        {
+          "title": "1 New York City Sightseeing bus tour and boat ride included",
+          "link": "https://www.cooldestinations.com/activity/new-york-city/6-hours-bus-and-boat-tour-in-new-york/?ttd_source=e&language=en-US&currency=USD&q_activity_id=349463&q_option_id=349463-TG1",
+          "price": "$267",
+          "extracted_price": 267,
+          "rating": 4.9,
+          "reviews": 212,
+          "thumbnail": "https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcTG4eB9-YL7CdSoDfqH1nTNvjpB5GXtlyc_NB6_gokZ6PlZns0P",
+          "source": "Cool Destinations",
+          "icon": "https://encrypted-tbn1.gstatic.com/faviconV2?url=https://www.cooldestinations.com/&client=DESTINATION_EXPLORE&type=FAVICON&size=32&fallback_opts=TYPE,SIZE,URL&nfrp=1"
+        },
+        {
+          "title": "Statue of Liberty Tour & Ellis Island: Guided Tour Options",
+          "link": "https://www.cooldestinations.com/activity/new-york-city/small-group-early-access-statue-of-liberty-tour-and-ellis-island/?ttd_source=e&language=en-US&currency=USD&q_activity_id=20861&q_option_id=20861-TG4",
+          "price": "$82",
+          "extracted_price": 82,
+          "rating": 4.8,
+          "reviews": 1209,
+          "thumbnail": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSWqUhZvjkZxJxzX4XjyzPZ43Jk2lTgjiEjOaxWbwUUu1LRMozH",
+          "source": "Cool Destinations",
+          "icon": "https://encrypted-tbn1.gstatic.com/faviconV2?url=https://www.cooldestinations.com/&client=DESTINATION_EXPLORE&type=FAVICON&size=32&fallback_opts=TYPE,SIZE,URL&nfrp=1"
+        },
+        {
+          "title": "Statue of Liberty and Ellis Island Tour",
+          "link": "https://www.cooldestinations.com/activity/new-york-city/statue-of-liberty-and-ellis-island-tour/?ttd_source=e&language=en-US&currency=USD&q_activity_id=21025&q_option_id=21025-TG5",
+          "price": "$82",
+          "extracted_price": 82,
+          "rating": 4.8,
+          "reviews": 1023,
+          "thumbnail": "https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcSSy01Wc9lfS3p8V3zkqppYqAgStw6jnSeQ03Tqmhbf0kZizpsE",
+          "source": "Cool Destinations",
+          "icon": "https://encrypted-tbn1.gstatic.com/faviconV2?url=https://www.cooldestinations.com/&client=DESTINATION_EXPLORE&type=FAVICON&size=32&fallback_opts=TYPE,SIZE,URL&nfrp=1"
+        },
+        {
+          "title": "NYC 9/11 Museum & Statue of Liberty Ferry Tickets 8:30am 1st Tour",
+          "link": "https://www.viator.com/en-US/tours/New-York-City/9-11-Memorial-Museum-Admission-Statue-of-Liberty-and-Ellis-Island-Admission/d687-74526P22?googlettd=true&src=papi&campaign=e",
+          "price": "$130",
+          "extracted_price": 130,
+          "rating": 3.5,
+          "reviews": 32,
+          "thumbnail": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQzGApRbgo87hvuK7IzBx3tsplwtEiAwlZe8EqiJ9HmUFguwjpj",
+          "source": "Viator",
+          "icon": "https://encrypted-tbn3.gstatic.com/faviconV2?url=https://www.viator.com/&client=DESTINATION_EXPLORE&type=FAVICON&size=32&fallback_opts=TYPE,SIZE,URL&nfrp=1",
+          "duration": "5h"
+        }
+      ],
+      "hours": [
+        {
+          "friday": "9 AM–5 PM"
+        },
+        {
+          "saturday": "9 AM–5 PM"
+        },
+        {
+          "sunday": "9 AM–5 PM"
+        },
+        {
+          "monday": "9 AM–5 PM"
+        },
+        {
+          "tuesday": "9 AM–5 PM"
+        },
+        {
+          "wednesday": "9 AM–5 PM"
+        },
+        {
+          "thursday": "9 AM–5 PM"
+        }
+      ],
+      "images": [
+        {
+          "title": "All",
+          "thumbnail": "https://lh5.googleusercontent.com/p/AF1QipNOkjsKcMBL_Fia95bCQvwISPZBNG_Addfw3AYm=w224-h298-k-no"
+        },
+        {
+          "title": "Latest",
+          "thumbnail": "https://lh5.googleusercontent.com/p/AF1QipNRKCDFZZNbUkxX5yK4frbM1omiwoadsTZf-uN7=w238-h298-k-no"
+        },
+        {
+          "title": "Videos",
+          "thumbnail": "https://lh5.googleusercontent.com/p/AF1QipPQr3uOGW6-qad5JJzxurKNgHGraG0ztb3FWfdj=w529-h298-k-no"
+        },
+        {
+          "title": "Street View & 360°",
+          "thumbnail": "https://lh5.googleusercontent.com/p/AF1QipOSbowFlywcnfBetYZK99hl9skuYWAjzcPPNSRB=w224-h298-k-no-pi-20.600374-ya357.52344-ro-0-fo100"
+        }
+      ],
+      "questions_and_answers": [
+        {
+          "question": {
+            "user": {
+              "name": "People are asking"
+            },
+            "text": "Are people allowed in the Statue of Liberty's crown?",
+            "date": "Frequently searched on Google",
+            "language": "en"
+          },
+          "answer": {
+            "user": {
+              "name": "Arka Chowdhury",
+              "link": "https://www.google.com/maps/contrib/102224277231379136438",
+              "thumbnail": "https://lh3.googleusercontent.com/a-/ALV-UjU6PTxXrnaz7c6iwOENSp3vfTSoUr56VGIVXeIzPsRa-fqr1tb7=s120-c-rp-mo-ba3-br100"
+            },
+            "text": "Yes, you have to book for crown access before hand online.",
+            "date": "6 years ago",
+            "language": "en"
+          },
+          "total_answers": 219
+        }
+      ],
+      "at_this_place": {
+        "type": [
+          {
+            "title": "Food & Drink",
+            "places": 1
+          },
+          {
+            "title": "Other",
+            "places": 2
+          }
+        ],
+        "places": [
+          {
+            "position": 1,
+            "title": "Statue of Liberty Crown Cafe",
+            "data_id": "0x89c2508ed4dd0f3b:0x5bbc017303e12e94",
+            "data_cid": "6610159946571001492",
+            "reviews_link": "https://serpapi.com/search.json?data_id=0x89c2508ed4dd0f3b%3A0x5bbc017303e12e94&engine=google_maps_reviews&hl=en",
+            "photos_link": "https://serpapi.com/search.json?data_id=0x89c2508ed4dd0f3b%3A0x5bbc017303e12e94&engine=google_maps_photos&hl=en",
+            "gps_coordinates": {
+              "latitude": 40.689992499999995,
+              "longitude": -74.04629349999999
+            },
+            "place_id_search": "https://serpapi.com/search.json?data=%214m5%213m4%211s0x89c2508ed4dd0f3b%3A0x5bbc017303e12e94%218m2%213d40.689992499999995%214d-74.04629349999999&engine=google_maps&google_domain=google.com&hl=en&type=place",
+            "rating": 4.1,
+            "reviews": 2023,
+            "type": "Restaurant",
+            "type_id": "restaurant",
+            "address": "Liberty Island, Manhattan, NY 10004",
+            "open_state": "Closed ⋅ Opens 9:30 AM Sat",
+            "hours": [
+              {
+                "friday": "9:30 AM–5 PM"
+              },
+              {
+                "saturday": "9:30 AM–5 PM"
+              },
+              {
+                "sunday": "9:30 AM–5 PM"
+              },
+              {
+                "monday": "9:30 AM–5 PM"
+              },
+              {
+                "tuesday": "9:30 AM–5 PM"
+              },
+              {
+                "wednesday": "9:30 AM–5 PM"
+              },
+              {
+                "thursday": "9:30 AM–5 PM"
+              }
+            ],
+            "thumbanil": "https://lh5.googleusercontent.com/p/AF1QipPtdiICWx0jkKA5ENWveC4tLlFsQlMUIAhoNEVP=w86-h86-n-k-no"
+          },
+          {
+            "position": 2,
+            "title": "Fort Wood",
+            "data_id": "0x89c25088d75fdcdd:0xcf1c5b8f81b289bf",
+            "data_cid": "14923903937113393599",
+            "reviews_link": "https://serpapi.com/search.json?data_id=0x89c25088d75fdcdd%3A0xcf1c5b8f81b289bf&engine=google_maps_reviews&hl=en",
+            "photos_link": "https://serpapi.com/search.json?data_id=0x89c25088d75fdcdd%3A0xcf1c5b8f81b289bf&engine=google_maps_photos&hl=en",
+            "gps_coordinates": {
+              "latitude": 40.6895453,
+              "longitude": -74.0449292
+            },
+            "place_id_search": "https://serpapi.com/search.json?data=%214m5%213m4%211s0x89c25088d75fdcdd%3A0xcf1c5b8f81b289bf%218m2%213d40.6895453%214d-74.0449292&engine=google_maps&google_domain=google.com&hl=en&type=place",
+            "rating": 4.3,
+            "reviews": 156,
+            "type": "Historical landmark",
+            "type_id": "historical_landmark",
+            "address": "1 Liberty Island - Ellis Island, New York, NJ 10004",
+            "open_state": "Open 24 hours",
+            "hours": [
+              {
+                "friday": "Open 24 hours"
+              },
+              {
+                "saturday": "Open 24 hours"
+              },
+              {
+                "sunday": "Open 24 hours"
+              },
+              {
+                "monday": "Open 24 hours"
+              },
+              {
+                "tuesday": "Open 24 hours"
+              },
+              {
+                "wednesday": "Open 24 hours"
+              },
+              {
+                "thursday": "Open 24 hours"
+              }
+            ],
+            "thumbanil": "https://lh5.googleusercontent.com/p/AF1QipM-HKxSpj_UTMqmOlCbJPpakW1n0onsABvfHTrk=w86-h86-n-k-no"
+          },
+          {
+            "position": 3,
+            "title": "Statue of Liberty audio-guide",
+            "data_id": "0x89c251a226ffc073:0x4ea9cbb017c480d3",
+            "data_cid": "5668285563195916499",
+            "reviews_link": "https://serpapi.com/search.json?data_id=0x89c251a226ffc073%3A0x4ea9cbb017c480d3&engine=google_maps_reviews&hl=en",
+            "photos_link": "https://serpapi.com/search.json?data_id=0x89c251a226ffc073%3A0x4ea9cbb017c480d3&engine=google_maps_photos&hl=en",
+            "gps_coordinates": {
+              "latitude": 40.6901723,
+              "longitude": -74.0463867
+            },
+            "place_id_search": "https://serpapi.com/search.json?data=%214m5%213m4%211s0x89c251a226ffc073%3A0x4ea9cbb017c480d3%218m2%213d40.6901723%214d-74.0463867&engine=google_maps&google_domain=google.com&hl=en&type=place",
+            "rating": 4.3,
+            "reviews": 6,
+            "type": "Historical landmark",
+            "type_id": "historical_landmark",
+            "address": "Liberty Island, Manhattan, NY 10004",
+            "location": "Floor 1",
+            "thumbanil": "https://lh5.googleusercontent.com/p/AF1QipOhXPmnBARg3EobPv39jn1CYh4qppNsXtaoPA48=w86-h86-n-k-no"
+          }
+        ]
+      },
+      "user_reviews": {
+        "summary": [
+          {
+            "snippet": "\"Soda, water, juices, beers and wines help rinse the good food down.\""
+          },
+          {
+            "snippet": "\"An awesome place to eat big hot dogs,, big pizzas, and big fries.\""
+          },
+          {
+            "snippet": "\"Rude people on security line no trash cans inside waste of money and energy\""
+          }
+        ],
+        "most_relevant": [
+          {
+            "username": "Ramesh D Foodie",
+            "rating": 5,
+            "contributor_id": "104341239215667566377",
+            "description": "This is a must-see place when it comes to New York City. You can catch a ferry to reach here either from Battery Park New York or from Jersey City Liberty State Park. If you are visiting just the liberty statue and Ellis Island, I would recommend catching a ferry from Liberty State Park. The parking is easy and you get less crowd from that side. If you plan to do the entire New York, then Battery Park will be a good option. However, the parking rates are very high. The tickets can be purchased ahead of time or at the counter and watch out for a lot of people selling their tickets for a different ferry, don't fall for tricks. One thing to notice is if you are getting to the counter at around 2:00 p.m. then you can see only one island. Once you purchase the tickets, you go to the ferry onboarding, and based on the season, the lines could get longer. The ferry ride as such is wonderful, and you can get close-up views of the statue when you are in the ferry. Liberty Island is well maintained, and you can get nice pictures of the statue, the skyline of New York City, and beautiful views of the water. If you prefer the pedestal or crown access, you have to plan ahead and book the tickets in advance. There is always a park ranger on duty who gives an overview of the island if you are interested in knowing that history. There are restrooms well maintained. There are cafes  to grab some quick bites. This is definitely one of the places I have visited more than 10 times, and I still love to go here.",
+            "link": "https://www.google.com/maps/reviews/data=!4m8!14m7!1m6!2m5!1sChZDSUhNMG9nS0VJQ0FnSUNqcktDY01BEAE!2m1!1s0x0:0x40c6a5770d25022b!3m1!1s2@1:CIHM0ogKEICAgICjrKCcMA%7CCgwImOKEsQYQ8Mi9wQM%7C?hl=en-US",
+            "images": [
+              {
+                "thumbnail": "https://lh5.googleusercontent.com/p/AF1QipN17qV5-uaVEFc3vlcWPOVl4z6qYehJ1TJYO_A_=w150-h150-k-no-p"
+              },
+              {
+                "thumbnail": "https://lh5.googleusercontent.com/p/AF1QipOBOfI0Wtu_lZloau6NuvaIuLYRg0sYab1cmPvu=w150-h150-k-no-p"
+              },
+              {
+                "thumbnail": "https://lh5.googleusercontent.com/p/AF1QipP7G2ZjnqUlrVdoPZNgWF2AVNBjHA_Tm-LJRpwf=w150-h150-k-no-p"
+              },
+              {
+                "thumbnail": "https://lh5.googleusercontent.com/p/AF1QipOJsyHm4qa0hQkt8oGbJoXXcNuUnbgKePZkQU_t=w150-h150-k-no-p"
+              },
+              {
+                "thumbnail": "https://lh5.googleusercontent.com/p/AF1QipPEstMDvMSS_YGr-iiZCekzVdCMb8NJwDp7mCAZ=w150-h150-k-no-p"
+              },
+              {
+                "thumbnail": "https://lh5.googleusercontent.com/p/AF1QipPdYDJUbMXVU4wxRo2aW0BmnaNWh42se0TUvrU3=w150-h150-k-no-p"
+              },
+              {
+                "thumbnail": "https://lh5.googleusercontent.com/p/AF1QipOSXUzbPvBDbhP2WA0FXGpuMW7MTWuxyhxeUnRI=w150-h150-k-no-p"
+              }
+            ],
+            "date": "2 weeks ago"
+          },
+          {
+            "username": "Mamunur Rashid",
+            "rating": 5,
+            "contributor_id": "101671351269645552957",
+            "description": "Visited on Monday. Very nice environment on the month of April. Better to keep a jacket. Nice place to spend time alone or with family. Don’t miss to visit museum. About no waiting time if you buy the ticket the day before your tour.",
+            "link": "https://www.google.com/maps/reviews/data=!4m8!14m7!1m6!2m5!1sChdDSUhNMG9nS0VJQ0FnSUNqb3NUdTBnRRAB!2m1!1s0x0:0x40c6a5770d25022b!3m1!1s2@1:CIHM0ogKEICAgICjosTu0gE%7CCgsI5JSJsQYQoNyDFA%7C?hl=en-US",
+            "images": [
+              {
+                "thumbnail": "https://lh5.googleusercontent.com/p/AF1QipNI2y8yOmd2ArhElNexApYeWW3DfWTlVL-2NvCZ=w150-h150-k-no-p"
+              },
+              {
+                "thumbnail": "https://lh5.googleusercontent.com/p/AF1QipOz0CicrkMrBbODUOWPzG6gdwkYvCJUx2UNq-9T=w150-h150-k-no-p"
+              },
+              {
+                "thumbnail": "https://lh5.googleusercontent.com/p/AF1QipO2kZ5uFWxYCPq_Beiv_63p4UXLypVeBrmhJ4XZ=w150-h150-k-no-p"
+              },
+              {
+                "thumbnail": "https://lh5.googleusercontent.com/p/AF1QipNisl8uvKFOmNz0ZIt8lYlE9V8E1jbromwnK3N5=w150-h150-k-no-p"
+              },
+              {
+                "thumbnail": "https://lh5.googleusercontent.com/p/AF1QipMxAWDF5KLJCeWEgYQjSR0srfgHEFWANlGNyWfn=w150-h150-k-no-p"
+              },
+              {
+                "thumbnail": "https://lh5.googleusercontent.com/p/AF1QipOlCOkBMX12xNVshWfVz0K-Y1M4nGLCHsx_taAd=w150-h150-k-no-p"
+              }
+            ],
+            "date": "2 weeks ago"
+          },
+          {
+            "username": "Dustin Deshiro",
+            "rating": 4,
+            "contributor_id": "100072531285468271713",
+            "description": "Their was an excellent experience. We went to the Crown and really enjoyed ourselves. The staff manning the elevator and the staff at the crown were accommodating and personable. They interacted with the kids and made it memorable. The line control at the ferry and security staff were pretty rude but the actual experience made up for it.",
+            "link": "https://www.google.com/maps/reviews/data=!4m8!14m7!1m6!2m5!1sChZDSUhNMG9nS0VJQ0FnSURqd0lTZFFnEAE!2m1!1s0x0:0x40c6a5770d25022b!3m1!1s2@1:CIHM0ogKEICAgIDjwISdQg%7CCgwI-Z62sQYQsJ-b0AE%7C?hl=en-US",
+            "images": [
+              {
+                "thumbnail": "https://lh5.googleusercontent.com/p/AF1QipNzqSiownmcy_DQhts_61enTtSzIMcWJChzByu-=w150-h150-k-no-p"
+              },
+              {
+                "thumbnail": "https://lh5.googleusercontent.com/p/AF1QipNjy00zcCcZETYJ27rxhPuMtEEvxWgpFxQ-6XDn=w150-h150-k-no-p"
+              },
+              {
+                "thumbnail": "https://lh5.googleusercontent.com/p/AF1QipPt6XjVhdbNhkdhj-6nQ_0coYHfO06zPq_iRtDD=w150-h150-k-no-p"
+              },
+              {
+                "thumbnail": "https://lh5.googleusercontent.com/p/AF1QipOcBn3r0yHLefkNidnpJM3c2utuewFLcA-8LUaM=w150-h150-k-no-p"
+              },
+              {
+                "thumbnail": "https://lh5.googleusercontent.com/p/AF1QipMkjBFUtRhBJh5abbpYyRmCzq3cL8_VMAyKPVV4=w150-h150-k-no-p"
+              }
+            ],
+            "date": "5 days ago"
+          },
+          {
+            "username": "Azamat Karimov",
+            "rating": 5,
+            "contributor_id": "105227690414264740446",
+            "description": "Visiting the Statue of Liberty and the island was an unforgettable experience that left me in awe! 🗽⛴️ The boat ride to the island was a thrilling journey, offering stunning views of the New York City skyline and the majestic statue standing tall in the harbor.\n\nAs we approached the island, the sight of Lady Liberty standing proudly against the backdrop of the city skyline was truly breathtaking. Stepping foot on Liberty Island felt like stepping into history, with the iconic statue serving as a symbol of freedom and hope.\n\nExploring the grounds and learning about the statue's rich history was both educational and inspiring. The museum provided fascinating insights into the statue's construction and significance, adding depth to the experience.\n\nClimbing to the pedestal and taking in the panoramic views of the city and the harbor was a highlight of the visit. The sense of accomplishment and reverence for this iconic monument was palpable.\n\nThe boat ride back offered one last opportunity to soak in the beauty of the statue and the city skyline. The entire experience was seamless, from booking tickets to disembarking the boat.\n\nVisiting the Statue of Liberty and the island is a must-do for anyone visiting New York City. It's an experience that truly embodies the spirit of freedom and leaves a lasting impression. Highly recommended! 👏🌟🇺🇸",
+            "link": "https://www.google.com/maps/reviews/data=!4m8!14m7!1m6!2m5!1sChZDSUhNMG9nS0VJQ0FnSUQ5MXRfMEhnEAE!2m1!1s0x0:0x40c6a5770d25022b!3m1!1s2@1:CIHM0ogKEICAgID91t_0Hg%7CCgwI3arWrwYQwJaNiwE%7C?hl=en-US",
+            "images": [
+              {
+                "thumbnail": "https://lh5.googleusercontent.com/p/AF1QipMeDXLGiS9oYEVXnRJ706z2rg9Z7qeZPSgFORpu=w150-h150-k-no-p"
+              },
+              {
+                "thumbnail": "https://lh5.googleusercontent.com/p/AF1QipNcyfsEr8Y8HbPYYoTBfeKhdDVgmT4LQqzIFlt7=w150-h150-k-no-p"
+              },
+              {
+                "thumbnail": "https://lh5.googleusercontent.com/p/AF1QipOAawfEiDxflV09PSB3Q0hhL5g3tVqDwpBJkgnc=w150-h150-k-no-p"
+              },
+              {
+                "thumbnail": "https://lh5.googleusercontent.com/p/AF1QipMqOhqtMqsTWuVWoh9cWkFCKDSh5Zyx0U3s5lAp=w150-h150-k-no-p"
+              }
+            ],
+            "date": "a month ago"
+          },
+          {
+            "username": "Alice Woo",
+            "rating": 5,
+            "contributor_id": "117795955823699679975",
+            "description": "The Statue of Liberty looks amazing! We normally get to see it on tv or in movies but seeing it up close is even exciting for us. It was said that this iconic monument honours the alliance and friendship between United States and France. The construction of the Statue of Liberty was completed in France itself in 1884. It is made of copper and stands at 305 feet tall! The statue’s torch symbolizes enlightenment… lighting a way to freedom and path to liberty. What an amazing piece of art!",
+            "link": "https://www.google.com/maps/reviews/data=!4m8!14m7!1m6!2m5!1sChdDSUhNMG9nS0VJQ0FnSUNqNXBEbTJRRRAB!2m1!1s0x0:0x40c6a5770d25022b!3m1!1s2@1:CIHM0ogKEICAgICj5pDm2QE%7CCgsIsdKRsQYQ2NCRLw%7C?hl=en-US",
+            "images": [
+              {
+                "thumbnail": "https://lh5.googleusercontent.com/p/AF1QipNITUF0OURNPaj18oIykPAoImJj0_5_oXO-6VKl=w150-h150-k-no-p"
+              },
+              {
+                "thumbnail": "https://lh5.googleusercontent.com/p/AF1QipNuWESRokUwYI9HYkf-JFQf0hu1St4Rpk7SicZN=w150-h150-k-no-p"
+              },
+              {
+                "thumbnail": "https://lh5.googleusercontent.com/p/AF1QipOtIPADSbir2mrmRgzTkQMwG9w-zr-R3UgPF3mU=w150-h150-k-no-p"
+              },
+              {
+                "thumbnail": "https://lh5.googleusercontent.com/p/AF1QipON5WVXjJ5Ai7N5QnOUtDHtuE1EgQCyOxfqhau-=w150-h150-k-no-p"
+              },
+              {
+                "thumbnail": "https://lh5.googleusercontent.com/p/AF1QipPjN9hrTwk6Nh27LjJtZTKDIUQljP3P6vPaBq8R=w150-h150-k-no-p"
+              },
+              {
+                "thumbnail": "https://lh5.googleusercontent.com/p/AF1QipNFmrWGAHi6TjrayU94Y-V8GUZbhxWOF2mqsMlL=w150-h150-k-no-p"
+              },
+              {
+                "thumbnail": "https://lh5.googleusercontent.com/p/AF1QipNP_6KeUCRmaccwP9xxpujaSe4SCcRNOqjKj_9x=w150-h150-k-no-p"
+              },
+              {
+                "thumbnail": "https://lh5.googleusercontent.com/p/AF1QipPD09EfrZihvorTHEqiUBU8JnGevS-qTiXpRd_e=w150-h150-k-no-p"
+              },
+              {
+                "thumbnail": "https://lh5.googleusercontent.com/p/AF1QipO_i6EwRCohdmk-7wTO9ZFKjaIn0YY16sabt-wF=w150-h150-k-no-p"
+              }
+            ],
+            "date": "a week ago"
+          },
+          {
+            "username": "Shailesh Mahadkar",
+            "rating": 5,
+            "contributor_id": "100146708936900505843",
+            "description": "Visiting the Statue of Liberty and Ellis Island is an unforgettable experience that offers a profound glimpse into American history and culture. From the moment you board the ferry to Liberty Island, the iconic silhouette of Lady Liberty welcomes you, evoking a sense of awe and inspiration. Exploring the statue up close allows you to appreciate its intricate details and symbolism, representing freedom and democracy.\n\nEllis Island adds another layer to the experience, serving as a poignant reminder of the millions of immigrants who passed through its halls in search of a better life. The museum provides fascinating insights into their journeys, struggles, and contributions to American society. Walking through the same halls where they once stood is a powerful and humbling experience.\n\nOverall, a visit to the Statue of Liberty and Ellis Island is not just a tourist attraction; it's a journey through history that leaves a lasting impact and a deeper appreciation for the ideals upon which America was built. Whether you're a history buff, a patriot, or simply someone seeking inspiration, this is a must-see destination.",
+            "link": "https://www.google.com/maps/reviews/data=!4m8!14m7!1m6!2m5!1sChZDSUhNMG9nS0VJQ0FnSUREaTgyUmVBEAE!2m1!1s0x0:0x40c6a5770d25022b!3m1!1s2@1:CIHM0ogKEICAgIDDi82ReA%7CCgsIiPHtsAYQ2KzoFg%7C?hl=en-US",
+            "images": [
+              {
+                "thumbnail": "https://lh5.googleusercontent.com/p/AF1QipPY3FebTwV3M5cjKixRCpvxTTo5-797PknAJC3i=w150-h150-k-no-p"
+              },
+              {
+                "thumbnail": "https://lh5.googleusercontent.com/p/AF1QipNSMx5yfAb1fjKzqaqgwltkTpeeaUx-eDtwCOa8=w150-h150-k-no-p"
+              },
+              {
+                "thumbnail": "https://lh5.googleusercontent.com/p/AF1QipOzITCvV1fQYBoxWY80kM7NLDA5tTz04G0bJi3y=w150-h150-k-no-p"
+              },
+              {
+                "thumbnail": "https://lh5.googleusercontent.com/p/AF1QipNUG1WUMBG2g9bb4kcvT53f_VZzn52Vxr8EhjPC=w150-h150-k-no-p"
+              },
+              {
+                "thumbnail": "https://lh5.googleusercontent.com/p/AF1QipOTakvbBkQuyyZnA-Zpa7P5JsJxSCKwRc5C2Ibj=w150-h150-k-no-p"
+              },
+              {
+                "thumbnail": "https://lh5.googleusercontent.com/p/AF1QipMRCEFU6ZMjSs2BwlLrhmrLaG0kkZKCWaYKFUgi=w150-h150-k-no-p"
+              },
+              {
+                "thumbnail": "https://lh5.googleusercontent.com/p/AF1QipMPM4rHziiGTEqO4JJbQcQKVjSw2ideJExglWdz=w150-h150-k-no-p"
+              }
+            ],
+            "date": "2 weeks ago"
+          },
+          {
+            "username": "Cristian A",
+            "rating": 5,
+            "contributor_id": "115228862482885145431",
+            "description": "One of the world's heritage, must visit when you're in New York, US. You can book online to get the ticket and choose the Harbor in New Jersey or n New York.\nThis time I choosed departure Harbour in New Jersey. About 45 minuttes drives from Queen and they have huge outdoor car parking.\n\nIt's Affordable trip,  well organized with professional crews, clean area, and beautiful places. Before going to Liberty Statue, we visited the museum of US Immigration.\n\nIn the US Immigration Museum, You can learn about US history here. There are restrooms, Cafe, and Gift Shop in this area. Very interesting gifts for your love one.\n\nThen I'm going to Liberty Statue, waiting the Boat about 15 minutes. There's a Cafe, 2 museums and 1 Gift shop near Harbour. You can enjoy the garden while walking to the Statue of Liberty. It's nice and lovely place 😍😍😍👍👍👍",
+            "link": "https://www.google.com/maps/reviews/data=!4m8!14m7!1m6!2m5!1sChdDSUhNMG9nS0VJQ0FnSUNqa1o2NnJBRRAB!2m1!1s0x0:0x40c6a5770d25022b!3m1!1s2@1:CIHM0ogKEICAgICjkZ66rAE%7CCgwI0-2asQYQ4PT4hAM%7C?hl=en-US",
+            "images": [
+              {
+                "thumbnail": "https://lh5.googleusercontent.com/p/AF1QipN_s8hlcUb2P3hica08tOb0dClm2NUuQbRxvO8H=w150-h150-k-no-p"
+              },
+              {
+                "thumbnail": "https://lh5.googleusercontent.com/p/AF1QipNJUgEpLxXvd9M1rwyrUTCMdMUNEgKeXZz2fvp6=w150-h150-k-no-p"
+              },
+              {
+                "thumbnail": "https://lh5.googleusercontent.com/p/AF1QipPOwSSEYWJw5V0JLI6GNvT80V7uIPeB8EYjP4Jn=w150-h150-k-no-p"
+              },
+              {
+                "thumbnail": "https://lh5.googleusercontent.com/p/AF1QipOcF5Ndk3EXJVb0IjYVdNzoJkKR_Bj3-NyTbeO6=w150-h150-k-no-p"
+              },
+              {
+                "thumbnail": "https://lh5.googleusercontent.com/p/AF1QipPU_UFKe2gJG_UcdigTnk7VPu3pAe07OYGfmKiR=w150-h150-k-no-p"
+              },
+              {
+                "thumbnail": "https://lh5.googleusercontent.com/p/AF1QipNyyL0TdQAr3C_X6RZQT3RmfdfaJgtkjYZhm84h=w150-h150-k-no-p"
+              },
+              {
+                "thumbnail": "https://lh5.googleusercontent.com/p/AF1QipPo_i04GwuGkPjBm8eU5OBkFoWfn0oxvejHnlCB=w150-h150-k-no-p"
+              },
+              {
+                "thumbnail": "https://lh5.googleusercontent.com/p/AF1QipP0LZ6lESNnncKsxF3IQj_qMnibTlzwlEOxyV8U=w150-h150-k-no-p"
+              },
+              {
+                "thumbnail": "https://lh5.googleusercontent.com/p/AF1QipOeh0xrZ5fkIVJBoq1D4ekI8rpXpdrsIXhQ6-33=w150-h150-k-no-p"
+              },
+              {
+                "thumbnail": "https://lh5.googleusercontent.com/p/AF1QipO3pQHdAVz6YvQkwc12nzcB4z-r_B8C2b0mrzPI=w150-h150-k-no-p"
+              },
+              {
+                "thumbnail": "https://lh5.googleusercontent.com/p/AF1QipPhBU901RoVFnWszRlUwHW6X91hYYRjBfPzIFjK=w150-h150-k-no-p"
+              },
+              {
+                "thumbnail": "https://lh5.googleusercontent.com/p/AF1QipMIqTvoN2TCDv-nSjZJUoyrqVmxKO6w4BEtBeW4=w150-h150-k-no-p"
+              },
+              {
+                "thumbnail": "https://lh5.googleusercontent.com/p/AF1QipMfHVXTqBcPsZicyq0r-haRUyLyyJKeiKtEXCiu=w150-h150-k-no-p"
+              },
+              {
+                "thumbnail": "https://lh5.googleusercontent.com/p/AF1QipPahoqiJrzJHRqaG9n79L9KtBETe1VBgqpUwyZt=w150-h150-k-no-p"
+              },
+              {
+                "thumbnail": "https://lh5.googleusercontent.com/p/AF1QipMj8MyJQG1lPDVm2tm_oKU8RoKj_dsX4AQ83G4z=w150-h150-k-no-p"
+              },
+              {
+                "thumbnail": "https://lh5.googleusercontent.com/p/AF1QipMUike_kRBawt1OYnRPWzQCwD3J_R1ZexEmNF32=w150-h150-k-no-p"
+              },
+              {
+                "thumbnail": "https://lh5.googleusercontent.com/p/AF1QipNZ4pe-YqtgaN3YnGFFUQJy7CJ1qy9UFTHrKRJw=w150-h150-k-no-p"
+              },
+              {
+                "thumbnail": "https://lh5.googleusercontent.com/p/AF1QipNKeQU7dAS8P2PMfy0ZQwuE-s7bRqufubjuKTri=w150-h150-k-no-p"
+              },
+              {
+                "thumbnail": "https://lh5.googleusercontent.com/p/AF1QipPdnEWVdOG3UC1dlDw6yLTZdN6-bux8mNs8kqHt=w150-h150-k-no-p"
+              },
+              {
+                "thumbnail": "https://lh5.googleusercontent.com/p/AF1QipO0JBNaDzytfVUk8jOP37GZXbjEUP23WTEJEoNW=w150-h150-k-no-p"
+              },
+              {
+                "thumbnail": "https://lh5.googleusercontent.com/p/AF1QipMLgtDZCFQd1mPbc764rEpzFU0sF19axfKeLCQu=w150-h150-k-no-p"
+              },
+              {
+                "thumbnail": "https://lh5.googleusercontent.com/p/AF1QipMm46e0IdQjFJzTBsh00w1rA5q0HA9m3uedNDsU=w150-h150-k-no-p"
+              },
+              {
+                "thumbnail": "https://lh5.googleusercontent.com/p/AF1QipNSmGwqi7ENYI886gdGn2dK1By9cYr_vNby4l63=w150-h150-k-no-p"
+              },
+              {
+                "thumbnail": "https://lh5.googleusercontent.com/p/AF1QipM_QuvqKxSdOCA5fDJJs-LXGT_9uiFpAC48bSGq=w150-h150-k-no-p"
+              },
+              {
+                "thumbnail": "https://lh5.googleusercontent.com/p/AF1QipO5WVDgUyp1osnfWI4D3zvLWA8ULPNpUiU_9Lto=w150-h150-k-no-p"
+              },
+              {
+                "thumbnail": "https://lh5.googleusercontent.com/p/AF1QipMBIXNGknZjx-VbD_Jk_U24jZYrA0Jq_RRotN87=w150-h150-k-no-p"
+              },
+              {
+                "thumbnail": "https://lh5.googleusercontent.com/p/AF1QipMhcr-TS39-YL_JoHjyuPcmB80xykjK3wzd-r4u=w150-h150-k-no-p"
+              },
+              {
+                "thumbnail": "https://lh5.googleusercontent.com/p/AF1QipP3Ec6ph7wCD-eP2AVzloX3CbIemPhKh0vTuaKS=w150-h150-k-no-p"
+              },
+              {
+                "thumbnail": "https://lh5.googleusercontent.com/p/AF1QipOSi13QS3xlqecrgfF3LTI6LptRi4mZxHgGl595=w150-h150-k-no-p"
+              },
+              {
+                "thumbnail": "https://lh5.googleusercontent.com/p/AF1QipNATqqjHz9UHDuMkORW_PlS3bsinwucxgI79xBM=w150-h150-k-no-p"
+              },
+              {
+                "thumbnail": "https://lh5.googleusercontent.com/p/AF1QipPImCQTqGK-3Qnsdj7435kguCnUFEP2s3NAc6pi=w150-h150-k-no-p"
+              },
+              {
+                "thumbnail": "https://lh5.googleusercontent.com/p/AF1QipNs5Lnv-JWVlSwmV2lOYif6kZMOssjnPziYRBtz=w150-h150-k-no-p"
+              },
+              {
+                "thumbnail": "https://lh5.googleusercontent.com/p/AF1QipOAssOs2tOkGtEU-o2aIw69bFHM5SHk_jpLtQ0J=w150-h150-k-no-p"
+              },
+              {
+                "thumbnail": "https://lh5.googleusercontent.com/p/AF1QipMkuHKjaZuy6SIIX3qxHu19v01CZWnrrdVCJfEz=w150-h150-k-no-p"
+              },
+              {
+                "thumbnail": "https://lh5.googleusercontent.com/p/AF1QipOviNbYNv1RTIHCPc9hi_sCT9HNplKQrCKHQ75W=w150-h150-k-no-p"
+              },
+              {
+                "thumbnail": "https://lh5.googleusercontent.com/p/AF1QipOWClzPrtTDJ_L6vG0T01VAnfyF-1ACJTYyPlEv=w150-h150-k-no-p"
+              },
+              {
+                "thumbnail": "https://lh5.googleusercontent.com/p/AF1QipPU5XPe6mV8ZTnABbxBbF1vW06iUrF_NeWpgGiG=w150-h150-k-no-p"
+              },
+              {
+                "thumbnail": "https://lh5.googleusercontent.com/p/AF1QipPqJlhx3vvmFxAC3YkVz5CegE4IbZdkq9GIxTXh=w150-h150-k-no-p"
+              },
+              {
+                "thumbnail": "https://lh5.googleusercontent.com/p/AF1QipPzC6yZsXKmKrS7TKvfLPJcPMfm9IK-fAmDYgPF=w150-h150-k-no-p"
+              },
+              {
+                "thumbnail": "https://lh5.googleusercontent.com/p/AF1QipNGCASWHVQENOwh7G3XrixSPc_7ImQcmxZP912d=w150-h150-k-no-p"
+              },
+              {
+                "thumbnail": "https://lh5.googleusercontent.com/p/AF1QipOdwWoicrrz4hgHl3-za56rf2IOalkphjmjUctN=w150-h150-k-no-p"
+              },
+              {
+                "thumbnail": "https://lh5.googleusercontent.com/p/AF1QipN0yCeeYV8MIETKt_Ki43V7mgKAxQzJnW-UxNTM=w150-h150-k-no-p"
+              },
+              {
+                "thumbnail": "https://lh5.googleusercontent.com/p/AF1QipM4XK6w5PAZj0j6QohxzXjhIpkJ1dRfe6bvRA1c=w150-h150-k-no-p"
+              }
+            ],
+            "date": "a week ago"
+          },
+          {
+            "username": "Karen Wagner",
+            "rating": 5,
+            "contributor_id": "107395770478791284412",
+            "description": "The Statue of Liberty and the museum were amazing and it is just heartwarming to see people from all over the world enjoying such a treasure that will forever be linked to Freedom prosperity Liberty Independence and progression. No matter what is going on in the world, here we are at peace. And I just want to say the statue is very beautiful and the grounds are very well maintained and they are very environmentally conscious about recycling and using recyclable materials. Which I was not expecting at all. Thank you for a wonderful day!",
+            "link": "https://www.google.com/maps/reviews/data=!4m8!14m7!1m6!2m5!1sChdDSUhNMG9nS0VJQ0FnSUREOWEtRzJRRRAB!2m1!1s0x0:0x40c6a5770d25022b!3m1!1s2@1:CIHM0ogKEICAgIDD9a-G2QE%7CCgwIw8XlsAYQ8ICc2gE%7C?hl=en-US",
+            "images": [
+              {
+                "thumbnail": "https://lh5.googleusercontent.com/p/AF1QipM9K1dquPW8SQq4RLI8KMon8BNlqc2H3qI2wCsg=w150-h150-k-no-p"
+              },
+              {
+                "thumbnail": "https://lh5.googleusercontent.com/p/AF1QipNPXIKUFsgnu4Xs1augiGC-gUCmfQ4pJtsRjTFz=w150-h150-k-no-p"
+              },
+              {
+                "thumbnail": "https://lh5.googleusercontent.com/p/AF1QipMZBL_Xh8__SxxaFE0BtGZjTOByYk8qDs_N5ums=w150-h150-k-no-p"
+              },
+              {
+                "thumbnail": "https://lh5.googleusercontent.com/p/AF1QipOQw--zkIOFJYY5OCHt1gP9VdbuvFOoUuzSU_yn=w150-h150-k-no-p"
+              },
+              {
+                "thumbnail": "https://lh5.googleusercontent.com/p/AF1QipOUv6_Pb2tSCR8fgoftvEsnFbA8Ony-m6-n18uW=w150-h150-k-no-p"
+              },
+              {
+                "thumbnail": "https://lh5.googleusercontent.com/p/AF1QipPAIu278Ax1lRNiDM2sSMdxO_6aGFkHsKN7r4ky=w150-h150-k-no-p"
+              },
+              {
+                "thumbnail": "https://lh5.googleusercontent.com/p/AF1QipMW5IywQo3DI2lTbw8kmYdiZ_zp_iq3Ee2ht4HN=w150-h150-k-no-p"
+              }
+            ],
+            "date": "3 weeks ago"
+          }
+        ]
+      },
+      "people_also_search_for": [
+        {
+          "search_term": "Tourist attractions",
+          "local_results": [
+            {
+              "position": 1,
+              "title": "Balto Statue",
+              "data_id": "0x0:0x35c71b135cfce478",
+              "data_cid": "3875095774354007160",
+              "reviews_link": "https://serpapi.com/search.json?data_id=0x0%3A0x35c71b135cfce478&engine=google_maps_reviews&hl=en",
+              "photos_link": "https://serpapi.com/search.json?data_id=0x0%3A0x35c71b135cfce478&engine=google_maps_photos&hl=en",
+              "gps_coordinates": {
+                "latitude": 40.7699742,
+                "longitude": -73.9710197
+              },
+              "place_id_search": "https://serpapi.com/search.json?data=%214m5%213m4%211s0x0%3A0x35c71b135cfce478%218m2%213d40.7699742%214d-73.9710197&engine=google_maps&google_domain=google.com&hl=en&type=place",
+              "rating": 4.7,
+              "reviews": 2158,
+              "thumbnail": "https://lh5.googleusercontent.com/p/AF1QipOdJpw3dZHu4CVOaKbWViIxuNBkNYzHkezFGkLD=w156-h156-n-k-no",
+              "type": [
+                "Tourist attraction",
+                "Historical landmark",
+                "Scenic spot",
+                "Sculpture"
+              ]
+            },
+            {
+              "position": 2,
+              "title": "President Arthur Statue",
+              "data_id": "0x0:0xfab9fc279da20bea",
+              "data_cid": "18066748627252022250",
+              "reviews_link": "https://serpapi.com/search.json?data_id=0x0%3A0xfab9fc279da20bea&engine=google_maps_reviews&hl=en",
+              "photos_link": "https://serpapi.com/search.json?data_id=0x0%3A0xfab9fc279da20bea&engine=google_maps_photos&hl=en",
+              "gps_coordinates": {
+                "latitude": 40.742715,
+                "longitude": -73.9871105
+              },
+              "place_id_search": "https://serpapi.com/search.json?data=%214m5%213m4%211s0x0%3A0xfab9fc279da20bea%218m2%213d40.742715%214d-73.9871105&engine=google_maps&google_domain=google.com&hl=en&type=place",
+              "rating": 3.7,
+              "reviews": 3,
+              "thumbnail": "https://lh5.googleusercontent.com/p/AF1QipNjBc679Ln4V_1hi18cNk9pnh1mPOH83BJO8ucW=w156-h156-n-k-no",
+              "type": [
+                "Tourist attraction"
+              ]
+            },
+            {
+              "position": 3,
+              "title": "Captain America Statue",
+              "data_id": "0x0:0x94874c1b1274b46e",
+              "data_cid": "10702606718626739310",
+              "reviews_link": "https://serpapi.com/search.json?data_id=0x0%3A0x94874c1b1274b46e&engine=google_maps_reviews&hl=en",
+              "photos_link": "https://serpapi.com/search.json?data_id=0x0%3A0x94874c1b1274b46e&engine=google_maps_photos&hl=en",
+              "gps_coordinates": {
+                "latitude": 40.659152299999995,
+                "longitude": -74.00463409999999
+              },
+              "place_id_search": "https://serpapi.com/search.json?data=%214m5%213m4%211s0x0%3A0x94874c1b1274b46e%218m2%213d40.659152299999995%214d-74.00463409999999&engine=google_maps&google_domain=google.com&hl=en&type=place",
+              "rating": 4.7,
+              "reviews": 107,
+              "thumbnail": "https://lh5.googleusercontent.com/p/AF1QipO6xLbuFQeH7iNlOISMU5OfUgr_N-6R3K2gLtTg=w156-h156-n-k-no",
+              "type": [
+                "Tourist attraction"
+              ]
+            }
+          ]
+        },
+        {
+          "search_term": "Historic places",
+          "local_results": [
+            {
+              "position": 1,
+              "title": "Statue City Cruises Battery Park",
+              "data_id": "0x0:0xd8f0cbaa20cd480",
+              "data_cid": "977013639884887168",
+              "reviews_link": "https://serpapi.com/search.json?data_id=0x0%3A0xd8f0cbaa20cd480&engine=google_maps_reviews&hl=en",
+              "photos_link": "https://serpapi.com/search.json?data_id=0x0%3A0xd8f0cbaa20cd480&engine=google_maps_photos&hl=en",
+              "gps_coordinates": {
+                "latitude": 40.7013968,
+                "longitude": -74.01549109999999
+              },
+              "place_id_search": "https://serpapi.com/search.json?data=%214m5%213m4%211s0x0%3A0xd8f0cbaa20cd480%218m2%213d40.7013968%214d-74.01549109999999&engine=google_maps&google_domain=google.com&hl=en&type=place",
+              "rating": 4.3,
+              "reviews": 6207,
+              "thumbnail": "https://lh5.googleusercontent.com/p/AF1QipNHE0cmRNv9PQ4ESWEHlth6pfFcfSrQ_HndToPB=w156-h156-n-k-no",
+              "type": [
+                "Boat tour agency",
+                "Ferry service",
+                "Tour agency",
+                "Tour operator",
+                "Tourist attraction"
+              ]
+            },
+            {
+              "position": 2,
+              "title": "Lenin Statue",
+              "data_id": "0x0:0x64e47202d8565d79",
+              "data_cid": "7270061055027862905",
+              "reviews_link": "https://serpapi.com/search.json?data_id=0x0%3A0x64e47202d8565d79&engine=google_maps_reviews&hl=en",
+              "photos_link": "https://serpapi.com/search.json?data_id=0x0%3A0x64e47202d8565d79&engine=google_maps_photos&hl=en",
+              "gps_coordinates": {
+                "latitude": 40.7213518,
+                "longitude": -73.9857463
+              },
+              "place_id_search": "https://serpapi.com/search.json?data=%214m5%213m4%211s0x0%3A0x64e47202d8565d79%218m2%213d40.7213518%214d-73.9857463&engine=google_maps&google_domain=google.com&hl=en&type=place",
+              "rating": 4.2,
+              "reviews": 110,
+              "thumbnail": "https://lh5.googleusercontent.com/p/AF1QipOTaQ9DL7yvHILMFjdJ7w4jjCPK0c2YJr0dICQI=w156-h156-n-k-no",
+              "type": [
+                "Historical landmark"
+              ]
+            },
+            {
+              "position": 3,
+              "title": "Patience Lion",
+              "data_id": "0x0:0x770b1e8caa5dd03c",
+              "data_cid": "8577983504759771196",
+              "reviews_link": "https://serpapi.com/search.json?data_id=0x0%3A0x770b1e8caa5dd03c&engine=google_maps_reviews&hl=en",
+              "photos_link": "https://serpapi.com/search.json?data_id=0x0%3A0x770b1e8caa5dd03c&engine=google_maps_photos&hl=en",
+              "gps_coordinates": {
+                "latitude": 40.752809899999995,
+                "longitude": -73.9816809
+              },
+              "place_id_search": "https://serpapi.com/search.json?data=%214m5%213m4%211s0x0%3A0x770b1e8caa5dd03c%218m2%213d40.752809899999995%214d-73.9816809&engine=google_maps&google_domain=google.com&hl=en&type=place",
+              "rating": 4.9,
+              "reviews": 70,
+              "thumbnail": "https://lh5.googleusercontent.com/p/AF1QipOO2cIrRKxbYvcEmGF8-ehtJ4wS7Nbe_9QRDGE_=w156-h156-n-k-no",
+              "type": [
+                "Sculpture"
+              ]
+            },
+            {
+              "position": 4,
+              "title": "Empire State Building",
+              "data_id": "0x0:0xd134e199a405a163",
+              "data_cid": "15074921902713971043",
+              "reviews_link": "https://serpapi.com/search.json?data_id=0x0%3A0xd134e199a405a163&engine=google_maps_reviews&hl=en",
+              "photos_link": "https://serpapi.com/search.json?data_id=0x0%3A0xd134e199a405a163&engine=google_maps_photos&hl=en",
+              "gps_coordinates": {
+                "latitude": 40.7484405,
+                "longitude": -73.98566439999999
+              },
+              "place_id_search": "https://serpapi.com/search.json?data=%214m5%213m4%211s0x0%3A0xd134e199a405a163%218m2%213d40.7484405%214d-73.98566439999999&engine=google_maps&google_domain=google.com&hl=en&type=place",
+              "rating": 4.7,
+              "reviews": 103845,
+              "thumbnail": "https://lh5.googleusercontent.com/p/AF1QipNAG7iptYkmXdRODIfH30UToKMxcwIycF8ou5RI=w156-h156-n-k-no",
+              "type": [
+                "Historical landmark",
+                "Historical place museum",
+                "Observation deck",
+                "Tourist attraction"
+              ]
+            }
+          ]
+        },
+        {
+          "search_term": "Attractions",
+          "local_results": [
+            {
+              "position": 1,
+              "title": "Statue at Herald Square",
+              "data_id": "0x0:0x2247cf28a1281b0c",
+              "data_cid": "2470170694045408012",
+              "reviews_link": "https://serpapi.com/search.json?data_id=0x0%3A0x2247cf28a1281b0c&engine=google_maps_reviews&hl=en",
+              "photos_link": "https://serpapi.com/search.json?data_id=0x0%3A0x2247cf28a1281b0c&engine=google_maps_photos&hl=en",
+              "gps_coordinates": {
+                "latitude": 40.7504175,
+                "longitude": -73.9876021
+              },
+              "place_id_search": "https://serpapi.com/search.json?data=%214m5%213m4%211s0x0%3A0x2247cf28a1281b0c%218m2%213d40.7504175%214d-73.9876021&engine=google_maps&google_domain=google.com&hl=en&type=place",
+              "rating": 5,
+              "reviews": 3,
+              "thumbnail": "https://lh5.googleusercontent.com/p/AF1QipPgGQLgHnxPoA1mpyy5EnaNtCREgx31VO6NbCbk=w156-h156-n-k-no",
+              "type": [
+                "Historical landmark"
+              ]
+            },
+            {
+              "position": 2,
+              "title": "Statue of Christopher Columbus",
+              "data_id": "0x0:0xfa10da8f8390146e",
+              "data_cid": "18019142419031790702",
+              "reviews_link": "https://serpapi.com/search.json?data_id=0x0%3A0xfa10da8f8390146e&engine=google_maps_reviews&hl=en",
+              "photos_link": "https://serpapi.com/search.json?data_id=0x0%3A0xfa10da8f8390146e&engine=google_maps_photos&hl=en",
+              "gps_coordinates": {
+                "latitude": 40.768093199999996,
+                "longitude": -73.9818866
+              },
+              "place_id_search": "https://serpapi.com/search.json?data=%214m5%213m4%211s0x0%3A0xfa10da8f8390146e%218m2%213d40.768093199999996%214d-73.9818866&engine=google_maps&google_domain=google.com&hl=en&type=place",
+              "rating": 3.5,
+              "reviews": 17,
+              "thumbnail": "https://lh5.googleusercontent.com/p/AF1QipP2SLOuppFPgXFVqWYGBXOQgwAE9jHC64rdKJFi=w156-h156-n-k-no",
+              "type": [
+                "Historical landmark"
+              ]
+            },
+            {
+              "position": 3,
+              "title": "Madame Tussauds New York",
+              "data_id": "0x0:0xe72a0c97fe7d2986",
+              "data_cid": "16657140018732411270",
+              "reviews_link": "https://serpapi.com/search.json?data_id=0x0%3A0xe72a0c97fe7d2986&engine=google_maps_reviews&hl=en",
+              "photos_link": "https://serpapi.com/search.json?data_id=0x0%3A0xe72a0c97fe7d2986&engine=google_maps_photos&hl=en",
+              "gps_coordinates": {
+                "latitude": 40.7564269,
+                "longitude": -73.9888338
+              },
+              "place_id_search": "https://serpapi.com/search.json?data=%214m5%213m4%211s0x0%3A0xe72a0c97fe7d2986%218m2%213d40.7564269%214d-73.9888338&engine=google_maps&google_domain=google.com&hl=en&type=place",
+              "rating": 4.5,
+              "reviews": 25995,
+              "thumbnail": "https://lh5.googleusercontent.com/p/AF1QipO18v5o23ouusO7gE0-t48oEQNjn1fXcBZqP-Nf=w156-h156-n-k-no",
+              "type": [
+                "Wax museum",
+                "Tourist attraction"
+              ]
+            },
+            {
+              "position": 4,
+              "title": "The Museum of Interesting Things Secret Speakeasy",
+              "data_id": "0x0:0x83212ff1ee29d1d5",
+              "data_cid": "9448886209329353173",
+              "reviews_link": "https://serpapi.com/search.json?data_id=0x0%3A0x83212ff1ee29d1d5&engine=google_maps_reviews&hl=en",
+              "photos_link": "https://serpapi.com/search.json?data_id=0x0%3A0x83212ff1ee29d1d5&engine=google_maps_photos&hl=en",
+              "gps_coordinates": {
+                "latitude": 40.726448999999995,
+                "longitude": -74.001798
+              },
+              "place_id_search": "https://serpapi.com/search.json?data=%214m5%213m4%211s0x0%3A0x83212ff1ee29d1d5%218m2%213d40.726448999999995%214d-74.001798&engine=google_maps&google_domain=google.com&hl=en&type=place",
+              "rating": 4.5,
+              "reviews": 23,
+              "thumbnail": "https://lh5.googleusercontent.com/p/AF1QipMbjJZL9Bkr6BqosjYEhJZSJyY2NXx431didfrv=w156-h156-n-k-no",
+              "type": [
+                "History museum",
+                "Tourist attraction"
+              ]
+            }
+          ]
+        }
+      ],
+      "popular_times": {
+        "graph_results": {
+          "sunday": [
+            {
+              "time": "6 AM",
+              "busyness_score": 0
+            },
+            {
+              "time": "7 AM",
+              "busyness_score": 0
+            },
+            {
+              "time": "8 AM",
+              "busyness_score": 0
+            },
+            {
+              "time": "9 AM",
+              "info": "Usually not too busy",
+              "busyness_score": 33
+            },
+            {
+              "time": "10 AM",
+              "info": "Usually a little busy",
+              "busyness_score": 59
+            },
+            {
+              "time": "11 AM",
+              "info": "Usually as busy as it gets",
+              "busyness_score": 82
+            },
+            {
+              "time": "12 PM",
+              "info": "Usually as busy as it gets",
+              "busyness_score": 94
+            },
+            {
+              "time": "1 PM",
+              "info": "Usually as busy as it gets",
+              "busyness_score": 93
+            },
+            {
+              "time": "2 PM",
+              "info": "Usually as busy as it gets",
+              "busyness_score": 84
+            },
+            {
+              "time": "3 PM",
+              "info": "Usually a little busy",
+              "busyness_score": 63
+            },
+            {
+              "time": "4 PM",
+              "info": "Usually not too busy",
+              "busyness_score": 37
+            },
+            {
+              "time": "5 PM",
+              "busyness_score": 0
+            },
+            {
+              "time": "6 PM",
+              "busyness_score": 0
+            },
+            {
+              "time": "7 PM",
+              "busyness_score": 0
+            },
+            {
+              "time": "8 PM",
+              "busyness_score": 0
+            },
+            {
+              "time": "9 PM",
+              "busyness_score": 0
+            },
+            {
+              "time": "10 PM",
+              "busyness_score": 0
+            },
+            {
+              "time": "11 PM",
+              "busyness_score": 0
+            }
+          ],
+          "monday": [
+            {
+              "time": "6 AM",
+              "busyness_score": 0
+            },
+            {
+              "time": "7 AM",
+              "busyness_score": 0
+            },
+            {
+              "time": "8 AM",
+              "busyness_score": 0
+            },
+            {
+              "time": "9 AM",
+              "info": "Usually not too busy",
+              "busyness_score": 36
+            },
+            {
+              "time": "10 AM",
+              "info": "Usually a little busy",
+              "busyness_score": 63
+            },
+            {
+              "time": "11 AM",
+              "info": "Usually as busy as it gets",
+              "busyness_score": 84
+            },
+            {
+              "time": "12 PM",
+              "info": "Usually as busy as it gets",
+              "busyness_score": 93
+            },
+            {
+              "time": "1 PM",
+              "info": "Usually as busy as it gets",
+              "busyness_score": 90
+            },
+            {
+              "time": "2 PM",
+              "info": "Usually a little busy",
+              "busyness_score": 78
+            },
+            {
+              "time": "3 PM",
+              "info": "Usually a little busy",
+              "busyness_score": 58
+            },
+            {
+              "time": "4 PM",
+              "info": "Usually not too busy",
+              "busyness_score": 33
+            },
+            {
+              "time": "5 PM",
+              "busyness_score": 0
+            },
+            {
+              "time": "6 PM",
+              "busyness_score": 0
+            },
+            {
+              "time": "7 PM",
+              "busyness_score": 0
+            },
+            {
+              "time": "8 PM",
+              "busyness_score": 0
+            },
+            {
+              "time": "9 PM",
+              "busyness_score": 0
+            },
+            {
+              "time": "10 PM",
+              "busyness_score": 0
+            },
+            {
+              "time": "11 PM",
+              "busyness_score": 0
+            }
+          ],
+          "tuesday": [
+            {
+              "time": "6 AM",
+              "busyness_score": 0
+            },
+            {
+              "time": "7 AM",
+              "busyness_score": 0
+            },
+            {
+              "time": "8 AM",
+              "busyness_score": 0
+            },
+            {
+              "time": "9 AM",
+              "info": "Usually not too busy",
+              "busyness_score": 32
+            },
+            {
+              "time": "10 AM",
+              "info": "Usually a little busy",
+              "busyness_score": 55
+            },
+            {
+              "time": "11 AM",
+              "info": "Usually a little busy",
+              "busyness_score": 71
+            },
+            {
+              "time": "12 PM",
+              "info": "Usually a little busy",
+              "busyness_score": 78
+            },
+            {
+              "time": "1 PM",
+              "info": "Usually a little busy",
+              "busyness_score": 75
+            },
+            {
+              "time": "2 PM",
+              "info": "Usually a little busy",
+              "busyness_score": 64
+            },
+            {
+              "time": "3 PM",
+              "info": "Usually not too busy",
+              "busyness_score": 45
+            },
+            {
+              "time": "4 PM",
+              "info": "Usually not too busy",
+              "busyness_score": 26
+            },
+            {
+              "time": "5 PM",
+              "busyness_score": 0
+            },
+            {
+              "time": "6 PM",
+              "busyness_score": 0
+            },
+            {
+              "time": "7 PM",
+              "busyness_score": 0
+            },
+            {
+              "time": "8 PM",
+              "busyness_score": 0
+            },
+            {
+              "time": "9 PM",
+              "busyness_score": 0
+            },
+            {
+              "time": "10 PM",
+              "busyness_score": 0
+            },
+            {
+              "time": "11 PM",
+              "busyness_score": 0
+            }
+          ],
+          "wednesday": [
+            {
+              "time": "6 AM",
+              "busyness_score": 0
+            },
+            {
+              "time": "7 AM",
+              "busyness_score": 0
+            },
+            {
+              "time": "8 AM",
+              "busyness_score": 0
+            },
+            {
+              "time": "9 AM",
+              "info": "Usually not too busy",
+              "busyness_score": 32
+            },
+            {
+              "time": "10 AM",
+              "info": "Usually a little busy",
+              "busyness_score": 56
+            },
+            {
+              "time": "11 AM",
+              "info": "Usually a little busy",
+              "busyness_score": 72
+            },
+            {
+              "time": "12 PM",
+              "info": "Usually a little busy",
+              "busyness_score": 76
+            },
+            {
+              "time": "1 PM",
+              "info": "Usually a little busy",
+              "busyness_score": 69
+            },
+            {
+              "time": "2 PM",
+              "info": "Usually a little busy",
+              "busyness_score": 55
+            },
+            {
+              "time": "3 PM",
+              "info": "Usually not too busy",
+              "busyness_score": 38
+            },
+            {
+              "time": "4 PM",
+              "info": "Usually not too busy",
+              "busyness_score": 21
+            },
+            {
+              "time": "5 PM",
+              "busyness_score": 0
+            },
+            {
+              "time": "6 PM",
+              "busyness_score": 0
+            },
+            {
+              "time": "7 PM",
+              "busyness_score": 0
+            },
+            {
+              "time": "8 PM",
+              "busyness_score": 0
+            },
+            {
+              "time": "9 PM",
+              "busyness_score": 0
+            },
+            {
+              "time": "10 PM",
+              "busyness_score": 0
+            },
+            {
+              "time": "11 PM",
+              "busyness_score": 0
+            }
+          ],
+          "thursday": [
+            {
+              "time": "6 AM",
+              "busyness_score": 0
+            },
+            {
+              "time": "7 AM",
+              "busyness_score": 0
+            },
+            {
+              "time": "8 AM",
+              "busyness_score": 0
+            },
+            {
+              "time": "9 AM",
+              "info": "Usually not too busy",
+              "busyness_score": 30
+            },
+            {
+              "time": "10 AM",
+              "info": "Usually a little busy",
+              "busyness_score": 53
+            },
+            {
+              "time": "11 AM",
+              "info": "Usually a little busy",
+              "busyness_score": 69
+            },
+            {
+              "time": "12 PM",
+              "info": "Usually a little busy",
+              "busyness_score": 74
+            },
+            {
+              "time": "1 PM",
+              "info": "Usually a little busy",
+              "busyness_score": 68
+            },
+            {
+              "time": "2 PM",
+              "info": "Usually a little busy",
+              "busyness_score": 56
+            },
+            {
+              "time": "3 PM",
+              "info": "Usually not too busy",
+              "busyness_score": 39
+            },
+            {
+              "time": "4 PM",
+              "info": "Usually not too busy",
+              "busyness_score": 21
+            },
+            {
+              "time": "5 PM",
+              "busyness_score": 0
+            },
+            {
+              "time": "6 PM",
+              "busyness_score": 0
+            },
+            {
+              "time": "7 PM",
+              "busyness_score": 0
+            },
+            {
+              "time": "8 PM",
+              "busyness_score": 0
+            },
+            {
+              "time": "9 PM",
+              "busyness_score": 0
+            },
+            {
+              "time": "10 PM",
+              "busyness_score": 0
+            },
+            {
+              "time": "11 PM",
+              "busyness_score": 0
+            }
+          ],
+          "friday": [
+            {
+              "time": "6 AM",
+              "busyness_score": 0
+            },
+            {
+              "time": "7 AM",
+              "busyness_score": 0
+            },
+            {
+              "time": "8 AM",
+              "busyness_score": 0
+            },
+            {
+              "time": "9 AM",
+              "info": "Usually not too busy",
+              "busyness_score": 35
+            },
+            {
+              "time": "10 AM",
+              "info": "Usually a little busy",
+              "busyness_score": 63
+            },
+            {
+              "time": "11 AM",
+              "info": "Usually as busy as it gets",
+              "busyness_score": 85
+            },
+            {
+              "time": "12 PM",
+              "info": "Usually as busy as it gets",
+              "busyness_score": 92
+            },
+            {
+              "time": "1 PM",
+              "info": "Usually as busy as it gets",
+              "busyness_score": 87
+            },
+            {
+              "time": "2 PM",
+              "info": "Usually a little busy",
+              "busyness_score": 74
+            },
+            {
+              "time": "3 PM",
+              "info": "Usually a little busy",
+              "busyness_score": 54
+            },
+            {
+              "time": "4 PM",
+              "info": "Usually not too busy",
+              "busyness_score": 32
+            },
+            {
+              "time": "5 PM",
+              "busyness_score": 0
+            },
+            {
+              "time": "6 PM",
+              "busyness_score": 0
+            },
+            {
+              "time": "7 PM",
+              "busyness_score": 0
+            },
+            {
+              "time": "8 PM",
+              "busyness_score": 0
+            },
+            {
+              "time": "9 PM",
+              "busyness_score": 0
+            },
+            {
+              "time": "10 PM",
+              "busyness_score": 0
+            },
+            {
+              "time": "11 PM",
+              "busyness_score": 0
+            }
+          ],
+          "saturday": [
+            {
+              "time": "6 AM",
+              "busyness_score": 0
+            },
+            {
+              "time": "7 AM",
+              "busyness_score": 0
+            },
+            {
+              "time": "8 AM",
+              "busyness_score": 0
+            },
+            {
+              "time": "9 AM",
+              "info": "Usually not too busy",
+              "busyness_score": 38
+            },
+            {
+              "time": "10 AM",
+              "info": "Usually a little busy",
+              "busyness_score": 69
+            },
+            {
+              "time": "11 AM",
+              "info": "Usually as busy as it gets",
+              "busyness_score": 92
+            },
+            {
+              "time": "12 PM",
+              "info": "Usually as busy as it gets",
+              "busyness_score": 100
+            },
+            {
+              "time": "1 PM",
+              "info": "Usually as busy as it gets",
+              "busyness_score": 94
+            },
+            {
+              "time": "2 PM",
+              "info": "Usually as busy as it gets",
+              "busyness_score": 82
+            },
+            {
+              "time": "3 PM",
+              "info": "Usually a little busy",
+              "busyness_score": 62
+            },
+            {
+              "time": "4 PM",
+              "info": "Usually not too busy",
+              "busyness_score": 38
+            },
+            {
+              "time": "5 PM",
+              "busyness_score": 0
+            },
+            {
+              "time": "6 PM",
+              "busyness_score": 0
+            },
+            {
+              "time": "7 PM",
+              "busyness_score": 0
+            },
+            {
+              "time": "8 PM",
+              "busyness_score": 0
+            },
+            {
+              "time": "9 PM",
+              "busyness_score": 0
+            },
+            {
+              "time": "10 PM",
+              "busyness_score": 0
+            },
+            {
+              "time": "11 PM",
+              "busyness_score": 0
+            }
+          ]
+        },
+        "live_hash": {
+          "info": null,
+          "time_spent": "People typically spend up to 2 hours here"
+        }
+      }
+    }
+  }

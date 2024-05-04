@@ -80,8 +80,10 @@
                   <div>
                     <img
                       [src]="
-                        location.serpGoogleResponse?.place_results?.thumbnail
-                      "
+                      location.serpGoogleResponse?.place_results
+                        ?.thumbnail ? location.serpGoogleResponse?.place_results
+                        ?.thumbnail : 'assets/icons/rove-around-favicon-color.svg'
+                    "
                       alt=""
                     />
                   </div>
@@ -216,7 +218,8 @@
                                 style="width: 150px; height: 80px"
                                 [src]="
                                   location.serpGoogleResponse?.place_results
-                                    ?.thumbnail
+                                    ?.thumbnail ? location.serpGoogleResponse?.place_results
+                                    ?.thumbnail : 'assets/icons/rove-around-favicon-color.svg'
                                 "
                                 alt=""
                               />
@@ -453,6 +456,6 @@
   [showTransitionOptions]="'1000ms'"
   [hideTransitionOptions]="'1000ms'"
   [showTransformOptions]="'translateX(100%)'"
-  [life]="10000"
+  [life]="5000"
 >
 </p-toast>

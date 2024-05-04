@@ -1,5 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
+import { MessageService } from 'primeng/api';
 import { BehaviorSubject } from 'rxjs';
 import { Type } from 'src/app/enums/type.enum';
 import { environment } from 'src/app/environment/environment';
@@ -14,7 +15,7 @@ export class TripDetailsService {
   public tripDetails$: BehaviorSubject<TripDetails> =
     new BehaviorSubject<TripDetails>({} as TripDetails);
 
-  constructor(private http: HttpClient) {}
+  constructor(private http: HttpClient, private messageService: MessageService) {}
 
   getTripDetails(code: string) {
     this.http
@@ -38,6 +39,7 @@ export class TripDetailsService {
     this.http.post(deleteApi, {}).subscribe({
       next: () => {
         this.getTripDetails(tripCode);
+        this.messageService.add({ severity: 'success', summary: 'Success', detail: 'Notes deleted successfully' });
       },
       error: (error) => {},
     });
@@ -54,6 +56,7 @@ export class TripDetailsService {
     this.http.post(deleteApi, { id }).subscribe({
       next: () => {
         this.getTripDetails(tripCode);
+        this.messageService.add({ severity: 'success', summary: 'Success', detail: 'Place deleted successfully' });
       },
       error: (error) => {},
     });
@@ -65,6 +68,7 @@ export class TripDetailsService {
       .subscribe({
         next: () => {
           this.getTripDetails(tripCode);
+          this.messageService.add({ severity: 'success', summary: 'Success', detail: 'Expense deleted successfully' });
         },
         error: (error) => {},
       });

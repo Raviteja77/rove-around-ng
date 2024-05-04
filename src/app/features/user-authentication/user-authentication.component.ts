@@ -104,7 +104,7 @@ export class UserAuthenticationComponent implements OnInit {
           if (response === 208) {
             this.messageService.add({ severity: 'error', summary: 'Error', detail: 'The entered email/username is already registered' });
           } else if (response == 201) {
-            this.messageService.add({ severity: 'success', summary: 'Success', detail: 'Registration Successful' });
+            this.messageService.add({ severity: 'success', summary: 'Success', detail: 'Registration Successfully' });
             this.toggleToOtherForm(
               'login',
               document.getElementById(
